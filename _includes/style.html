@@ -105,7 +105,13 @@ nav.lk a[aria-current]{color:var(--ac)}
 .burger[aria-expanded=true] i:nth-child(1){transform:translateY(5px) rotate(45deg)}
 .burger[aria-expanded=true] i:nth-child(2){opacity:0}
 .burger[aria-expanded=true] i:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
-@media (max-width:1020px){
+/* Collapse to the compact menu at 1140px, not 1020px. Ten service links
+   plus the brand, the phone number and a button need more room than 1020
+   leaves them: at 1024 and 1080 the desktop nav still rendered and the
+   brand sat on top of the first link, while the phone number collided
+   with the last one. Nothing scrolled sideways, so an overflow check saw
+   a clean page -- overlap is not overflow. Measured clean at 1180+. */
+@media (max-width:1140px){
   .nav-c{position:absolute;top:64px;left:0;right:0;display:none;background:var(--bg);
     border-bottom:1px solid var(--ln);padding:6px var(--pad) 16px}
   .nav-c.open{display:block}
