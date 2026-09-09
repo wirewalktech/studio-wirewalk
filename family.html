@@ -91,13 +91,16 @@ description: >-
     <div>
       <div class="grid g2">
         <!-- ─────────────────────────────────────────────────────────────
-             NEWBORN IMAGE SLOTS — deliberately empty.
+             NEWBORN IMAGE SLOTS - deliberately empty.
              The studio has no newborn frames yet, and illustrating this
              with stock photographs of somebody else's baby would be a
              straight misrepresentation of the portfolio.
-             To fill: put an <img> inside the .slot, e.g.
-               <div class="slot r45"><img src="/assets/img/newborn-01.jpg" alt="…"></div>
-             The dashed frame, crop marks and label switch themselves off.
+
+             To fill one: add the frame to tools/manifest.py, run
+             tools/build_images.py, then replace the inner span of a .slot
+             with an include of photo.html for the new slug. The dashed
+             frame, crop marks and label switch themselves off as soon as
+             the slot contains an image (see .slot:has(img) in the styles).
              ───────────────────────────────────────────────────────────── -->
         <div class="slot r45">
           <span><span class="s-t">Newborn</span><span class="s-m">Image slot 01 &middot; 4:5</span></span>
