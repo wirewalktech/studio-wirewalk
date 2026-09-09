@@ -21,7 +21,7 @@
   </div>
   <div class="nav-r">
     <a class="nav-tel" href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a>
-    <a class="btn btn-p btn-sm" href="{{ home }}#contact">Book a session</a>
+    <a class="btn btn-p btn-sm" href="{{ '/booking/' | relative_url }}"{% if page.nav == 'booking' %} aria-current="page"{% endif %}>Book a session</a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
   </div>
 </div></header>

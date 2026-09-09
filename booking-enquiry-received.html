@@ -1,0 +1,40 @@
+---
+layout: base
+permalink: /booking/enquiry-received/
+title: Request received
+noindex: true
+extra_style: booking-style.html
+og_photo: wat-fisherman
+description: Your quote or invoice request has been received.
+---
+<section class="mast"><div class="wide">
+  <div class="split">
+    <div>
+      <div class="crumb"><a href="{{ '/' | relative_url }}">Studio</a> <span>/</span> <a href="{{ '/booking/' | relative_url }}">Booking</a> <span>/</span> <span>Received</span></div>
+      <span class="eyebrow">Sent</span>
+      <h1>Request received.</h1>
+      <p class="lead">It has come through. You are seeing this page because the form actually posted &mdash; not because a script decided to say so. Nothing has been charged and no date is held yet; that happens when you accept the quote or the invoice is agreed.</p>
+
+      <h2 style="margin-top:40px">What happens now</h2>
+      <ol class="steps2">
+        <li><b>Same working day</b> &mdash; confirmation it arrived, and any supplier documents you asked for: quotation, W-9, certificate of insurance, supplier registration.</li>
+        <li><b>A written quote or invoice</b> naming the fee, the dates and the usage rights in the same document. Read it and tell me if anything is wrong; nothing is binding until you accept it.</li>
+        <li><b>The dates are held</b> while it goes through your process, so a purchase order does not cost you the day you wanted.</li>
+      </ol>
+
+      <p class="small muted" style="margin-top:26px">If the date is tight, call rather than wait &mdash; a diary clash is easier to solve in a minute on the phone than in a day of email.</p>
+
+      <div class="contacts" style="max-width:440px">
+        <a href="tel:{{ site.phone_link }}"><b>Phone</b><span class="v">{{ site.phone_display }}</span></a>
+        <a href="mailto:{{ site.email }}"><b>Email</b><span class="v">{{ site.email }}</span></a>
+      </div>
+
+      <div class="acts" style="margin-top:30px">
+        <a href="{{ '/booking/' | relative_url }}" class="btn btn-p">Rates and booking<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="{{ '/work/' | relative_url }}" class="btn btn-g">Look at the work</a>
+        <a href="{{ '/process/' | relative_url }}" class="btn btn-g">How a project runs</a>
+      </div>
+    </div>
+    <div class="dev">{% include photo.html slug="wat-fisherman" ratio="r32" loading="eager" sizes="(max-width:900px) 100vw, 46vw" %}</div>
+  </div>
+</div></section>

@@ -1,0 +1,102 @@
+---
+layout: base
+permalink: /booking/thanks/
+title: Payment
+noindex: true
+extra_style: booking-style.html
+og_photo: fam-grass
+description: Confirmation of a booking payment.
+---
+<section class="mast"><div class="wide">
+  <div class="crumb"><a href="{{ '/' | relative_url }}">Studio</a> <span>/</span> <a href="{{ '/booking/' | relative_url }}">Booking</a> <span>/</span> <span>Payment</span></div>
+  <span class="eyebrow">Booking</span>
+  <div class="outcome" id="outcome">
+    <h1 class="stat">Checking with the payment system&hellip;</h1>
+    <p class="lead">One moment. This page asks Stripe what actually happened rather than assuming it worked, so it takes a second longer than a page that simply says &ldquo;thank you&rdquo;.</p>
+  </div>
+
+  <div id="next-steps" hidden>
+    <h2 style="margin-top:44px">What happens now</h2>
+    <ol class="steps2">
+      <li><b>A receipt from Stripe</b>, to the address you gave, within a minute or two. If it has not arrived, check the junk folder before assuming anything went wrong.</li>
+      <li><b>Confirmation of the date from me</b>, in writing, within one working day &mdash; with what is included, where we are meeting and what to expect on the day.</li>
+      <li><b>The balance</b>, where you paid a retainer or deposit, is due on delivery. Nothing is taken automatically; you will be invoiced.</li>
+    </ol>
+    <p class="small muted" style="margin-top:24px">Newborn sessions are held as a provisional week and confirmed once the baby arrives &mdash; the retainer holds the week, not a particular day.</p>
+  </div>
+
+  <div class="contacts" style="max-width:440px">
+    <a href="tel:{{ site.phone_link }}"><b>Phone</b><span class="v">{{ site.phone_display }}</span></a>
+    <a href="mailto:{{ site.email }}"><b>Email</b><span class="v">{{ site.email }}</span></a>
+  </div>
+
+  <div class="acts" style="margin-top:30px">
+    <a href="{{ '/' | relative_url }}" class="btn btn-g">Back to the studio</a>
+    <a href="{{ '/booking/' | relative_url }}" class="btn btn-g">Booking and rates</a>
+    <a href="{{ '/process/' | relative_url }}" class="btn btn-g">How a session runs</a>
+  </div>
+</div></section>
+
+<script>
+/* Never congratulate anyone on a payment that did not complete.
+ *
+ * Stripe redirects here whatever the outcome, and the session id in the URL
+ * proves only that a checkout was started. So the session is read back
+ * through the Worker, which asks Stripe, and success is reported only when
+ * payment_status came back "paid". Anything else — an abandoned page, a
+ * failed card, a bank debit still processing, a tampered URL — says so
+ * plainly and tells the visitor not to pay twice.
+ */
+(function () {
+  var ORDERS = "https://wirewalk-orders.wirewalk-upload.workers.dev";
+  var out = document.getElementById("outcome");
+  var steps = document.getElementById("next-steps");
+  var id = new URLSearchParams(location.search).get("session");
+
+  var esc = function (t) {
+    return String(t == null ? "" : t).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  };
+
+  function unknown(why) {
+    out.innerHTML =
+      '<h1 class="stat no">This page cannot confirm a payment.</h1>' +
+      '<p class="lead">' + esc(why) + " Before paying again, email <strong>{{ site.email }}</strong> " +
+      "or call <strong>{{ site.phone_display }}</strong> and it will be checked against the " +
+      "payment records &mdash; that way nobody is charged twice.</p>";
+  }
+
+  if (!id) { unknown("It was opened without a payment reference, so there is nothing to look up."); return; }
+
+  fetch(ORDERS + "/session?id=" + encodeURIComponent(id))
+    .then(function (r) {
+      if (!r.ok) throw new Error("lookup failed");
+      return r.json();
+    })
+    .then(function (d) {
+      if (!d.paid) {
+        out.innerHTML =
+          '<h1 class="stat no">That payment did not complete.</h1>' +
+          '<p class="lead">Stripe has no completed payment against this reference, so <strong>nothing has been ' +
+          "booked and no date is held</strong>. A card may have been declined, or the page may have been " +
+          "closed before it finished. You can " +
+          '<a href="{{ '/booking/' | relative_url }}" style="color:var(--ac);text-decoration:underline;text-underline-offset:2px">try again</a>' +
+          " &mdash; but if you believe you were charged, email <strong>{{ site.email }}</strong> or call " +
+          "<strong>{{ site.phone_display }}</strong> first so you are not charged twice.</p>";
+        return;
+      }
+      var bal = d.balanceDue > 0
+        ? " The balance of <strong>" + esc(d.balanceDueFormatted) + "</strong> is due on delivery and will be invoiced."
+        : " There is nothing further to pay.";
+      out.innerHTML =
+        '<h1 class="stat">' + esc(d.amountFormatted) + " received. The date is held.</h1>" +
+        '<p class="lead">Thank you &mdash; the payment went through and a receipt is on its way to <strong>' +
+        esc(d.email || "the address you gave") + "</strong>." + bal + "</p>";
+      steps.hidden = false;
+    })
+    .catch(function () {
+      unknown("The payment system could not be reached just now, so this page will not guess.");
+    });
+})();
+</script>

@@ -1,0 +1,542 @@
+---
+layout: base
+permalink: /booking/
+title: Book a session
+extra_style: booking-style.html
+og_photo: fam-grass
+description: >-
+  Book a photography, video or audio session and pay for it here. A retainer
+  holds the date, or pay in full and take 10% off. Card and bank payment are
+  handled by Stripe; companies that need an invoice or purchase order can
+  request one.
+---
+<section class="mast"><div class="wide">
+  <div class="crumb"><a href="{{ '/' | relative_url }}">Studio</a> <span>/</span> <span>Booking</span></div>
+  <span class="eyebrow">Booking and payment</span>
+  <h1>Hold the date, and pay for it here.</h1>
+  <p class="lead">Pick the session or the shoot, pay a retainer to hold the date, and it is booked &mdash; or pay in full and take <strong>10% off</strong>. Card and bank payment are handled by Stripe, so no card details are typed into this site or stored by it.</p>
+  <div class="acts">
+    <a href="#pay" class="btn btn-p">Book and pay<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#quote" class="btn btn-g">Weddings and other quoted work</a>
+    <a href="#invoice" class="btn btn-g">My company needs an invoice</a>
+  </div>
+  <div id="cancelled" hidden><p class="note" style="margin-top:26px"><strong>That payment was cancelled and you have not been charged.</strong> Nothing has been booked. Start again below, or call <a href="tel:{{ site.phone_link }}" style="color:var(--ac);text-decoration:underline;text-underline-offset:2px">{{ site.phone_display }}</a> if something went wrong.</p></div>
+</div></section>
+
+<!-- ══════════ RATES ══════════ -->
+<section class="sec tint" id="rates"><div class="wide">
+  <div class="sh">
+    <span class="eyebrow">01 &mdash; What it costs</span>
+    <h2>Current rates.</h2>
+    <p>These figures are read from the booking system as this page loads, not typed into it, so what you see here is what you are charged &mdash; and if there is an offer running this month it appears here on its own. <strong>Prices exclude any applicable sales tax.</strong> Travel beyond the metro area is quoted separately and never added after the fact.</p>
+  </div>
+
+  <div id="rates-out">
+    <p class="lead muted">Loading current rates&hellip;</p>
+    <noscript><p class="lead">Rates load from the booking system, which needs JavaScript. Call <strong>{{ site.phone_display }}</strong> or email <strong>{{ site.email }}</strong> and the current rate card comes back the same day.</p></noscript>
+  </div>
+
+  <div class="note" style="margin-top:30px">
+    <p><b>Retainer or in full.</b> A retainer holds the date and comes off the total; the balance is due on delivery. Paying in full up front takes 10% off and holds the date on the same terms. The 10% applies to the whole booking, so it is not available on a retainer.</p>
+  </div>
+</div></section>
+
+<!-- ══════════ PAY ══════════ -->
+<section class="sec" id="pay"><div class="wide">
+  <div class="sh">
+    <span class="eyebrow">02 &mdash; Book and pay</span>
+    <h2>Pay the retainer and the date is yours.</h2>
+    <p>Choose what you are booking and how much to pay now. You will be handed to Stripe&rsquo;s payment page to enter card or bank details &mdash; they are never entered here, and this site never sees them. A receipt is emailed immediately, and confirmation of the date follows from me within a working day.</p>
+  </div>
+
+  <div class="paybox">
+    <div class="payrow">
+      <div>
+        <label for="pay-item">What you are booking</label>
+        <select id="pay-item" name="item"><option value="">Loading&hellip;</option></select>
+      </div>
+      <div>
+        <label for="pay-mode">How much to pay now</label>
+        <select id="pay-mode" name="mode">
+          <option value="deposit">Retainer &mdash; hold the date</option>
+          <option value="full">In full &mdash; 10% off</option>
+        </select>
+      </div>
+    </div>
+    <div class="payrow">
+      <div>
+        <label for="pay-email">Email for the receipt</label>
+        <input id="pay-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      </div>
+      <div>
+        <label for="pay-org">Your name, or your company</label>
+        <input id="pay-org" name="organisation" type="text" autocomplete="organization" placeholder="Optional, but it goes on the receipt">
+      </div>
+    </div>
+
+    <div class="due" id="due" hidden></div>
+    <div class="turn" id="turnstile"></div>
+    <button class="btn btn-p" id="paygo" type="button" disabled>Continue to payment<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="msg" id="paymsg" role="status" aria-live="polite"></div>
+
+    <p class="paynote">Nothing on this page is a card field. Payment happens on Stripe&rsquo;s own page and this site is told only whether it succeeded. Sessions are held once the retainer clears; more than 14 days&rsquo; notice moves a booking once at no charge, subject to availability, and a child being unwell moves a family or newborn session at no charge however late the notice. Questions first? <a href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a> or <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  </div>
+</div></section>
+
+<!-- ══════════ QUOTED WORK ══════════ -->
+<section class="sec tint" id="quote"><div class="wide">
+  <div class="sh">
+    <span class="eyebrow">03 &mdash; Quoted, not listed</span>
+    <h2>Some work cannot honestly carry a list price.</h2>
+    <p>A wedding is not a unit. Hours of coverage, a second shooter, an album, a rehearsal dinner and a timeline that runs from morning prep to the last dance vary so much between two weddings that a single number on a page would be a guess dressed up as a price. Scripted film is the same: the treatment decides the budget, not the other way round. So these are quoted after we talk, in writing, before anything is booked.</p>
+  </div>
+
+  <div class="split">
+    <div>
+      <div class="rows" id="quote-list">
+        <div class="row"><div><span class="kicker">Loading</span><h4>Quoted work</h4></div>
+          <p>Reading the current list&hellip;</p></div>
+      </div>
+      <p class="small muted" style="margin-top:20px">Anything else that does not match a line on the rate card &mdash; a multi-day shoot, an unusual location, a large team, a retained arrangement across a year &mdash; belongs here too.</p>
+    </div>
+
+    <div>
+      <form class="frm2" action="https://formsubmit.co/{{ site.email }}" method="POST">
+        <input type="hidden" name="_subject" value="Wirewalk Studio — quote request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="{{ '/booking/enquiry-received/' | absolute_url }}">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+
+        <div>
+          <label for="q-name">Your name</label>
+          <input id="q-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="q-email">Email</label>
+          <input id="q-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div>
+          <label for="q-phone">Phone <span class="muted">&mdash; optional</span></label>
+          <input id="q-phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div>
+          <label for="q-date">Date, or roughly when</label>
+          <input id="q-date" name="date" type="text" placeholder="14 June, or &ldquo;late spring&rdquo;">
+        </div>
+        <div class="wide-f">
+          <label for="q-what">What it is</label>
+          <select id="q-what" name="what"><option value="Quoted work">Loading&hellip;</option></select>
+        </div>
+        <div class="wide-f">
+          <label for="q-msg">Tell me about it</label>
+          <textarea id="q-msg" name="message" placeholder="Where it is, roughly how many hours, how many people, and what you want at the end of it. For a wedding: the venue, the timeline as far as you know it, and whether you want an album."></textarea>
+        </div>
+        <button class="btn btn-p" type="submit">Ask for a quote<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </form>
+      <p class="frm-note">This posts straight to email and lands you on a confirmation page once it has actually sent. A quote comes back in writing, with the usage rights stated in the same document, and nothing is booked until you accept it.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ══════════ INVOICE / PURCHASE ORDER ══════════ -->
+<section class="sec" id="invoice"><div class="wide">
+  <div class="sh">
+    <span class="eyebrow">04 &mdash; For companies</span>
+    <h2>If your finance team needs an invoice or a purchase order.</h2>
+    <p>Commercial work &mdash; team headshots, a workplace day, product, property, video and audio &mdash; can be placed on a purchase order and invoiced instead of paid by card. Ask here and an invoice, W-9 or supplier form comes back the same working day; the dates are held while it goes through your system.</p>
+    <p class="small muted">Family, newborn, portrait, pet and wedding bookings are card only. Nobody raises a purchase order for a family session, and pretending otherwise would only put a procurement process between you and a Saturday morning.</p>
+  </div>
+
+  <div class="split wide-r">
+    <div>
+      <div class="rows">
+        <div class="row"><div><span class="kicker">Terms</span><h4>Net 30</h4></div>
+          <p>Invoiced against your PO number to the accounts payable address you give, on net 30 terms unless your process says otherwise.</p></div>
+        <div class="row"><div><span class="kicker">Documents</span><h4>Whatever procurement needs</h4></div>
+          <p>Quotation, W-9, certificate of insurance, supplier registration &mdash; say which and they come back the same working day.</p></div>
+        <div class="row"><div><span class="kicker">Rights</span><h4>Stated before, not after</h4></div>
+          <p>The usage licence is written into the quotation, so what your marketing team may do with the pictures is settled before the shoot rather than argued afterwards.</p></div>
+        <div class="row"><div><span class="kicker">Faster</span><h4>Or just pay by card</h4></div>
+          <p>Commercial bookings can also go through the <a href="#pay">card route above</a>, which holds the date immediately and takes 10% off if paid in full.</p></div>
+      </div>
+    </div>
+
+    <div>
+      <form class="frm2" action="https://formsubmit.co/{{ site.email }}" method="POST">
+        <input type="hidden" name="_subject" value="Wirewalk Studio — invoice or purchase order request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="{{ '/booking/enquiry-received/' | absolute_url }}">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+
+        <div>
+          <label for="i-org">Organisation</label>
+          <input id="i-org" name="organisation" type="text" autocomplete="organization" required>
+        </div>
+        <div>
+          <label for="i-dept">Department <span class="muted">&mdash; optional</span></label>
+          <input id="i-dept" name="department" type="text">
+        </div>
+        <div>
+          <label for="i-name">Your name</label>
+          <input id="i-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="i-email">Your email</label>
+          <input id="i-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div>
+          <label for="i-ap">Accounts payable email <span class="muted">&mdash; where the invoice goes</span></label>
+          <input id="i-ap" name="accounts_payable_email" type="email">
+        </div>
+        <div>
+          <label for="i-po">PO number <span class="muted">&mdash; if already raised</span></label>
+          <input id="i-po" name="po_number" type="text">
+        </div>
+        <div class="wide-f">
+          <label for="i-item">What you are booking</label>
+          <select id="i-item" name="booking"><option value="">Loading&hellip;</option></select>
+        </div>
+        <div class="wide-f">
+          <label for="i-date">Dates you want held</label>
+          <input id="i-date" name="dates" type="text" placeholder="A date, a week, or several options">
+        </div>
+        <div class="wide-f">
+          <label for="i-msg">Anything else, and any documents you need</label>
+          <textarea id="i-msg" name="message" placeholder="Location, headcount, what the images are for, and whether procurement needs a quotation, W-9, certificate of insurance or supplier registration before a PO can be raised."></textarea>
+        </div>
+        <button class="btn btn-p" type="submit">Request an invoice or PO<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </form>
+      <p class="frm-note">This posts straight to email and lands you on a confirmation page once it has actually sent &mdash; there is no script here that says &ldquo;thanks&rdquo; without sending anything.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ══════════ SMALL PRINT ══════════ -->
+<section class="sec tint" id="smallprint" style="border-bottom:0"><div class="wide">
+  <div class="sh">
+    <span class="eyebrow">05 &mdash; The small print, in plain words</span>
+    <h2>What you are agreeing to.</h2>
+  </div>
+  <div class="rows">
+    <div class="row"><div><span class="kicker">Tax</span><h4>Prices exclude sales tax</h4></div>
+      <p>Every figure on this page is before any applicable sales or use tax. Tax is shown on the invoice or the Stripe receipt, not buried in the headline number.</p></div>
+    <div class="row"><div><span class="kicker">Travel</span><h4>Quoted separately</h4></div>
+      <p>Rates cover work in and around New York. Travel beyond the metro area is quoted before you book, never added afterwards.</p></div>
+    <div class="row"><div><span class="kicker">Retainer</span><h4>It holds the date and comes off the total</h4></div>
+      <p>A retainer is part payment, not a fee on top. The balance is due on delivery. Where a booking is invoiced instead, the whole fee is invoiced on net 30 terms.</p></div>
+    <div class="row"><div><span class="kicker">Moving a date</span><h4>Once, free, with notice</h4></div>
+      <p>More than 14 days&rsquo; notice moves a booking once at no charge, subject to availability. Inside that window the retainer covers time reserved that cannot be filled at short notice. A child who is unwell is not a late cancellation &mdash; a family or newborn session moves at no charge, whenever you tell me.</p></div>
+    <div class="row"><div><span class="kicker">Newborn</span><h4>Booked to a due date, not a day</h4></div>
+      <p>Newborn sessions hold a provisional week and confirm once the baby arrives. Pay the retainer against the due date and the week is yours.</p></div>
+    <div class="row"><div><span class="kicker">Rights</span><h4>Written down before the shoot</h4></div>
+      <p>Personal sessions come with print rights for your own use. Commercial licensing is set out in the quotation. Either way it is in writing before the camera comes out &mdash; see <a href="{{ '/process/' | relative_url }}#rights">rights and usage</a>.</p></div>
+  </div>
+  <div class="acts" style="margin-top:34px">
+    <a href="#pay" class="btn btn-p">Book and pay<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="{{ '/process/' | relative_url }}" class="btn btn-g">How a project runs</a>
+    <a href="tel:{{ site.phone_link }}" class="btn btn-g">{{ site.phone_display }}</a>
+  </div>
+</div></section>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+<script>
+/* Booking.
+ *
+ * Two rules, both of which exist because the alternative has burned somebody:
+ *   1. Every figure on this page comes from GET /catalog. Nothing is typed
+ *      into the markup. A page that carries its own copy of a price will one
+ *      day charge a different number from the one it advertised.
+ *   2. The browser never sends an amount. It sends a SKU and a mode; the
+ *      Worker resolves the money and Stripe collects it. No card field is
+ *      rendered by this site at any point.
+ */
+(function () {
+  var ORDERS = "https://wirewalk-orders.wirewalk-upload.workers.dev";
+  var SITEKEY = "0x4AAAAAAEuBwz8OpbI3bmtE";
+
+  var $ = function (s) { return document.querySelector(s); };
+  var ITEMS = [], GROUPS = [], BY = {}, widget = null;
+
+  /* Groups booked by holding a date use "retainer", which is the word a
+     client expects and which says the date is held. Commercial and post
+     work is a deposit against an invoice, and calling that a retainer
+     would be borrowing a warmer word than the thing deserves. */
+  var HOLDS_A_DATE = { sessions: 1, events: 1 };
+  var partWord = function (g) { return HOLDS_A_DATE[g] ? "Retainer" : "Deposit"; };
+
+  var esc = function (t) {
+    return String(t == null ? "" : t).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  };
+
+  var params = new URLSearchParams(location.search);
+  if (params.get("cancelled")) { $("#cancelled").hidden = false; }
+
+  fetch(ORDERS + "/catalog?practice=studio")
+    .then(function (r) {
+      if (!r.ok) throw new Error("catalogue " + r.status);
+      return r.json();
+    })
+    .then(function (d) {
+      ITEMS = (d.items || []).filter(function (i) { return i && i.sku; });
+      GROUPS = d.groups || [];
+      if (!ITEMS.length) throw new Error("catalogue is empty");
+      ITEMS.forEach(function (i) { BY[i.sku] = i; });
+      renderRates();
+      fillSelects();
+      renderQuoted();
+      applyDeepLink();
+    })
+    .catch(function () {
+      $("#rates-out").innerHTML =
+        '<p class="lead">Rates could not be loaded just now, and this page will not guess at them. ' +
+        'Call <strong>{{ site.phone_display }}</strong> or email ' +
+        '<a href="mailto:{{ site.email }}" style="color:var(--ac);text-decoration:underline">{{ site.email }}</a>' +
+        ' and the current rate card comes straight back.</p>';
+      $("#paymsg").className = "msg bad";
+      $("#paymsg").textContent =
+        "The booking system is not answering, so nothing can be paid here at the moment. " +
+        "Please call {{ site.phone_display }} — do not assume a booking has been made.";
+      $("#pay-item").innerHTML = '<option value="">Unavailable</option>';
+    });
+
+  /* ---- the rate tables ------------------------------------------------ */
+  function renderRates() {
+    var order = GROUPS.length
+      ? GROUPS
+      : [{ id: "sessions", label: "Sessions", note: "" }];
+    var html = "";
+    order.forEach(function (g) {
+      var rows = ITEMS.filter(function (i) { return i.group === g.id; });
+      if (!rows.length) return;
+      var word = partWord(g.id);
+      html +=
+        '<div class="rategrp"><h3 id="rates-' + esc(g.id) + '">' + esc(g.label) + "</h3>" +
+        '<p class="gnote">' + esc(g.note || "") + "</p>" +
+        '<div class="tbl-wrap"><table class="rate"><thead><tr>' +
+        "<th>What it is</th><th class=\"p\">Price</th>" +
+        '<th class="p">Paid in full</th><th class="p">' + word + "</th><th></th>" +
+        "</tr></thead><tbody>";
+      rows.forEach(function (i) {
+        html += '<tr><td class="n">' + esc(i.name) + "<small>" + esc(i.blurb) + "</small></td>";
+        if (i.priceOnApplication || !i.prepay || !i.deposit) {
+          html +=
+            '<td class="p poa" colspan="3">Quoted after we talk &mdash; it depends on too much to list</td>' +
+            '<td class="a"><button class="pick" type="button" data-quote="' + esc(i.sku) +
+            '">Ask for a quote</button></td></tr>';
+          return;
+        }
+        html +=
+          '<td class="p"><b>' + esc(i.listFormatted) + "</b></td>" +
+          '<td class="p"><b>' + esc(i.prepay.formatted) + "</b>" +
+          '<span class="save">saves ' + esc(i.prepay.savingFormatted) + "</span>" +
+          (i.special ? '<span class="special">' + esc(i.special.label) + "</span>" : "") +
+          "</td>" +
+          '<td class="p"><b>' + esc(i.deposit.formatted) + "</b>" +
+          '<span class="save">then ' + esc(i.deposit.balanceFormatted) + " on delivery</span></td>" +
+          '<td class="a"><button class="pick" type="button" data-sku="' + esc(i.sku) +
+          '">Book this</button></td></tr>';
+      });
+      html += "</tbody></table></div></div>";
+    });
+    $("#rates-out").innerHTML = html;
+
+    $("#rates-out").addEventListener("click", function (e) {
+      var b = e.target.closest("button.pick");
+      if (!b) return;
+      if (b.getAttribute("data-quote")) { choose(b.getAttribute("data-quote"), "quote"); }
+      else { choose(b.getAttribute("data-sku"), "pay"); }
+    });
+  }
+
+  /* ---- the three dropdowns ------------------------------------------- */
+  function fillSelects() {
+    var payable = ITEMS.filter(function (i) { return !i.priceOnApplication && i.prepay && i.deposit; });
+    fill($("#pay-item"), payable, "", function (i) { return i.name + " — " + i.listFormatted; });
+    fill($("#i-item"),
+         payable.filter(function (i) { return i.poEligible; }),
+         "", function (i) { return i.name + " — " + i.listFormatted; });
+
+    var quoted = ITEMS.filter(function (i) { return i.priceOnApplication; });
+    var qsel = $("#q-what");
+    qsel.innerHTML = "";
+    quoted.forEach(function (i) {
+      var o = document.createElement("option");
+      o.value = i.name; o.textContent = i.name; o.setAttribute("data-sku", i.sku);
+      qsel.appendChild(o);
+    });
+    ["Something larger than a listed rate", "More than one of these", "Not sure yet"]
+      .forEach(function (t) {
+        var o = document.createElement("option");
+        o.value = t; o.textContent = t; qsel.appendChild(o);
+      });
+
+    $("#pay-item").addEventListener("change", summarise);
+    $("#pay-mode").addEventListener("change", summarise);
+    summarise();
+  }
+
+  function fill(sel, list, blank, label) {
+    sel.innerHTML = "";
+    var o0 = document.createElement("option");
+    o0.value = ""; o0.textContent = blank || "Choose one";
+    sel.appendChild(o0);
+    var seen = {};
+    list.forEach(function (i) {
+      var g = i.group, grp = seen[g];
+      if (!grp) {
+        grp = document.createElement("optgroup");
+        var meta = GROUPS.filter(function (x) { return x.id === g; })[0];
+        grp.label = meta ? meta.label : g;
+        sel.appendChild(grp);
+        seen[g] = grp;
+      }
+      var o = document.createElement("option");
+      o.value = i.sku; o.textContent = label(i);
+      grp.appendChild(o);
+    });
+  }
+
+  /* ---- quoted work, listed from the catalogue ------------------------- */
+  function renderQuoted() {
+    var quoted = ITEMS.filter(function (i) { return i.priceOnApplication; });
+    if (!quoted.length) { $("#quote-list").innerHTML = ""; return; }
+    var html = "";
+    quoted.forEach(function (i) {
+      var meta = GROUPS.filter(function (x) { return x.id === i.group; })[0];
+      html +=
+        '<div class="row"><div><span class="kicker">' + esc(meta ? meta.label : i.group) +
+        "</span><h4>" + esc(i.name) + "</h4></div><p>" + esc(i.blurb) + "</p></div>";
+    });
+    $("#quote-list").innerHTML = html;
+  }
+
+  /* ---- what is due now ------------------------------------------------ */
+  function summarise() {
+    var i = BY[$("#pay-item").value], box = $("#due"), btn = $("#paygo");
+    var modeSel = $("#pay-mode");
+    if (!i) {
+      box.hidden = true; btn.disabled = true;
+      modeSel.options[0].textContent = "Retainer — hold the date";
+      return;
+    }
+    var word = partWord(i.group);
+    modeSel.options[0].textContent =
+      word + " — " + i.deposit.formatted + (HOLDS_A_DATE[i.group] ? ", holds the date" : "");
+    modeSel.options[1].textContent = "In full — " + i.prepay.formatted + ", 10% off";
+
+    var part = modeSel.value === "deposit";
+    box.hidden = false;
+    box.innerHTML = part
+      ? '<span class="big">' + esc(i.deposit.formatted) + " due now</span>" +
+        esc(word) + " against " + esc(i.name) + " at " + esc(i.listFormatted) + ". " +
+        (HOLDS_A_DATE[i.group] ? "The date is held once it clears" : "The booking is confirmed once it clears") +
+        ", and the balance of <b>" + esc(i.deposit.balanceFormatted) + "</b> is due on delivery. " +
+        "The 10% applies to the whole booking, so it is not available on a " + esc(word.toLowerCase()) + "."
+      : '<span class="big">' + esc(i.prepay.formatted) + " due now</span>" +
+        esc(i.name) + " paid in full &mdash; <b>" + esc(i.listFormatted) + " less " +
+        esc(i.prepay.savingFormatted) + "</b>. Nothing further to pay" +
+        (i.special ? ". " + esc(i.special.label) : ", and the date is held once it clears.");
+    btn.disabled = false;
+  }
+
+  /* ---- deep links from the service pages ------------------------------ */
+  function choose(sku, where) {
+    var i = BY[sku];
+    if (!i) return;
+    if (i.priceOnApplication) {
+      var qs = $("#q-what");
+      for (var n = 0; n < qs.options.length; n++) {
+        if (qs.options[n].getAttribute("data-sku") === sku) { qs.selectedIndex = n; break; }
+      }
+      go("#quote");
+      return;
+    }
+    $("#pay-item").value = sku;
+    if (i.poEligible) { $("#i-item").value = sku; }
+    summarise();
+    if (where !== "silent") go("#pay");
+  }
+
+  function go(hash) {
+    var el = document.querySelector(hash);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (history.replaceState) history.replaceState(null, "", location.pathname + location.search + hash);
+  }
+
+  function applyDeepLink() {
+    var want = params.get("item") || params.get("sku") || "";
+    if (want && BY[want]) {
+      /* The fragment in the incoming link has already put the browser in the
+         right place, so only scroll when the link did not name one. */
+      choose(want, location.hash ? "silent" : "");
+      return;
+    }
+    if (params.get("route") === "invoice") go("#invoice");
+  }
+
+  /* ---- Turnstile ------------------------------------------------------ */
+  function token() {
+    return new Promise(function (resolve, reject) {
+      if (!window.turnstile) { reject(new Error("verification did not load")); return; }
+      var opts = {
+        sitekey: SITEKEY,
+        callback: resolve,
+        "error-callback": function () { reject(new Error("verification failed")); }
+      };
+      if (widget === null) { widget = window.turnstile.render("#turnstile", opts); }
+      else { window.turnstile.reset(widget); window.turnstile.execute(widget, opts); }
+    });
+  }
+
+  /* ---- start the checkout --------------------------------------------- */
+  $("#paygo").addEventListener("click", function () {
+    var btn = $("#paygo"), msg = $("#paymsg"), emailEl = $("#pay-email");
+    var email = emailEl.value.trim();
+    if (!email || !emailEl.checkValidity()) {
+      msg.className = "msg bad";
+      msg.textContent = "An email address is needed for the receipt and the confirmation.";
+      emailEl.focus();
+      return;
+    }
+    if (!$("#pay-item").value) {
+      msg.className = "msg bad";
+      msg.textContent = "Choose what you are booking first.";
+      return;
+    }
+    btn.disabled = true;
+    msg.className = "msg";
+    msg.textContent = "Checking you are not a robot…";
+    token()
+      .then(function (t) {
+        msg.textContent = "Opening Stripe’s secure payment page…";
+        return fetch(ORDERS + "/checkout", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            sku: $("#pay-item").value,
+            mode: $("#pay-mode").value,
+            email: email,
+            organisation: $("#pay-org").value.trim(),
+            token: t
+          })
+        });
+      })
+      .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (res) {
+        if (!res.ok || !res.d.url) throw new Error(res.d.error || "the payment could not be started");
+        location.assign(res.d.url);
+      })
+      .catch(function (err) {
+        btn.disabled = false;
+        msg.className = "msg bad";
+        msg.textContent = (err && err.message ? err.message : "Something went wrong") +
+          " — nothing has been charged. Please call {{ site.phone_display }} or email {{ site.email }}.";
+      });
+  });
+})();
+</script>

@@ -17,7 +17,8 @@ description: >-
   <h1>Photography a company can actually use.</h1>
   <p class="lead">Most corporate photography fails for administrative reasons rather than aesthetic ones. The headshots do not match because they were taken by five people over five years. The files arrive full-frame and somebody in marketing spends a week cropping them. Nobody can answer whether the images may be used in a paid campaign, so they are quietly used anyway. This page is about the parts that prevent that.</p>
   <div class="acts">
-    <a href="{{ '/' | relative_url }}#contact" class="btn btn-p">Discuss a shoot<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="{{ '/booking/' | relative_url }}?item=studio-headshots#pay" class="btn btn-p">Book team headshots<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="{{ '/booking/' | relative_url }}#invoice" class="btn btn-g">Invoice or purchase order</a>
     <a href="#library" class="btn btn-g">The image library approach</a>
   </div>
 </div></section>
@@ -78,6 +79,15 @@ description: >-
       <p class="refnote">Public-domain reference frames showing the kinds of picture described, not this studio&rsquo;s portfolio: commissioned corporate work is generally covered by confidentiality and is shown only with written permission. <a href="{{ '/credits/' | relative_url }}">Sources and licences</a>.</p>
     </div>
   </div>
+
+  <div class="acts" style="margin-top:clamp(26px,3.5vw,40px)">
+    <a href="{{ '/booking/' | relative_url }}?item=studio-headshots#pay" class="btn btn-p">Book team headshots on site<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="{{ '/booking/' | relative_url }}?item=studio-commercial-day#pay" class="btn btn-g">Book a commercial day</a>
+    <a href="{{ '/booking/' | relative_url }}?item=studio-product-day#pay" class="btn btn-g">Book a product day</a>
+    <a href="{{ '/booking/' | relative_url }}?item=studio-headshots&amp;route=invoice#invoice" class="btn btn-g">Invoice or purchase order</a>
+  </div>
+  <p class="small muted" style="margin-top:14px">Team headshots and the commercial day rate are listed &mdash; book and pay outright, or ask for an invoice or PO and the dates are held while it goes through your finance system. Everything here is PO-eligible; family, newborn, portrait, pet and wedding bookings are card only.</p>
+
 </div></section>
 
 <!-- ══════════ THE IMAGE LIBRARY ══════════ -->
@@ -143,6 +153,13 @@ description: >-
       <p>Screens, whiteboards, documents, prototypes andnameplates all end up in frame if nobody is watching for them. They are watched for, and anything sensitive is composed out or cleared before the frame is taken rather than retouched afterwards. Work is done under a mutual non-disclosure agreement where required, and images made under one are not shown anywhere, including in this site&rsquo;s own work section, without written permission.</p>
     </div>
   </div>
+
+  <div class="acts" style="margin-top:clamp(26px,3.5vw,40px)">
+    <a href="{{ '/booking/' | relative_url }}#invoice" class="btn btn-p">Request an invoice or purchase order<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="{{ '/booking/' | relative_url }}#rates" class="btn btn-g">See the rates</a>
+  </div>
+  <p class="small muted" style="margin-top:14px">Net 30 against your PO number, with quotation, W-9, certificate of insurance or supplier registration back the same working day.</p>
+
 </div></section>
 
 <!-- ══════════ MOTION AND SOUND ══════════ -->
@@ -183,7 +200,9 @@ description: >-
     <p>Send the pages, decks and channels the images have to serve, roughly how many people are involved and where they are. That is enough to come back with a scope, a schedule that fits your working day, and a usage licence written in plain terms.</p>
   </div>
   <div class="acts">
-    <a href="{{ '/' | relative_url }}#contact" class="btn btn-p">Start a project<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="{{ '/booking/' | relative_url }}?item=studio-commercial-day#pay" class="btn btn-p">Book a commercial day<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="{{ '/booking/' | relative_url }}#invoice" class="btn btn-g">Request an invoice or PO</a>
+    <a href="{{ '/' | relative_url }}#contact" class="btn btn-g">Ask a question first</a>
     <a href="tel:{{ site.phone_link }}" class="btn btn-g">{{ site.phone_display }}</a>
   </div>
 </div></section>

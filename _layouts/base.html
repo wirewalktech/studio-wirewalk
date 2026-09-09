@@ -19,6 +19,12 @@
 <meta property="og:image:alt" content="{{ og.alt | escape }}">
 <meta name="twitter:card" content="summary_large_image">
 {% include style.html %}
+{%- comment -%}
+  Page-specific CSS, kept out of style.html so the other pages do not carry
+  rules only the booking flow uses. Set `extra_style: booking-style.html` in
+  a page's front matter.
+{%- endcomment -%}
+{% if page.extra_style %}{% include {{ page.extra_style }} %}{% endif %}
 </head>
 <body>
 {% include header.html %}

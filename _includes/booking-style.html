@@ -1,0 +1,79 @@
+<style>
+/* ── booking page ───────────────────────────────────────────────────────
+   Only loaded by /booking/ and its two outcome pages, via page.extra_style
+   in the front matter. Everything here builds on the palette and type
+   already defined in style.html; nothing is redefined.
+   ─────────────────────────────────────────────────────────────────────── */
+
+/* The rate tables. One table per catalogue group, each rendered from the
+   live catalogue — never typed into this file — so the page and the charge
+   cannot disagree, and a monthly special appears without a deploy. */
+.rategrp{margin-bottom:clamp(30px,4vw,52px)}
+.rategrp:last-child{margin-bottom:0}
+.rategrp h3{font-family:var(--disp);font-size:clamp(21px,2.4vw,27px);font-weight:400;
+  letter-spacing:-.014em;margin-bottom:6px}
+.rategrp .gnote{font-size:14.5px;color:var(--tx3);max-width:70ch;margin-bottom:16px}
+table.rate td.n{color:var(--tx);font-weight:500;min-width:230px}
+table.rate td.n small{display:block;font-weight:400;color:var(--tx2);font-size:13px;
+  line-height:1.5;margin-top:4px;max-width:46ch}
+table.rate td.p{white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums;
+  color:var(--tx2)}
+table.rate th.p{text-align:right}
+table.rate td.p b{color:var(--tx);font-weight:600}
+table.rate .save{display:block;color:var(--ac);font-size:12px;letter-spacing:.01em}
+table.rate .special{display:block;color:var(--ac);font-size:12px;font-weight:600}
+table.rate .poa{font-style:italic;color:var(--tx3);white-space:normal;text-align:left}
+table.rate td.a{text-align:right;white-space:nowrap;width:1%}
+.pick{font:500 12.5px/1 var(--sans);color:var(--ac);background:transparent;
+  border:1px solid var(--acln);border-radius:999px;padding:8px 14px;cursor:pointer;
+  transition:background .16s var(--e),border-color .16s var(--e)}
+.pick:hover{background:var(--acbg);border-color:var(--ac)}
+.pick[aria-pressed="true"]{background:var(--ac);border-color:var(--ac);color:var(--btn-fg)}
+
+/* The pay panel. Not a <form>: it posts JSON to the orders Worker and then
+   hands the visitor to Stripe, so there is no browser form submission to
+   hijack and no card field anywhere on this domain. */
+.paybox{border:1px solid var(--ln);border-radius:8px;background:var(--card);
+  box-shadow:var(--shadow-l);padding:clamp(22px,3vw,38px)}
+.payrow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:720px){.payrow{grid-template-columns:1fr}}
+.due{border-left:2px solid var(--ac);padding:4px 0 4px 18px;margin:22px 0 6px;
+  font-size:15.5px;color:var(--tx2)}
+.due b{color:var(--tx);font-weight:600}
+.due .big{font-family:var(--disp);font-size:clamp(26px,3vw,34px);font-weight:400;
+  color:var(--tx);display:block;letter-spacing:-.015em;line-height:1.2;margin-bottom:4px}
+.msg{margin-top:14px;font-size:14.5px;min-height:1.3em}
+.msg.bad{color:#B4321F}
+.msg.ok{color:var(--ac)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .msg.bad{color:#F09080}}
+.turn{margin:20px 0 4px;min-height:0}
+.paynote{margin-top:20px;font-size:13px;line-height:1.65;color:var(--tx3)}
+.paynote a{color:var(--ac);text-decoration:underline;text-underline-offset:2px}
+
+/* Two plain HTML forms — the invoice/PO route and the quote request. Both
+   post straight to FormSubmit and land on a real confirmation page, so a
+   "thank you" is only ever shown after something was actually sent. */
+.frm2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+@media (max-width:720px){.frm2{grid-template-columns:1fr}}
+.frm2 .wide-f{grid-column:1/-1}
+.frm2 label{font-size:12.5px;color:var(--tx3);margin-top:12px;display:block;letter-spacing:.02em}
+.frm2 input,.frm2 select,.frm2 textarea{width:100%;font:400 15.5px/1.5 var(--sans);
+  color:var(--tx);background:var(--bg);border:1px solid var(--ln2);border-radius:6px;
+  padding:11px 13px;margin-top:5px}
+.frm2 textarea{min-height:104px;resize:vertical}
+.frm2 input:focus,.frm2 select:focus,.frm2 textarea:focus{outline:0;border-color:var(--ac);
+  box-shadow:0 0 0 3px var(--acbg)}
+.frm2 .btn{margin-top:22px;justify-self:start}
+
+/* Outcome pages */
+.outcome{max-width:70ch}
+.outcome .stat{font-family:var(--disp);font-size:clamp(28px,3.6vw,40px);font-weight:400;
+  letter-spacing:-.016em;line-height:1.18;margin-bottom:10px}
+.outcome .stat.no{color:var(--tx2)}
+.steps2{counter-reset:s;list-style:none;margin-top:20px}
+.steps2 li{counter-increment:s;position:relative;padding-left:40px;margin-bottom:16px;
+  font-size:15.5px;color:var(--tx2);max-width:64ch}
+.steps2 li b{color:var(--tx);font-weight:600}
+.steps2 li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:2px;
+  font:400 12px/1.6 var(--mono);color:var(--ac);letter-spacing:.06em}
+</style>
