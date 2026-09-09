@@ -149,7 +149,6 @@ NEW += [
 ("ref-fam-newmum",   "Lfamily-f04cbdf1-db1",(4,5),"feature",.4,"a mother holding a newborn with her older child alongside"),
 
 # ══ NEWBORN — REFERENCE FRAMES, SECOND SWEEP ═════════════════════════════
-("ref-nb-hat",      "Lnewborn-1f6e6288-bb1",(3,2),"grid",.5,"a newborn asleep, wrapped, in a striped hat"),
 ("ref-nb-wool",     "Lnewborn-34f35733-bc5",(3,2),"grid",.5,"newborn feet against knitted wool"),
 ("ref-nb-cream",    "Lnewborn-3ee8a1f6-029",(3,2),"grid",.5,"newborn feet on a cream blanket"),
 ("ref-nb-sleep",    "Lnewborn-7596daff-064",(4,3),"grid",.5,"a newborn sleeping in soft daylight"),
@@ -220,4 +219,59 @@ NEW += [
 ("ref-ev-cupcakes", "Levent-189934f2-040",(3,2),"grid",.5,"cupcakes and candles styled on wood"),
 ("ref-ev-flatlay",  "Levent-4c7dc997-60e",(3,2),"grid",.5,"a party flat lay with confetti and cake"),
 ("ref-ev-balloons", "Levent-7e0d5bc9-d83",(4,5),"grid",.4,"balloons against a white brick wall"),
+]
+
+# ─────────────────────────────────────────────────────────────────────────
+# THIRD PASS — HERO CROPS, after the pages were looked at in a real browser.
+#
+# What was wrong: the homepage hero was family-198, the owner's own frame of
+# a child photographed FROM BEHIND, and /family/ opened with family-075 in a
+# 21:9 band -- a crop that throws away 36% of the frame's HEIGHT and took the
+# top of a head with it. On a site selling family portraits the largest image
+# showed a child's back.
+#
+# The rule these entries exist to enforce: A CROP THAT TRIMS HEIGHT CAN CUT A
+# HEAD OFF; A CROP THAT TRIMS SIDES CANNOT. Every source here is 3:2, so
+# cropping to 4:3 trims 11% off the SIDES and touches no vertical pixel --
+# which is why the hero slots moved from 4:5 to 4:3 rather than the frames
+# moving to fit the old slots. 4:5 out of a 3:2 source would have thrown away
+# 47% of the width and left a 512px rendition; both are worse than a slot
+# that is slightly less tall.
+#
+# The one wide crop below trims height, so it is anchored at 0.05 -- hard to
+# the top, where heads are -- and takes its 16% out of the ground instead.
+NEW += [
+("ref-fam-hug-43",     "Lfamily-7673b1b2-060",(4,3),"feature",.5,"a family in a group hug, all of them laughing"),
+("ref-fam-lift-43",    "Lfamily-31d35e4b-4ba",(4,3),"feature",.5,"a mother lifting her laughing daughter, backlit"),
+("ref-fam-cheek-43",   "Lfamily-412012f3-8ab",(4,3),"feature",.5,"a mother and daughter cheek to cheek in golden light"),
+("ref-fam-sibkiss-43", "Lfamily-84005e87-a2a",(4,3),"grid",.5,"an older sibling kissing the new baby"),
+("ref-fam-baking-43",  "Lfamily-2d4b99d9-995",(4,3),"grid",.5,"a grandmother and her granddaughter baking together"),
+("ref-fam-golden-43",  "Lfamily-a514e487-56b",(4,3),"feature",.5,"a mother and daughter outdoors at golden hour"),
+("ref-fam-dogport-43", "Lfamily-74d31a89-d2e",(4,3),"grid",.5,"a family on the grass with their dog, facing the camera"),
+("ref-fam-newborn3-43","Lfamily-e3b39ad7-8a7",(4,3),"grid",.5,"parents and children together in bed with the newborn"),
+("ref-nb-hat-43",      "Lnewborn-1f6e6288-bb1",(4,3),"feature",.5,"a newborn asleep, wrapped, in a striped hat"),
+# 4898x3265 source, so 16:9 still lands at 4898px wide. Anchored to the top:
+# the child in this frame is held UP, and the 16% this crop costs comes out
+# of the field at the bottom rather than off anybody's head.
+("ref-fam-laugh-wide", "Lfamily-7b4ec082-444",(16,9),"hero",.05,"a father holding a laughing child up in a field"),
+]
+
+# ─────────────────────────────────────────────────────────────────────────
+# HEAD-SAFE RE-ANCHORS of the owner's own frames.
+#
+# An audit of all 312 crops for "how much does this take off the TOP" found
+# five containing people that were centring their vertical trim -- so a
+# close portrait lost 7-17% off the top of the frame, which is precisely how
+# a forehead gets cut. Same slug content, same ratio, same layout; only the
+# anchor moves to 0, which takes the whole trim off the BOTTOM instead.
+# Heads are at the top of photographs of people; ground is at the bottom.
+#
+# These are the owner's own work (F = his Flickr, O = the studio archive) and
+# carry no "Reference frame:" prefix.
+NEW += [
+("ppl-smoker-t2", "Fpeople-53693994437",(3,2),"feature",0,"Older man outdoors, cigarette in his lips, weathered face filling the frame"),
+("ppl-bench-t2",  "Fpeople-53695094818",(3,2),"grid",0,"Man in a flat cap sitting alone on a park bench among fallen leaves"),
+("ppl-tower-t2",  "Fpeople-53744800312",(3,2),"tile",0,"Two lifeguards on a yellow beach tower, rescue buoys planted in the sand"),
+("ppl-quad-t2",   "Fpeople-53695324610",(3,2),"grid",0,"Beach patrol rider crossing the sand on a quad bike"),
+("fam-dress-w2",  "Ofamily-198",(3,2),"grid",0,"Small child in a purple dress in dappled light"),
 ]

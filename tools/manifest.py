@@ -1,3 +1,7 @@
+# Five entries were retired in favour of head-safe re-anchors in
+# manifest_licensed.py (ppl-smoker/bench/tower/quad, fam-dress-w). Their
+# vertical trim was centred, so a close portrait lost up to 17% off the
+# TOP of the frame. The replacements are identical but anchored at 0.
 # slug, source, ratio(w/h), role, anchor(0=top..1=bottom), alt
 # source:  G<name> = ~/Downloads/wirewalk-photos/selects/<name>.jpg   (owner's own)
 #          L<name> = ~/Downloads/wirewalk-photos/flickr/<name>.jpg    (owner's own)
@@ -18,13 +22,14 @@ M = [
 ("fam-grass-t",     "Gfamily-075",(4,5),"feature",.45,"Young girl sitting in long grass, backlit in late afternoon"),
 ("fam-surf",        "Gfamily-169",(3,2),"feature",.5,"Child running through shallow surf, backlit and in monochrome"),
 ("fam-surf-t",      "Gfamily-169",(4,5),"grid",.45,"Child running through shallow surf, backlit and in monochrome"),
-("fam-dress",       "Gfamily-198",(4,5),"feature",.42,"Small child in a purple dress seen from behind, dappled light through trees"),
-("fam-dress-w",     "Gfamily-198",(3,2),"grid",.3,"Small child in a purple dress in dappled light"),
+# ("fam-dress", ...) retired: a 4:5 crop of a 2400x3600 frame trims 17% off
+# the HEIGHT, and it is the child-photographed-from-behind frame that should
+# not have been in a tall hero slot. The photograph is still published as
+# fam-dress-w further down /family/.
 ("fam-run",         "Gfamily-206",(3,2),"feature",.5,"Child caught mid-run across a lawn, arms out"),
 ("fam-run-t",       "Gfamily-206",(4,5),"grid",.4,"Child caught mid-run across a lawn, arms out"),
 
 # ══ PEOPLE — the owner's own street portraiture ══════════════════════════
-("ppl-smoker",      "Lpeople-53693994437",(3,2),"feature",.4,"Older man outdoors, cigarette in his lips, weathered face filling the frame"),
 ("ppl-blossom",     "Lpeople-53694883761",(3,2),"grid",.4,"Woman framed by pink blossom, looking past the camera"),
 ("ppl-blossom-t",   "Lpeople-53694883761",(4,5),"feature",.35,"Woman framed by pink blossom, looking past the camera"),
 ("ppl-chess",       "Lpeople-53695232234",(3,2),"grid",.5,"Three men bent over a stone chess table in a park"),
@@ -32,16 +37,13 @@ M = [
 ("ppl-reading",     "Lpeople-53695324725",(4,5),"grid",.4,"A man and a child reading together against a bright yellow wall"),
 ("ppl-lifeguard",   "Lpeople-53750327826",(4,5),"grid",.45,"Lifeguard seated beneath an orange umbrella, tower blocks behind"),
 ("ppl-surfer",      "Lpeople-53695232139",(3,2),"grid",.5,"Surfer wading out through the shallows carrying a board overhead"),
-("ppl-bench",       "Lpeople-53695094818",(3,2),"grid",.5,"Man in a flat cap sitting alone on a park bench among fallen leaves"),
 ("ppl-bench-2",     "Lpeople-53695232164",(4,5),"grid",.4,"Woman resting on a park bench in autumn light"),
 ("ppl-grass",       "Lpeople-53695094908",(3,2),"grid",.5,"Two young people sitting together on the grass in late afternoon light"),
 ("ppl-taichi",      "Lpeople-53693994427",(4,5),"grid",.4,"A line of people practising tai chi along a park path"),
-("ppl-quad",        "Lpeople-53695324610",(3,2),"grid",.5,"Beach patrol rider crossing the sand on a quad bike"),
 ("ppl-angler",      "Lpeople-53765728502",(4,5),"grid",.45,"Lone surfcaster on an empty beach under piled cloud, warm monochrome"),
 ("ppl-anglers",     "Lpeople-53750451288",(3,2),"grid",.5,"Two anglers sitting out a grey afternoon beside their rods"),
 ("ppl-bodyboard",   "Lpeople-53872899420",(3,2),"grid",.5,"Bodyboarder walking out of the water as another rider takes a wave"),
 ("ppl-walk",        "Lpeople-53694883701",(4,5),"tile",.35,"Woman walking a park path in sunglasses, headphones in"),
-("ppl-tower",       "Lpeople-53744800312",(3,2),"tile",.5,"Two lifeguards on a yellow beach tower, rescue buoys planted in the sand"),
 
 # ══ CITYSCAPE — the owner's own, largely monochrome ══════════════════════
 ("city-dusk",       "Lcityscape-53783702414",(3,2),"feature",.5,"City waterfront at dusk, cloud piled above the towers and a bird crossing"),

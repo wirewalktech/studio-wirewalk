@@ -12,19 +12,27 @@ description: >-
 ---
 <section class="mast"><div class="wide">
   <div class="crumb"><a href="{{ '/' | relative_url }}">Studio</a> <span>/</span> <span>Family and children</span></div>
-  <span class="eyebrow">Family and children</span>
-  <h1>The year they were like this.</h1>
-  <p class="lead">Children change faster than anyone photographs them. A family session is not really about a portrait for the wall &mdash; though you get one &mdash; it is about having a proper record of a particular summer, a particular height, a particular way of standing. Sessions are run at the pace of the youngest person there, which is the only pace that produces anything worth keeping.</p>
-  <div class="acts">
-    <a href="{{ '/booking/' | relative_url }}?item=studio-family#pay" class="btn btn-p">Book a family session<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <a href="{{ '/booking/' | relative_url }}?item=studio-newborn#pay" class="btn btn-g">Book a newborn session</a>
-    <a href="#newborn" class="btn btn-g">How newborn sessions work</a>
+  <div class="split">
+    <div>
+      <span class="eyebrow">Family and children</span>
+      <h1>The year they were like this.</h1>
+      <p class="lead">Children change faster than anyone photographs them. A family session is not really about a portrait for the wall &mdash; though you get one &mdash; it is about having a proper record of a particular summer, a particular height, a particular way of standing. Sessions are run at the pace of the youngest person there, which is the only pace that produces anything worth keeping.</p>
+      <div class="acts">
+        <a href="{{ '/booking/' | relative_url }}?item=studio-family#pay" class="btn btn-p">Book a family session<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="{{ '/booking/' | relative_url }}?item=studio-newborn#pay" class="btn btn-g">Book a newborn session</a>
+        <a href="#newborn" class="btn btn-g">How newborn sessions work</a>
+      </div>
+    </div>
+    <div>
+      <div class="dev">{% include photo.html slug="ref-fam-golden-43" ratio="r43" loading="eager" fetchpriority="high" sizes="(max-width:900px) 100vw, 46vw" %}</div>
+      <p class="refnote" style="margin-top:12px"><b style="color:var(--tx2)">Reference frame &mdash; not this studio&rsquo;s work.</b> A licensed photograph, here because it shows a face. <a href="{{ '/credits/' | relative_url }}#licensed">Creator, licence and source</a>.</p>
+    </div>
   </div>
 </div></section>
 
 <div class="bleed">
-  <div class="dev">{% include photo.html slug="fam-grass" ratio="r219" loading="eager" fetchpriority="high" sizes="100vw" %}</div>
-  <figcaption><span class="t">Long grass, late afternoon</span><span class="m">The studio&rsquo;s own work</span></figcaption>
+  <div class="dev">{% include photo.html slug="ref-fam-laugh-wide" ratio="r169" sizes="100vw" %}</div>
+  <figcaption><span class="t">A father, a child, and a field</span><span class="m">Reference frame &mdash; not the studio&rsquo;s work. <a href="{{ '/credits/' | relative_url }}#licensed" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Creator and licence</a></span></figcaption>
 </div>
 
 <!-- ══════════ WHAT A SESSION IS ══════════ -->
@@ -61,7 +69,7 @@ description: >-
 
     <div class="sticky">
       <div class="grid g2">
-        <div class="dev">{% include photo.html slug="fam-dress" ratio="r45" sizes="(max-width:900px) 50vw, 19vw" %}</div>
+        <div class="dev">{% include photo.html slug="fam-grass-t" ratio="r45" sizes="(max-width:900px) 50vw, 19vw" %}</div>
         <div class="dev d1">{% include photo.html slug="fam-run-t" ratio="r45" sizes="(max-width:900px) 50vw, 19vw" %}</div>
         <div class="dev d2" style="grid-column:span 2">{% include photo.html slug="fam-surf" ratio="r32" sizes="(max-width:900px) 100vw, 38vw" %}</div>
       </div>
@@ -141,15 +149,15 @@ description: >-
       </ul>
     </div>
     <div class="sticky">
-      {% include photo.html slug="ref-nb-star" ratio="r45" class="dev" sizes="(max-width:900px) 100vw, 40vw" %}
-      <p class="refnote"><b style="color:var(--tx2)">Reference frames, not the studio&rsquo;s newborn work.</b> Newborn sessions are offered and the description above is exactly how they run &mdash; but the studio has no newborn photographs of its own to show yet, and on a photographer&rsquo;s site every picture reads as &ldquo;I made this&rdquo;. These four frames are properly licensed images used to show what the session is <em>about</em>. They are not evidence of newborn work performed here, and nobody should book on the strength of them. They come out the moment there are real sessions to put in their place, with the families&rsquo; permission. <a href="{{ '/credits/' | relative_url }}#licensed">Licences, creators and sources</a>.</p>
+      {% include photo.html slug="ref-nb-hat-43" ratio="r43" class="dev" sizes="(max-width:900px) 100vw, 40vw" %}
+      <p class="refnote"><b style="color:var(--tx2)">Reference frames, not the studio&rsquo;s newborn work.</b> Newborn sessions are offered and the description above is exactly how they run &mdash; but the studio has no newborn photographs of its own to show yet, and on a photographer&rsquo;s site every picture reads as &ldquo;I made this&rdquo;. These nine frames are properly licensed images used to show what the session is <em>about</em>. They are not evidence of newborn work performed here, and nobody should book on the strength of them. They come out the moment there are real sessions to put in their place, with the families&rsquo; permission. <a href="{{ '/credits/' | relative_url }}#licensed">Licences, creators and sources</a>.</p>
     </div>
   </div>
 
   <div class="grid g3" style="margin-top:clamp(24px,3vw,36px)">
-    <div class="dev">{% include photo.html slug="ref-nb-hat" ratio="r32" sizes="(max-width:700px) 100vw, (max-width:1100px) 46vw, 30vw" %}</div>
     <div class="dev d1">{% include photo.html slug="ref-nb-sleep" ratio="r43" sizes="(max-width:700px) 100vw, (max-width:1100px) 46vw, 30vw" %}</div>
     <div class="dev d2">{% include photo.html slug="ref-nb-finger" ratio="r32" sizes="(max-width:700px) 100vw, (max-width:1100px) 46vw, 30vw" %}</div>
+    <div class="dev">{% include photo.html slug="ref-nb-star" ratio="r45" sizes="(max-width:700px) 100vw, (max-width:1100px) 46vw, 30vw" %}</div>
     <div class="dev">{% include photo.html slug="ref-nb-wool" ratio="r32" sizes="(max-width:700px) 100vw, (max-width:1100px) 46vw, 30vw" %}</div>
     <div class="dev d1">{% include photo.html slug="ref-nb-cupped" ratio="r32" sizes="(max-width:700px) 100vw, (max-width:1100px) 46vw, 30vw" %}</div>
     <div class="dev d2">{% include photo.html slug="ref-nb-feet" ratio="r32" sizes="(max-width:700px) 100vw, (max-width:1100px) 46vw, 30vw" %}</div>
@@ -232,7 +240,7 @@ description: >-
     </div>
     <div class="sticky">
       <div class="dev">{% include photo.html slug="fam-run" ratio="r32" sizes="(max-width:900px) 100vw, 38vw" %}</div>
-      <div class="dev d1" style="margin-top:14px">{% include photo.html slug="fam-dress-w" ratio="r32" sizes="(max-width:900px) 100vw, 38vw" %}</div>
+      <div class="dev d1" style="margin-top:14px">{% include photo.html slug="fam-dress-w2" ratio="r32" sizes="(max-width:900px) 100vw, 38vw" %}</div>
       <p class="ownnote"><b>The studio&rsquo;s own work.</b></p>
     </div>
   </div>

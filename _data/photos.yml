@@ -225,24 +225,15 @@ det-reeds:
   key: "detail-239"
   webp: "/assets/img/det-reeds-420.webp 420w, /assets/img/det-reeds-640.webp 640w"
   jpg: "/assets/img/det-reeds-520.jpg"
-fam-dress:
-  alt: "Small child in a purple dress seen from behind, dappled light through trees"
-  ratio: "4/5"
-  w: 1200
-  h: 1500
-  src: "selects"
-  key: "family-198"
-  webp: "/assets/img/fam-dress-640.webp 640w, /assets/img/fam-dress-1000.webp 1000w, /assets/img/fam-dress-1400.webp 1400w"
-  jpg: "/assets/img/fam-dress-1200.jpg"
-fam-dress-w:
+fam-dress-w2:
   alt: "Small child in a purple dress in dappled light"
   ratio: "3/2"
   w: 800
   h: 533
   src: "selects"
   key: "family-198"
-  webp: "/assets/img/fam-dress-w-640.webp 640w, /assets/img/fam-dress-w-1000.webp 1000w"
-  jpg: "/assets/img/fam-dress-w-800.jpg"
+  webp: "/assets/img/fam-dress-w2-640.webp 640w, /assets/img/fam-dress-w2-1000.webp 1000w"
+  jpg: "/assets/img/fam-dress-w2-800.jpg"
 fam-grass:
   alt: "Young girl sitting in long grass, backlit, the background thrown well out of focus"
   ratio: "3/2"
@@ -666,15 +657,6 @@ ppl-angler:
   key: "people-53765728502"
   webp: "/assets/img/ppl-angler-640.webp 640w"
   jpg: "/assets/img/ppl-angler-683.jpg"
-ppl-bench:
-  alt: "Man in a flat cap sitting alone on a park bench among fallen leaves"
-  ratio: "3/2"
-  w: 800
-  h: 533
-  src: "flickr"
-  key: "people-53695094818"
-  webp: "/assets/img/ppl-bench-640.webp 640w, /assets/img/ppl-bench-1000.webp 1000w"
-  jpg: "/assets/img/ppl-bench-800.jpg"
 ppl-bench-2:
   alt: "Woman resting on a park bench in autumn light"
   ratio: "4/5"
@@ -684,6 +666,15 @@ ppl-bench-2:
   key: "people-53695232164"
   webp: "/assets/img/ppl-bench-2-640.webp 640w"
   jpg: "/assets/img/ppl-bench-2-683.jpg"
+ppl-bench-t2:
+  alt: "Man in a flat cap sitting alone on a park bench among fallen leaves"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "flickr"
+  key: "people-53695094818"
+  webp: "/assets/img/ppl-bench-t2-640.webp 640w, /assets/img/ppl-bench-t2-1000.webp 1000w"
+  jpg: "/assets/img/ppl-bench-t2-800.jpg"
 ppl-blossom:
   alt: "Woman framed by pink blossom, looking past the camera"
   ratio: "3/2"
@@ -738,15 +729,15 @@ ppl-lifeguard:
   key: "people-53750327826"
   webp: "/assets/img/ppl-lifeguard-614.webp 614w"
   jpg: "/assets/img/ppl-lifeguard-614.jpg"
-ppl-quad:
+ppl-quad-t2:
   alt: "Beach patrol rider crossing the sand on a quad bike"
   ratio: "3/2"
   w: 800
   h: 533
   src: "flickr"
   key: "people-53695324610"
-  webp: "/assets/img/ppl-quad-640.webp 640w, /assets/img/ppl-quad-1000.webp 1000w"
-  jpg: "/assets/img/ppl-quad-800.jpg"
+  webp: "/assets/img/ppl-quad-t2-640.webp 640w, /assets/img/ppl-quad-t2-1000.webp 1000w"
+  jpg: "/assets/img/ppl-quad-t2-800.jpg"
 ppl-reading:
   alt: "A man and a child reading together against a bright yellow wall"
   ratio: "4/5"
@@ -756,15 +747,15 @@ ppl-reading:
   key: "people-53695324725"
   webp: "/assets/img/ppl-reading-640.webp 640w"
   jpg: "/assets/img/ppl-reading-800.jpg"
-ppl-smoker:
+ppl-smoker-t2:
   alt: "Older man outdoors, cigarette in his lips, weathered face filling the frame"
   ratio: "3/2"
   w: 1024
   h: 683
   src: "flickr"
   key: "people-53693994437"
-  webp: "/assets/img/ppl-smoker-640.webp 640w, /assets/img/ppl-smoker-1000.webp 1000w"
-  jpg: "/assets/img/ppl-smoker-1024.jpg"
+  webp: "/assets/img/ppl-smoker-t2-640.webp 640w, /assets/img/ppl-smoker-t2-1000.webp 1000w, /assets/img/ppl-smoker-t2-1024.webp 1024w"
+  jpg: "/assets/img/ppl-smoker-t2-1024.jpg"
 ppl-studio:
   alt: "Studio-lit portrait of a woman against a plain warm ground"
   ratio: "4/5"
@@ -792,15 +783,15 @@ ppl-taichi:
   key: "people-53693994427"
   webp: "/assets/img/ppl-taichi-640.webp 640w"
   jpg: "/assets/img/ppl-taichi-774.jpg"
-ppl-tower:
+ppl-tower-t2:
   alt: "Two lifeguards on a yellow beach tower, rescue buoys planted in the sand"
   ratio: "3/2"
   w: 520
   h: 347
   src: "flickr"
   key: "people-53744800312"
-  webp: "/assets/img/ppl-tower-420.webp 420w, /assets/img/ppl-tower-640.webp 640w"
-  jpg: "/assets/img/ppl-tower-520.jpg"
+  webp: "/assets/img/ppl-tower-t2-420.webp 420w, /assets/img/ppl-tower-t2-640.webp 640w"
+  jpg: "/assets/img/ppl-tower-t2-520.jpg"
 prop-barn:
   alt: "A barn standing in long summer grass"
   ratio: "3/2"
@@ -1179,6 +1170,15 @@ ref-fam-baking:
   key: "family-2d4b99d9-995"
   webp: "/assets/img/ref-fam-baking-640.webp 640w, /assets/img/ref-fam-baking-960.webp 960w"
   jpg: "/assets/img/ref-fam-baking-960.jpg"
+ref-fam-baking-43:
+  alt: "Reference frame: a grandmother and her granddaughter baking together"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "family-2d4b99d9-995"
+  webp: "/assets/img/ref-fam-baking-43-640.webp 640w, /assets/img/ref-fam-baking-43-853.webp 853w"
+  jpg: "/assets/img/ref-fam-baking-43-800.jpg"
 ref-fam-beach:
   alt: "Reference frame: a parent carrying a child along a wide empty beach"
   ratio: "3/2"
@@ -1224,6 +1224,15 @@ ref-fam-cheek:
   key: "family-412012f3-8ab"
   webp: "/assets/img/ref-fam-cheek-640.webp 640w, /assets/img/ref-fam-cheek-960.webp 960w"
   jpg: "/assets/img/ref-fam-cheek-800.jpg"
+ref-fam-cheek-43:
+  alt: "Reference frame: a mother and daughter cheek to cheek in golden light"
+  ratio: "4/3"
+  w: 853
+  h: 640
+  src: "licensed"
+  key: "family-412012f3-8ab"
+  webp: "/assets/img/ref-fam-cheek-43-640.webp 640w, /assets/img/ref-fam-cheek-43-853.webp 853w"
+  jpg: "/assets/img/ref-fam-cheek-43-853.jpg"
 ref-fam-closeport:
   alt: "Reference frame: a mother and daughter photographed close, outdoors"
   ratio: "3/2"
@@ -1242,6 +1251,15 @@ ref-fam-dogport:
   key: "family-74d31a89-d2e"
   webp: "/assets/img/ref-fam-dogport-640.webp 640w, /assets/img/ref-fam-dogport-960.webp 960w"
   jpg: "/assets/img/ref-fam-dogport-800.jpg"
+ref-fam-dogport-43:
+  alt: "Reference frame: a family on the grass with their dog, facing the camera"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "family-74d31a89-d2e"
+  webp: "/assets/img/ref-fam-dogport-43-640.webp 640w, /assets/img/ref-fam-dogport-43-853.webp 853w"
+  jpg: "/assets/img/ref-fam-dogport-43-800.jpg"
 ref-fam-four:
   alt: "Reference frame: a relaxed outdoor portrait of a family of four"
   ratio: "3/2"
@@ -1260,6 +1278,15 @@ ref-fam-golden:
   key: "family-a514e487-56b"
   webp: "/assets/img/ref-fam-golden-640.webp 640w, /assets/img/ref-fam-golden-960.webp 960w"
   jpg: "/assets/img/ref-fam-golden-800.jpg"
+ref-fam-golden-43:
+  alt: "Reference frame: a mother and daughter outdoors at golden hour"
+  ratio: "4/3"
+  w: 853
+  h: 640
+  src: "licensed"
+  key: "family-a514e487-56b"
+  webp: "/assets/img/ref-fam-golden-43-640.webp 640w, /assets/img/ref-fam-golden-43-853.webp 853w"
+  jpg: "/assets/img/ref-fam-golden-43-853.jpg"
 ref-fam-grass-dog:
   alt: "Reference frame: a family lying on the grass with their dog"
   ratio: "3/2"
@@ -1278,6 +1305,15 @@ ref-fam-hug:
   key: "family-7673b1b2-060"
   webp: "/assets/img/ref-fam-hug-640.webp 640w, /assets/img/ref-fam-hug-960.webp 960w"
   jpg: "/assets/img/ref-fam-hug-960.jpg"
+ref-fam-hug-43:
+  alt: "Reference frame: a family in a group hug, all of them laughing"
+  ratio: "4/3"
+  w: 853
+  h: 640
+  src: "licensed"
+  key: "family-7673b1b2-060"
+  webp: "/assets/img/ref-fam-hug-43-640.webp 640w, /assets/img/ref-fam-hug-43-853.webp 853w"
+  jpg: "/assets/img/ref-fam-hug-43-853.jpg"
 ref-fam-laugh:
   alt: "Reference frame: a father holding a laughing child up in a field"
   ratio: "3/2"
@@ -1296,6 +1332,15 @@ ref-fam-laugh-t:
   key: "family-7b4ec082-444"
   webp: "/assets/img/ref-fam-laugh-t-640.webp 640w, /assets/img/ref-fam-laugh-t-1000.webp 1000w, /assets/img/ref-fam-laugh-t-1400.webp 1400w"
   jpg: "/assets/img/ref-fam-laugh-t-1200.jpg"
+ref-fam-laugh-wide:
+  alt: "Reference frame: a father holding a laughing child up in a field"
+  ratio: "16/9"
+  w: 1400
+  h: 788
+  src: "licensed"
+  key: "family-7b4ec082-444"
+  webp: "/assets/img/ref-fam-laugh-wide-900.webp 900w, /assets/img/ref-fam-laugh-wide-1400.webp 1400w, /assets/img/ref-fam-laugh-wide-2000.webp 2000w"
+  jpg: "/assets/img/ref-fam-laugh-wide-1400.jpg"
 ref-fam-leaves:
   alt: "Reference frame: a family's feet gathered in a drift of autumn leaves"
   ratio: "3/2"
@@ -1314,6 +1359,15 @@ ref-fam-lift:
   key: "family-31d35e4b-4ba"
   webp: "/assets/img/ref-fam-lift-640.webp 640w, /assets/img/ref-fam-lift-960.webp 960w"
   jpg: "/assets/img/ref-fam-lift-960.jpg"
+ref-fam-lift-43:
+  alt: "Reference frame: a mother lifting her laughing daughter, backlit"
+  ratio: "4/3"
+  w: 853
+  h: 640
+  src: "licensed"
+  key: "family-31d35e4b-4ba"
+  webp: "/assets/img/ref-fam-lift-43-640.webp 640w, /assets/img/ref-fam-lift-43-853.webp 853w"
+  jpg: "/assets/img/ref-fam-lift-43-853.jpg"
 ref-fam-newbaby:
   alt: "Reference frame: a family together in bed meeting the new baby"
   ratio: "3/2"
@@ -1332,6 +1386,15 @@ ref-fam-newborn3:
   key: "family-e3b39ad7-8a7"
   webp: "/assets/img/ref-fam-newborn3-640.webp 640w, /assets/img/ref-fam-newborn3-960.webp 960w"
   jpg: "/assets/img/ref-fam-newborn3-800.jpg"
+ref-fam-newborn3-43:
+  alt: "Reference frame: parents and children together in bed with the newborn"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "family-e3b39ad7-8a7"
+  webp: "/assets/img/ref-fam-newborn3-43-640.webp 640w, /assets/img/ref-fam-newborn3-43-853.webp 853w"
+  jpg: "/assets/img/ref-fam-newborn3-43-800.jpg"
 ref-fam-newmum:
   alt: "Reference frame: a mother holding a newborn with her older child alongside"
   ratio: "4/5"
@@ -1395,6 +1458,15 @@ ref-fam-sibkiss:
   key: "family-84005e87-a2a"
   webp: "/assets/img/ref-fam-sibkiss-640.webp 640w, /assets/img/ref-fam-sibkiss-960.webp 960w"
   jpg: "/assets/img/ref-fam-sibkiss-800.jpg"
+ref-fam-sibkiss-43:
+  alt: "Reference frame: an older sibling kissing the new baby"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "family-84005e87-a2a"
+  webp: "/assets/img/ref-fam-sibkiss-43-640.webp 640w, /assets/img/ref-fam-sibkiss-43-853.webp 853w"
+  jpg: "/assets/img/ref-fam-sibkiss-43-800.jpg"
 ref-fam-sisters:
   alt: "Reference frame: two girls laughing with their arms around each other among autumn leaves"
   ratio: "3/2"
@@ -1566,15 +1638,15 @@ ref-nb-finger:
   key: "newborn-7ae5d76c-ce4"
   webp: "/assets/img/ref-nb-finger-640.webp 640w, /assets/img/ref-nb-finger-960.webp 960w"
   jpg: "/assets/img/ref-nb-finger-800.jpg"
-ref-nb-hat:
+ref-nb-hat-43:
   alt: "Reference frame: a newborn asleep, wrapped, in a striped hat"
-  ratio: "3/2"
-  w: 800
-  h: 533
+  ratio: "4/3"
+  w: 853
+  h: 640
   src: "licensed"
   key: "newborn-1f6e6288-bb1"
-  webp: "/assets/img/ref-nb-hat-640.webp 640w, /assets/img/ref-nb-hat-960.webp 960w"
-  jpg: "/assets/img/ref-nb-hat-800.jpg"
+  webp: "/assets/img/ref-nb-hat-43-640.webp 640w, /assets/img/ref-nb-hat-43-853.webp 853w"
+  jpg: "/assets/img/ref-nb-hat-43-853.jpg"
 ref-nb-muslin:
   alt: "Reference frame: a newborn's hand curled on soft muslin"
   ratio: "3/2"

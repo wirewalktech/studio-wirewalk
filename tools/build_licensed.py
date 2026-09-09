@@ -69,6 +69,11 @@ def crop_to(im, rw, rh, anchor):
 lic_manifest = json.load(open(LIB + '/licensed_manifest.json'))
 LIC = {os.path.basename(p['file'])[:-4]: p for p in lic_manifest['photos']}
 OWN = {p['file'][8:-4]: p for p in json.load(open(LIB + '/manifest.json'))['photos']}
+# F<name> -- the owner's own work published on his Flickr. Same status as
+# O<name>: portfolio, no "Reference frame:" prefix. Added so a crop that was
+# clipping the top of somebody's head could be re-anchored without running
+# build_images.py, which would delete the 44 frames whose sources are gone.
+FLK = {p['file'][7:-4]: p for p in json.load(open(LIB + '/flickr_manifest.json'))}
 
 # The manifest is a superset that grows: the licensed library went from 50
 # frames to 124 mid-build. So a slug that is already in photos.yml AND still
@@ -91,6 +96,10 @@ for slug, src, (rw, rh), role, anchor, alt in todo:
         path = os.path.join(LIB, LIC[key]['file'])
         origin, alt = 'licensed', 'Reference frame: ' + alt
         used_lic.append(key)
+    elif src[0] == 'F':
+        if key not in FLK: sys.exit(f"{slug}: {key} is not in flickr_manifest.json")
+        path = os.path.join(LIB, FLK[key].get('use') or FLK[key]['file'])
+        origin = 'flickr'
     else:
         if key not in OWN: sys.exit(f"{slug}: {key} is not in manifest.json")
         path = os.path.join(LIB, OWN[key].get('use') or OWN[key]['file'])
