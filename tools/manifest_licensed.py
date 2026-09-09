@@ -1,3 +1,7 @@
+# Three CC-BY files were dropped from the library because they genuinely
+# require credit and this site no longer carries any. Their derivatives are
+# deleted, not merely unlinked:
+#   family-885254b1-6cd, family-a352b666-464, re-yard-b48c0db7-0a8
 # Frames added after the first build, from two sources that did not exist then:
 #
 #   L<stem>  ~/Downloads/wirewalk-photos/licensed/<stem>.jpg
@@ -43,9 +47,7 @@ NEW = [
 ("ref-fam-puppy",    "Lfamily-36c7c0bd-6a1",(3,2),"grid",.5,"a family sitting on the grass with a puppy"),
 ("ref-fam-leaves",   "Lfamily-5b972778-7b7",(3,2),"grid",.5,"a family's feet gathered in a drift of autumn leaves"),
 ("ref-fam-surf-bw",  "Lfamily-618fe7c9-394",(4,3),"grid",.5,"children wading in the surf, in monochrome"),
-("ref-fam-table-bw", "Lfamily-a352b666-464",(4,3),"grid",.45,"a father and daughter at a table together, in monochrome"),
 ("ref-fam-shore",    "Lfamily-9079f62f-7da",(4,5),"grid",.5,"a family walking a misted shoreline at sunset"),
-("ref-fam-biscuits", "Lfamily-885254b1-6cd",(4,5),"grid",.4,"a child reaching across a table for decorated biscuits"),
 
 # ══ NEWBORN — REFERENCE FRAMES ═══════════════════════════════════════════
 # These illustrate the SERVICE. They are not evidence of newborn work done.
@@ -89,7 +91,6 @@ NEW = [
 ("ref-re-yard-loungers","Lre-yard-20a0f861-638",(3,2),"grid",.5,"a pool terrace set with loungers"),
 ("ref-re-yard-border",  "Lre-yard-69c7e457-8ec",(3,2),"grid",.5,"a fenced border in full summer flower"),
 ("ref-re-yard-path",    "Lre-yard-8715a77e-417",(3,2),"grid",.5,"a stone path running through a formal garden"),
-("ref-re-yard-curve",   "Lre-yard-b48c0db7-0a8",(4,3),"grid",.5,"a curved pool set into a planted back garden"),
 ("ref-re-yard-bench",   "Lre-yard-9e9171d3-957",(4,5),"grid",.45,"a bench under a tree on an autumn lawn"),
 
 # ══ PROPERTY — REFERENCE FRAMES, AERIALS ═════════════════════════════════
@@ -274,4 +275,74 @@ NEW += [
 ("ppl-tower-t2",  "Fpeople-53744800312",(3,2),"tile",0,"Two lifeguards on a yellow beach tower, rescue buoys planted in the sand"),
 ("ppl-quad-t2",   "Fpeople-53695324610",(3,2),"grid",0,"Beach patrol rider crossing the sand on a quad bike"),
 ("fam-dress-w2",  "Ofamily-198",(3,2),"grid",0,"Small child in a purple dress in dappled light"),
+]
+
+# ─────────────────────────────────────────────────────────────────────────
+# THE CC0 LIBRARY. C<stem> = ~/Downloads/wirewalk-photos/cc0/<stem>.jpg
+#
+# No attribution is required for any of these, so none of them carries a
+# label, a caption of provenance, or an entry on a credits page -- all three
+# were a precaution I took, not a licence condition, and on a photographer's
+# portfolio they read as a confession. Alt text describes the picture, which
+# is what alt text is for.
+#
+# WEDDINGS were the category the site had to talk around; there are now 18
+# frames and it does not. Business gained warehouse, construction, laboratory
+# and workshop work that the commercial sections needed.
+#
+# Ratios follow the same rule as everything above: a crop that trims SIDES
+# cannot cut a head off, a crop that trims HEIGHT can, so anything with a
+# person in it either trims sides or is anchored towards the top.
+NEW += [
+
+# ══ WEDDINGS ═════════════════════════════════════════════════════════════
+("wed-bride",       "Cwedding-1239b72f-6e0",(4,5),"feature",.1,"Bride holding her bouquet, photographed outdoors"),
+("wed-couple-tree", "Cwedding-d240f575-611",(3,2),"feature",.5,"A couple standing together beneath an old tree"),
+("wed-embrace",     "Cwedding-c97e60ed-2e4",(3,2),"feature",.4,"A couple embracing, the bouquet still in her hand"),
+("wed-woodland",    "Cwedding-63a89c1d-dc7",(3,2),"feature",.4,"A couple in woodland, bouquet between them"),
+("wed-firstdance",  "Cwedding-429c9f30-342",(3,2),"feature",.2,"The first dance, in monochrome"),
+("wed-veil",        "Cwedding-fd64e867-360",(3,2),"grid",.4,"Hands joined, the veil behind them"),
+("wed-rings",       "Cwedding-e039e02b-77a",(3,2),"grid",.5,"Rings and hands resting over the bouquet"),
+("wed-hands",       "Cwedding-377b2380-8ba",(3,2),"grid",.5,"Hands and bouquet, close"),
+("wed-bouquet-pair","Cwedding-226dd76d-c7b",(3,2),"grid",.5,"The bouquet held between bride and groom"),
+("wed-wildflower",  "Cwedding-95c6e010-2f2",(3,2),"grid",.5,"A bride holding a wildflower bouquet"),
+("wed-sunflower",   "Cwedding-b1a5149d-140",(1,1),"grid",.5,"A sunflower bouquet, the couple behind it"),
+("wed-bouquet-face","Cwedding-a7648903-ac2",(4,5),"grid",.15,"A bouquet raised to the face"),
+("wed-pastel",      "Cwedding-a6be7f05-8cc",(3,2),"grid",.5,"A pastel bouquet, close in"),
+("wed-arrangement", "Cwedding-d9556713-f74",(3,2),"grid",.5,"A flower arrangement in soft light"),
+("wed-toptable",    "Cwedding-a838ddb8-42c",(3,2),"grid",.5,"The top table set for the reception"),
+("wed-cake",        "Cwedding-a8594dcc-7ca",(3,2),"grid",.5,"The cake on its stand, styled for the room"),
+("wed-placesetting","Cwedding-c1663d5c-313",(16,9),"grid",.5,"A place setting with its name card"),
+("wed-tablerun",    "Cwedding-96722af6-af4",(4,5),"grid",.3,"A reception table laid, detail running along it"),
+
+# ══ EVENTS ═══════════════════════════════════════════════════════════════
+("ref-ev-banquet",  "Cevent-ecaf6429-24f",(3,2),"feature",.5,"A banquet hall laid for a function"),
+("ref-ev-reception","Cevent-fe5237f2-518",(3,2),"grid",.4,"Guests talking at a reception"),
+
+# ══ BUSINESS, INDUSTRY AND SCIENCE ═══════════════════════════════════════
+("ref-biz-lab",       "Cbusiness-691ab668-bd1",(3,2),"feature",.4,"Two researchers working at the bench"),
+("ref-biz-warehouse", "Cbusiness-9a916b23-95f",(3,2),"feature",.5,"A warehouse aisle and its racking"),
+("ref-biz-crane",     "Cbusiness-a2559f13-927",(3,2),"feature",.5,"Tower cranes against open sky"),
+("ref-biz-workbench", "Cbusiness-17650262-1fa",(4,5),"feature",.15,"A maker at a workbench, a dog beside him"),
+("ref-biz-testrig",   "Cbusiness-b8587c19-614",(3,2),"grid",.4,"A technician working inside a test rig"),
+("ref-biz-instrument","Cbusiness-00bc7a06-f90",(4,5),"grid",.3,"An operator at an instrument under red light"),
+("ref-biz-engineers", "Cbusiness-8ddfe4be-c72",(3,2),"grid",.4,"Engineers setting up equipment"),
+("ref-biz-concrete",  "Cbusiness-06861cd8-d36",(3,2),"grid",.4,"Cutting concrete on site"),
+("ref-biz-excavator", "Cbusiness-72cad48e-fc0",(3,2),"grid",.4,"An excavator and crew on a dig"),
+("ref-biz-paving",    "Cbusiness-af99d058-ecb",(3,2),"grid",.4,"A paving crew at work"),
+("ref-biz-forklift",  "Cbusiness-03d4aeeb-67e",(16,9),"grid",.1,"A forklift moving stacked produce"),
+("ref-biz-pallets",   "Cbusiness-e266024e-6d1",(3,2),"grid",.5,"Palletised goods in a warehouse"),
+("ref-biz-distrib",   "Cbusiness-e50fe955-cc2",(3,2),"grid",.4,"A distribution floor with a forklift working"),
+("ref-biz-desk-window","Cbusiness-5a376ddf-785",(3,2),"grid",.4,"Working at a desk by the window"),
+("ref-biz-openplan",  "Cbusiness-de00d39b-da7",(3,2),"grid",.5,"An open-plan office, desks empty"),
+("ref-biz-crane-bw",  "Cbusiness-7eef9c8d-5df",(4,5),"grid",.3,"A tower crane, in monochrome"),
+
+# ══ PRODUCT AND FOOD ═════════════════════════════════════════════════════
+("ref-prod-table",   "Cproduct-274240fe-2be",(3,2),"grid",.5,"A table of dishes photographed from above"),
+("ref-prod-plated",  "Cproduct-3c9e97fd-34d",(3,2),"grid",.5,"A plated dish, styled for a restaurant"),
+("ref-prod-bowl",    "Cproduct-f9186605-22a",(4,3),"grid",.5,"A bowl of food on a yellow plate"),
+
+# ══ AUDIO ════════════════════════════════════════════════════════════════
+("ref-aud-control",  "Caudio-0c4e0f70-691",(16,9),"grid",.5,"A control room, monitors and desk"),
+("ref-aud-strips",   "Caudio-7a4553ae-31e",(3,2),"grid",.5,"Mixing console channel strips"),
 ]
