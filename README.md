@@ -30,15 +30,30 @@ Verify after any deploy:
     assets/img/            committed derivatives — WebP with JPEG fallback, several widths
     tools/                 the image pipeline (excluded from the build)
 
-Pages: `/`, `/business/`, `/photography/`, `/video/`, `/audio/`, `/work/`,
-`/process/`, `/credits/`, `/thanks/`, `404.html`.
+Pages: `/`, `/family/`, `/business/`, `/photography/`, `/video/`, `/audio/`,
+`/work/`, `/process/`, `/credits/`, `/thanks/`, `404.html`.
+
+## What the site is about
+
+It is a booking site, not a portfolio. The home page leads with the services
+people actually commission -- family and children, portraits, pets, events,
+business, product, property, video, audio -- each as its own section with a
+heading, a fact block (what it covers, how long, what you get, how it is
+priced) and a booking link. Landscape, city and aerial work sits near the
+bottom under "Personal work" and is labelled as personal work, because nobody
+commissions a dune. Keep that order if you edit this.
 
 ## Images
 
 Nothing is hotlinked. Every frame is committed as a derivative.
 
 * **The owner's own photography** — developed and cropped from his masters.
-  This is the portfolio and is credited as such.
+  This is the portfolio and is credited as such. Where a manifest entry
+  carries a `use` path it points at a hand-graded retouched master; the
+  pipeline uses that file and skips its own develop pass, so the two sets of
+  contrast moves cannot stack. That retouching is colour, contrast and tone
+  only — never the person: no smoothing, no reshaping. Say it that way if you
+  ever write about it.
 * **Reference frames** — CC0 or public domain, retrieved from Wikimedia
   Commons with the licence read from the Commons API at fetch time. Used only
   to illustrate services the public portfolio does not cover (business,
@@ -47,6 +62,18 @@ Nothing is hotlinked. Every frame is committed as a derivative.
   listed on `/credits/`. **Never present these as the studio's work.**
 
 No commercial stock and no machine-generated imagery is used anywhere.
+
+**Newborn:** `/family/#newborn` offers newborn sessions but shows three empty,
+labelled image slots, because the studio has no newborn frames. Do not fill
+them with stock photographs of infants — on a photographer's site every image
+reads as "I took this", and that would invite a parent to book on the strength
+of work that does not exist. Fill them with real sessions, with permission.
+
+**People:** the street portraits are identifiable members of the public
+photographed in public places, with no model releases. They appear as
+portfolio work only, are never presented as endorsements, and must not be
+licensed on for commercial or advertising use. The site states this on
+`/photography/#people`, `/work/` and `/process/#rights`.
 
 ### Rebuilding the derivatives
 
