@@ -801,6 +801,69 @@ ppl-tower:
   key: "people-53744800312"
   webp: "/assets/img/ppl-tower-420.webp 420w, /assets/img/ppl-tower-640.webp 640w"
   jpg: "/assets/img/ppl-tower-520.jpg"
+prop-barn:
+  alt: "A barn standing in long summer grass"
+  ratio: "3/2"
+  w: 1200
+  h: 800
+  src: "selects"
+  key: "property-085"
+  webp: "/assets/img/prop-barn-640.webp 640w, /assets/img/prop-barn-1000.webp 1000w, /assets/img/prop-barn-1400.webp 1400w"
+  jpg: "/assets/img/prop-barn-1200.jpg"
+prop-garden:
+  alt: "A landscaped garden with a white footbridge and a gazebo"
+  ratio: "3/2"
+  w: 1200
+  h: 800
+  src: "selects"
+  key: "property-254"
+  webp: "/assets/img/prop-garden-640.webp 640w, /assets/img/prop-garden-1000.webp 1000w, /assets/img/prop-garden-1400.webp 1400w"
+  jpg: "/assets/img/prop-garden-1200.jpg"
+prop-garden-t:
+  alt: "A landscaped garden with a white footbridge"
+  ratio: "4/5"
+  w: 800
+  h: 1000
+  src: "selects"
+  key: "property-254"
+  webp: "/assets/img/prop-garden-t-640.webp 640w, /assets/img/prop-garden-t-1000.webp 1000w"
+  jpg: "/assets/img/prop-garden-t-800.jpg"
+prop-modern:
+  alt: "Modern architecture stepping down to a water feature"
+  ratio: "3/2"
+  w: 1200
+  h: 800
+  src: "selects"
+  key: "property-083"
+  webp: "/assets/img/prop-modern-640.webp 640w, /assets/img/prop-modern-1000.webp 1000w, /assets/img/prop-modern-1400.webp 1400w"
+  jpg: "/assets/img/prop-modern-1200.jpg"
+prop-pergola:
+  alt: "A vine-covered pergola with seating beneath it"
+  ratio: "4/3"
+  w: 1200
+  h: 900
+  src: "selects"
+  key: "property-140"
+  webp: "/assets/img/prop-pergola-640.webp 640w, /assets/img/prop-pergola-1000.webp 1000w, /assets/img/prop-pergola-1400.webp 1400w"
+  jpg: "/assets/img/prop-pergola-1200.jpg"
+prop-timber:
+  alt: "Timber house with a metal roof and a pickup on the drive"
+  ratio: "3/2"
+  w: 1200
+  h: 800
+  src: "selects"
+  key: "property-249"
+  webp: "/assets/img/prop-timber-640.webp 640w, /assets/img/prop-timber-1000.webp 1000w, /assets/img/prop-timber-1400.webp 1400w"
+  jpg: "/assets/img/prop-timber-1200.jpg"
+prop-timber-t:
+  alt: "Timber house with a metal roof, seen from the drive"
+  ratio: "4/5"
+  w: 800
+  h: 1000
+  src: "selects"
+  key: "property-249"
+  webp: "/assets/img/prop-timber-t-640.webp 640w, /assets/img/prop-timber-t-1000.webp 1000w"
+  jpg: "/assets/img/prop-timber-t-800.jpg"
 ref-aerial-wood:
   alt: "Reference frame: aerial view straight down onto autumn woodland"
   ratio: "1/1"
@@ -864,6 +927,15 @@ ref-atwork-weld:
   key: "58828446"
   webp: "/assets/img/ref-atwork-weld-640.webp 640w, /assets/img/ref-atwork-weld-1000.webp 1000w"
   jpg: "/assets/img/ref-atwork-weld-800.jpg"
+ref-aud-boom:
+  alt: "Reference frame: a microphone on a boom against a dark backdrop"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "audio-ad4e0d70-2a8"
+  webp: "/assets/img/ref-aud-boom-640.webp 640w, /assets/img/ref-aud-boom-960.webp 960w"
+  jpg: "/assets/img/ref-aud-boom-800.jpg"
 ref-aud-cans:
   alt: "Reference frame: studio headphones photographed low key against black"
   ratio: "4/5"
@@ -873,6 +945,15 @@ ref-aud-cans:
   key: "61803610"
   webp: "/assets/img/ref-aud-cans-420.webp 420w, /assets/img/ref-aud-cans-640.webp 640w"
   jpg: "/assets/img/ref-aud-cans-520.jpg"
+ref-aud-condenser:
+  alt: "Reference frame: a large-diaphragm condenser microphone in a shock mount"
+  ratio: "4/5"
+  w: 960
+  h: 1200
+  src: "licensed"
+  key: "audio-9785b844-4d3"
+  webp: "/assets/img/ref-aud-condenser-640.webp 640w, /assets/img/ref-aud-condenser-960.webp 960w"
+  jpg: "/assets/img/ref-aud-condenser-960.jpg"
 ref-aud-console:
   alt: "Reference frame: faders and rotary controls along a mixing console"
   ratio: "3/2"
@@ -882,6 +963,24 @@ ref-aud-console:
   key: "61692790"
   webp: "/assets/img/ref-aud-console-640.webp 640w, /assets/img/ref-aud-console-1000.webp 1000w, /assets/img/ref-aud-console-1400.webp 1400w"
   jpg: "/assets/img/ref-aud-console-1200.jpg"
+ref-aud-desk:
+  alt: "Reference frame: a home studio desk with monitors and a laptop"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "audio-bfcf32e0-540"
+  webp: "/assets/img/ref-aud-desk-640.webp 640w, /assets/img/ref-aud-desk-960.webp 960w"
+  jpg: "/assets/img/ref-aud-desk-800.jpg"
+ref-aud-faders:
+  alt: "Reference frame: hands riding the faders on a lit mixing console"
+  ratio: "3/2"
+  w: 1024
+  h: 683
+  src: "licensed"
+  key: "audio-28ffeeda-2f5"
+  webp: "/assets/img/ref-aud-faders-640.webp 640w, /assets/img/ref-aud-faders-1000.webp 1000w, /assets/img/ref-aud-faders-1024.webp 1024w"
+  jpg: "/assets/img/ref-aud-faders-1024.jpg"
 ref-aud-mic:
   alt: "Reference frame: condenser microphone on a shock mount, lit low key"
   ratio: "4/5"
@@ -891,6 +990,78 @@ ref-aud-mic:
   key: "62059665"
   webp: "/assets/img/ref-aud-mic-640.webp 640w, /assets/img/ref-aud-mic-1000.webp 1000w"
   jpg: "/assets/img/ref-aud-mic-800.jpg"
+ref-aud-popshield:
+  alt: "Reference frame: a vocalist tracking behind a pop shield"
+  ratio: "3/2"
+  w: 960
+  h: 640
+  src: "licensed"
+  key: "audio-adeb472b-35b"
+  webp: "/assets/img/ref-aud-popshield-640.webp 640w, /assets/img/ref-aud-popshield-960.webp 960w"
+  jpg: "/assets/img/ref-aud-popshield-960.jpg"
+ref-aud-session:
+  alt: "Reference frame: a tracking session with the artist at the microphone"
+  ratio: "16/9"
+  w: 800
+  h: 450
+  src: "licensed"
+  key: "audio-fc35e82c-4b3"
+  webp: "/assets/img/ref-aud-session-640.webp 640w, /assets/img/ref-aud-session-960.webp 960w"
+  jpg: "/assets/img/ref-aud-session-800.jpg"
+ref-aud-strip:
+  alt: "Reference frame: a console channel strip in close-up"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "audio-d0777300-f6a"
+  webp: "/assets/img/ref-aud-strip-640.webp 640w, /assets/img/ref-aud-strip-1000.webp 1000w"
+  jpg: "/assets/img/ref-aud-strip-800.jpg"
+ref-aud-tracking:
+  alt: "Reference frame: recording vocals in headphones at the microphone"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "audio-57c84a8f-501"
+  webp: "/assets/img/ref-aud-tracking-640.webp 640w, /assets/img/ref-aud-tracking-960.webp 960w"
+  jpg: "/assets/img/ref-aud-tracking-800.jpg"
+ref-aud-vintage:
+  alt: "Reference frame: vintage ribbon and condenser microphones"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "audio-53395626-8cb"
+  webp: "/assets/img/ref-aud-vintage-640.webp 640w, /assets/img/ref-aud-vintage-960.webp 960w"
+  jpg: "/assets/img/ref-aud-vintage-800.jpg"
+ref-aud-vocal-bw:
+  alt: "Reference frame: a vocalist at the microphone, in monochrome"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "audio-f2a47c85-883"
+  webp: "/assets/img/ref-aud-vocal-bw-640.webp 640w, /assets/img/ref-aud-vocal-bw-960.webp 960w"
+  jpg: "/assets/img/ref-aud-vocal-bw-800.jpg"
+ref-biz-discuss:
+  alt: "Reference frame: a mixed team in discussion in a workplace"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "business-ffe2fa81-8e9"
+  webp: "/assets/img/ref-biz-discuss-640.webp 640w, /assets/img/ref-biz-discuss-960.webp 960w"
+  jpg: "/assets/img/ref-biz-discuss-800.jpg"
+ref-biz-meeting:
+  alt: "Reference frame: a team meeting around a table"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "business-012ee794-a3a"
+  webp: "/assets/img/ref-biz-meeting-640.webp 640w, /assets/img/ref-biz-meeting-960.webp 960w"
+  jpg: "/assets/img/ref-biz-meeting-800.jpg"
 ref-boardroom:
   alt: "Reference frame: boardroom table and chairs before a wall of windows"
   ratio: "3/2"
@@ -918,6 +1089,24 @@ ref-drone:
   key: "62191359"
   webp: "/assets/img/ref-drone-640.webp 640w, /assets/img/ref-drone-1000.webp 1000w"
   jpg: "/assets/img/ref-drone-800.jpg"
+ref-ev-balloons:
+  alt: "Reference frame: balloons against a white brick wall"
+  ratio: "4/5"
+  w: 800
+  h: 1000
+  src: "licensed"
+  key: "event-7e0d5bc9-d83"
+  webp: "/assets/img/ref-ev-balloons-640.webp 640w, /assets/img/ref-ev-balloons-894.webp 894w"
+  jpg: "/assets/img/ref-ev-balloons-800.jpg"
+ref-ev-cake:
+  alt: "Reference frame: a lit birthday cake carried through a dark room"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "event-75e7ccf2-1aa"
+  webp: "/assets/img/ref-ev-cake-640.webp 640w, /assets/img/ref-ev-cake-960.webp 960w"
+  jpg: "/assets/img/ref-ev-cake-800.jpg"
 ref-ev-concert:
   alt: "Reference frame: performer silhouetted against stage lights above a crowd"
   ratio: "3/2"
@@ -927,6 +1116,15 @@ ref-ev-concert:
   key: "61688449"
   webp: "/assets/img/ref-ev-concert-640.webp 640w, /assets/img/ref-ev-concert-1000.webp 1000w"
   jpg: "/assets/img/ref-ev-concert-800.jpg"
+ref-ev-cupcakes:
+  alt: "Reference frame: cupcakes and candles styled on wood"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "event-189934f2-040"
+  webp: "/assets/img/ref-ev-cupcakes-640.webp 640w, /assets/img/ref-ev-cupcakes-960.webp 960w"
+  jpg: "/assets/img/ref-ev-cupcakes-800.jpg"
 ref-ev-festival:
   alt: "Reference frame: festival crowd under strings of lights at dusk"
   ratio: "3/2"
@@ -936,6 +1134,15 @@ ref-ev-festival:
   key: "61670009"
   webp: "/assets/img/ref-ev-festival-640.webp 640w, /assets/img/ref-ev-festival-1000.webp 1000w"
   jpg: "/assets/img/ref-ev-festival-800.jpg"
+ref-ev-flatlay:
+  alt: "Reference frame: a party flat lay with confetti and cake"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "event-4c7dc997-60e"
+  webp: "/assets/img/ref-ev-flatlay-640.webp 640w, /assets/img/ref-ev-flatlay-960.webp 960w"
+  jpg: "/assets/img/ref-ev-flatlay-800.jpg"
 ref-ev-gig:
   alt: "Reference frame: black and white singer at the front of a small stage"
   ratio: "4/5"
@@ -945,6 +1152,312 @@ ref-ev-gig:
   key: "62195667"
   webp: "/assets/img/ref-ev-gig-640.webp 640w, /assets/img/ref-ev-gig-1000.webp 1000w"
   jpg: "/assets/img/ref-ev-gig-800.jpg"
+ref-ev-sparkler:
+  alt: "Reference frame: a sparkler held in a pair of hands at dusk"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "event-4081e0ae-e3c"
+  webp: "/assets/img/ref-ev-sparkler-640.webp 640w, /assets/img/ref-ev-sparkler-960.webp 960w"
+  jpg: "/assets/img/ref-ev-sparkler-800.jpg"
+ref-fam-adult:
+  alt: "Reference frame: a mother and her adult daughter embracing"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-8e1238ca-38d"
+  webp: "/assets/img/ref-fam-adult-640.webp 640w, /assets/img/ref-fam-adult-960.webp 960w"
+  jpg: "/assets/img/ref-fam-adult-800.jpg"
+ref-fam-baking:
+  alt: "Reference frame: a grandmother and her granddaughter baking together"
+  ratio: "3/2"
+  w: 960
+  h: 640
+  src: "licensed"
+  key: "family-2d4b99d9-995"
+  webp: "/assets/img/ref-fam-baking-640.webp 640w, /assets/img/ref-fam-baking-960.webp 960w"
+  jpg: "/assets/img/ref-fam-baking-960.jpg"
+ref-fam-beach:
+  alt: "Reference frame: a parent carrying a child along a wide empty beach"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-dcc3a88a-64d"
+  webp: "/assets/img/ref-fam-beach-640.webp 640w, /assets/img/ref-fam-beach-1000.webp 1000w"
+  jpg: "/assets/img/ref-fam-beach-800.jpg"
+ref-fam-bed:
+  alt: "Reference frame: parents playing with a toddler on the bed in morning light"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-1ad85d17-d24"
+  webp: "/assets/img/ref-fam-bed-640.webp 640w, /assets/img/ref-fam-bed-960.webp 960w"
+  jpg: "/assets/img/ref-fam-bed-800.jpg"
+ref-fam-biscuits:
+  alt: "Reference frame: a child reaching across a table for decorated biscuits"
+  ratio: "4/5"
+  w: 800
+  h: 1000
+  src: "licensed"
+  key: "family-885254b1-6cd"
+  webp: "/assets/img/ref-fam-biscuits-640.webp 640w, /assets/img/ref-fam-biscuits-1000.webp 1000w"
+  jpg: "/assets/img/ref-fam-biscuits-800.jpg"
+ref-fam-carry:
+  alt: "Reference frame: a parent carrying a toddler, close and candid"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-f2017cc7-6bd"
+  webp: "/assets/img/ref-fam-carry-640.webp 640w, /assets/img/ref-fam-carry-1000.webp 1000w"
+  jpg: "/assets/img/ref-fam-carry-800.jpg"
+ref-fam-cheek:
+  alt: "Reference frame: a mother and daughter cheek to cheek with their eyes closed"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-412012f3-8ab"
+  webp: "/assets/img/ref-fam-cheek-640.webp 640w, /assets/img/ref-fam-cheek-960.webp 960w"
+  jpg: "/assets/img/ref-fam-cheek-800.jpg"
+ref-fam-closeport:
+  alt: "Reference frame: a mother and daughter photographed close, outdoors"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-f51e9fa3-a82"
+  webp: "/assets/img/ref-fam-closeport-640.webp 640w, /assets/img/ref-fam-closeport-960.webp 960w"
+  jpg: "/assets/img/ref-fam-closeport-800.jpg"
+ref-fam-dogport:
+  alt: "Reference frame: a family portrait on the grass with their dog"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-74d31a89-d2e"
+  webp: "/assets/img/ref-fam-dogport-640.webp 640w, /assets/img/ref-fam-dogport-960.webp 960w"
+  jpg: "/assets/img/ref-fam-dogport-800.jpg"
+ref-fam-four:
+  alt: "Reference frame: a relaxed outdoor portrait of a family of four"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-f80b8668-340"
+  webp: "/assets/img/ref-fam-four-640.webp 640w, /assets/img/ref-fam-four-960.webp 960w"
+  jpg: "/assets/img/ref-fam-four-800.jpg"
+ref-fam-golden:
+  alt: "Reference frame: a mother and daughter outdoors at golden hour"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-a514e487-56b"
+  webp: "/assets/img/ref-fam-golden-640.webp 640w, /assets/img/ref-fam-golden-960.webp 960w"
+  jpg: "/assets/img/ref-fam-golden-800.jpg"
+ref-fam-grass-dog:
+  alt: "Reference frame: a family lying on the grass with their dog"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-01c62e71-cd1"
+  webp: "/assets/img/ref-fam-grass-dog-640.webp 640w, /assets/img/ref-fam-grass-dog-960.webp 960w"
+  jpg: "/assets/img/ref-fam-grass-dog-800.jpg"
+ref-fam-hug:
+  alt: "Reference frame: a family in a group hug, all of them laughing"
+  ratio: "3/2"
+  w: 960
+  h: 640
+  src: "licensed"
+  key: "family-7673b1b2-060"
+  webp: "/assets/img/ref-fam-hug-640.webp 640w, /assets/img/ref-fam-hug-960.webp 960w"
+  jpg: "/assets/img/ref-fam-hug-960.jpg"
+ref-fam-laugh:
+  alt: "Reference frame: a father holding a laughing child up in a field"
+  ratio: "3/2"
+  w: 1200
+  h: 800
+  src: "licensed"
+  key: "family-7b4ec082-444"
+  webp: "/assets/img/ref-fam-laugh-640.webp 640w, /assets/img/ref-fam-laugh-1000.webp 1000w, /assets/img/ref-fam-laugh-1400.webp 1400w"
+  jpg: "/assets/img/ref-fam-laugh-1200.jpg"
+ref-fam-laugh-t:
+  alt: "Reference frame: a father holding a laughing child up in a field"
+  ratio: "4/5"
+  w: 1200
+  h: 1500
+  src: "licensed"
+  key: "family-7b4ec082-444"
+  webp: "/assets/img/ref-fam-laugh-t-640.webp 640w, /assets/img/ref-fam-laugh-t-1000.webp 1000w, /assets/img/ref-fam-laugh-t-1400.webp 1400w"
+  jpg: "/assets/img/ref-fam-laugh-t-1200.jpg"
+ref-fam-leaves:
+  alt: "Reference frame: a family's feet gathered in a drift of autumn leaves"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-5b972778-7b7"
+  webp: "/assets/img/ref-fam-leaves-640.webp 640w, /assets/img/ref-fam-leaves-1000.webp 1000w"
+  jpg: "/assets/img/ref-fam-leaves-800.jpg"
+ref-fam-lift:
+  alt: "Reference frame: a mother holding her daughter close, backlit"
+  ratio: "3/2"
+  w: 960
+  h: 640
+  src: "licensed"
+  key: "family-31d35e4b-4ba"
+  webp: "/assets/img/ref-fam-lift-640.webp 640w, /assets/img/ref-fam-lift-960.webp 960w"
+  jpg: "/assets/img/ref-fam-lift-960.jpg"
+ref-fam-newbaby:
+  alt: "Reference frame: a family together in bed meeting the new baby"
+  ratio: "3/2"
+  w: 960
+  h: 640
+  src: "licensed"
+  key: "family-55827c02-ce7"
+  webp: "/assets/img/ref-fam-newbaby-640.webp 640w, /assets/img/ref-fam-newbaby-960.webp 960w"
+  jpg: "/assets/img/ref-fam-newbaby-960.jpg"
+ref-fam-newborn3:
+  alt: "Reference frame: parents and children together in bed with a newborn"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-e3b39ad7-8a7"
+  webp: "/assets/img/ref-fam-newborn3-640.webp 640w, /assets/img/ref-fam-newborn3-960.webp 960w"
+  jpg: "/assets/img/ref-fam-newborn3-800.jpg"
+ref-fam-newmum:
+  alt: "Reference frame: a mother holding a newborn with her older child alongside"
+  ratio: "4/5"
+  w: 960
+  h: 1200
+  src: "licensed"
+  key: "family-f04cbdf1-db1"
+  webp: "/assets/img/ref-fam-newmum-640.webp 640w, /assets/img/ref-fam-newmum-960.webp 960w"
+  jpg: "/assets/img/ref-fam-newmum-960.jpg"
+ref-fam-park:
+  alt: "Reference frame: a family playing together in the park"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-4ef13789-c93"
+  webp: "/assets/img/ref-fam-park-640.webp 640w, /assets/img/ref-fam-park-960.webp 960w"
+  jpg: "/assets/img/ref-fam-park-800.jpg"
+ref-fam-picnic:
+  alt: "Reference frame: a family picnic on the grass with a football"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-4e287743-f54"
+  webp: "/assets/img/ref-fam-picnic-640.webp 640w, /assets/img/ref-fam-picnic-960.webp 960w"
+  jpg: "/assets/img/ref-fam-picnic-800.jpg"
+ref-fam-point:
+  alt: "Reference frame: a father pointing something out to the children"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-79942813-3a1"
+  webp: "/assets/img/ref-fam-point-640.webp 640w, /assets/img/ref-fam-point-960.webp 960w"
+  jpg: "/assets/img/ref-fam-point-800.jpg"
+ref-fam-puppy:
+  alt: "Reference frame: a family sitting on the grass with a puppy"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-36c7c0bd-6a1"
+  webp: "/assets/img/ref-fam-puppy-640.webp 640w, /assets/img/ref-fam-puppy-960.webp 960w"
+  jpg: "/assets/img/ref-fam-puppy-800.jpg"
+ref-fam-shore:
+  alt: "Reference frame: a family walking a misted shoreline at sunset"
+  ratio: "4/5"
+  w: 800
+  h: 1000
+  src: "licensed"
+  key: "family-9079f62f-7da"
+  webp: "/assets/img/ref-fam-shore-640.webp 640w, /assets/img/ref-fam-shore-960.webp 960w"
+  jpg: "/assets/img/ref-fam-shore-800.jpg"
+ref-fam-sibkiss:
+  alt: "Reference frame: an older sibling kissing the new baby"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-84005e87-a2a"
+  webp: "/assets/img/ref-fam-sibkiss-640.webp 640w, /assets/img/ref-fam-sibkiss-960.webp 960w"
+  jpg: "/assets/img/ref-fam-sibkiss-800.jpg"
+ref-fam-sisters:
+  alt: "Reference frame: two girls laughing with their arms around each other among autumn leaves"
+  ratio: "3/2"
+  w: 960
+  h: 640
+  src: "licensed"
+  key: "family-cf5b09d7-ac3"
+  webp: "/assets/img/ref-fam-sisters-640.webp 640w, /assets/img/ref-fam-sisters-960.webp 960w"
+  jpg: "/assets/img/ref-fam-sisters-960.jpg"
+ref-fam-surf-bw:
+  alt: "Reference frame: children wading in the surf, in monochrome"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "family-618fe7c9-394"
+  webp: "/assets/img/ref-fam-surf-bw-640.webp 640w, /assets/img/ref-fam-surf-bw-1000.webp 1000w"
+  jpg: "/assets/img/ref-fam-surf-bw-800.jpg"
+ref-fam-table-bw:
+  alt: "Reference frame: a father and daughter at a table together, in monochrome"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "family-a352b666-464"
+  webp: "/assets/img/ref-fam-table-bw-640.webp 640w, /assets/img/ref-fam-table-bw-1000.webp 1000w"
+  jpg: "/assets/img/ref-fam-table-bw-800.jpg"
+ref-fam-tree:
+  alt: "Reference frame: a family gathered at the foot of a tree"
+  ratio: "4/5"
+  w: 960
+  h: 1200
+  src: "licensed"
+  key: "family-c9861abf-8f3"
+  webp: "/assets/img/ref-fam-tree-640.webp 640w, /assets/img/ref-fam-tree-960.webp 960w"
+  jpg: "/assets/img/ref-fam-tree-960.jpg"
+ref-fam-twogen:
+  alt: "Reference frame: two generations together, a monochrome portrait"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "family-271d8797-31e"
+  webp: "/assets/img/ref-fam-twogen-640.webp 640w, /assets/img/ref-fam-twogen-960.webp 960w"
+  jpg: "/assets/img/ref-fam-twogen-800.jpg"
+ref-fam-walk:
+  alt: "Reference frame: a family walking hand in hand through the park"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-cdaf5bb8-314"
+  webp: "/assets/img/ref-fam-walk-640.webp 640w, /assets/img/ref-fam-walk-960.webp 960w"
+  jpg: "/assets/img/ref-fam-walk-800.jpg"
+ref-fam-woods:
+  alt: "Reference frame: a parent and a small child walking a woodland path, backlit"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "family-f8a41c63-45a"
+  webp: "/assets/img/ref-fam-woods-640.webp 640w, /assets/img/ref-fam-woods-960.webp 960w"
+  jpg: "/assets/img/ref-fam-woods-800.jpg"
 ref-food-plate:
   alt: "Reference frame: plated dish photographed from directly above"
   ratio: "3/2"
@@ -1017,6 +1530,294 @@ ref-meeting:
   key: "58798558"
   webp: "/assets/img/ref-meeting-640.webp 640w, /assets/img/ref-meeting-1000.webp 1000w"
   jpg: "/assets/img/ref-meeting-800.jpg"
+ref-nb-cream:
+  alt: "Reference frame: newborn feet on a cream blanket"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "newborn-3ee8a1f6-029"
+  webp: "/assets/img/ref-nb-cream-640.webp 640w, /assets/img/ref-nb-cream-960.webp 960w"
+  jpg: "/assets/img/ref-nb-cream-800.jpg"
+ref-nb-cupped:
+  alt: "Reference frame: newborn feet cupped in a parent's hands"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "newborn-e1a9c5f8-f02"
+  webp: "/assets/img/ref-nb-cupped-640.webp 640w, /assets/img/ref-nb-cupped-1000.webp 1000w"
+  jpg: "/assets/img/ref-nb-cupped-800.jpg"
+ref-nb-feet:
+  alt: "Reference frame: newborn feet cupped in a pair of adult hands, in monochrome"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "newborn-d50f4017-289"
+  webp: "/assets/img/ref-nb-feet-640.webp 640w, /assets/img/ref-nb-feet-960.webp 960w"
+  jpg: "/assets/img/ref-nb-feet-800.jpg"
+ref-nb-finger:
+  alt: "Reference frame: a newborn's fingers closed around an adult finger"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "newborn-7ae5d76c-ce4"
+  webp: "/assets/img/ref-nb-finger-640.webp 640w, /assets/img/ref-nb-finger-960.webp 960w"
+  jpg: "/assets/img/ref-nb-finger-800.jpg"
+ref-nb-hat:
+  alt: "Reference frame: a newborn asleep, wrapped, in a striped hat"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "newborn-1f6e6288-bb1"
+  webp: "/assets/img/ref-nb-hat-640.webp 640w, /assets/img/ref-nb-hat-960.webp 960w"
+  jpg: "/assets/img/ref-nb-hat-800.jpg"
+ref-nb-muslin:
+  alt: "Reference frame: a newborn's hand curled on soft muslin"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "newborn-da67bde8-ebc"
+  webp: "/assets/img/ref-nb-muslin-640.webp 640w, /assets/img/ref-nb-muslin-960.webp 960w"
+  jpg: "/assets/img/ref-nb-muslin-800.jpg"
+ref-nb-sleep:
+  alt: "Reference frame: a newborn sleeping in soft daylight"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "newborn-7596daff-064"
+  webp: "/assets/img/ref-nb-sleep-640.webp 640w, /assets/img/ref-nb-sleep-960.webp 960w"
+  jpg: "/assets/img/ref-nb-sleep-800.jpg"
+ref-nb-star:
+  alt: "Reference frame: a newborn's hand resting open on a star-patterned blanket"
+  ratio: "4/5"
+  w: 960
+  h: 1200
+  src: "licensed"
+  key: "newborn-bb140918-b1b"
+  webp: "/assets/img/ref-nb-star-640.webp 640w, /assets/img/ref-nb-star-960.webp 960w"
+  jpg: "/assets/img/ref-nb-star-960.jpg"
+ref-nb-wool:
+  alt: "Reference frame: newborn feet against knitted wool"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "newborn-34f35733-bc5"
+  webp: "/assets/img/ref-nb-wool-640.webp 640w, /assets/img/ref-nb-wool-960.webp 960w"
+  jpg: "/assets/img/ref-nb-wool-800.jpg"
+ref-pet-beagle:
+  alt: "Reference frame: a beagle running through shallow surf"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "pets-7ee2bf1c-e92"
+  webp: "/assets/img/ref-pet-beagle-640.webp 640w, /assets/img/ref-pet-beagle-1000.webp 1000w"
+  jpg: "/assets/img/ref-pet-beagle-800.jpg"
+ref-pet-collies:
+  alt: "Reference frame: two collies running through shallow water"
+  ratio: "16/9"
+  w: 800
+  h: 450
+  src: "licensed"
+  key: "pets-b894c49d-d96"
+  webp: "/assets/img/ref-pet-collies-640.webp 640w, /assets/img/ref-pet-collies-960.webp 960w"
+  jpg: "/assets/img/ref-pet-collies-800.jpg"
+ref-pet-horse:
+  alt: "Reference frame: a horse photographed in its paddock"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "pets-019b340d-ddf"
+  webp: "/assets/img/ref-pet-horse-640.webp 640w, /assets/img/ref-pet-horse-1000.webp 1000w"
+  jpg: "/assets/img/ref-pet-horse-800.jpg"
+ref-pet-horse-graze:
+  alt: "Reference frame: a horse grazing, photographed close"
+  ratio: "9/16"
+  w: 520
+  h: 924
+  src: "licensed"
+  key: "pets-4932ba43-87d"
+  webp: "/assets/img/ref-pet-horse-graze-420.webp 420w, /assets/img/ref-pet-horse-graze-574.webp 574w"
+  jpg: "/assets/img/ref-pet-horse-graze-520.jpg"
+ref-pet-husky:
+  alt: "Reference frame: a husky running alongside its owner"
+  ratio: "4/5"
+  w: 800
+  h: 1000
+  src: "licensed"
+  key: "pets-8da705b6-e41"
+  webp: "/assets/img/ref-pet-husky-640.webp 640w, /assets/img/ref-pet-husky-960.webp 960w"
+  jpg: "/assets/img/ref-pet-husky-800.jpg"
+ref-pet-labrador:
+  alt: "Reference frame: a black labrador sprinting, seen from a low angle"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "pets-e4972749-c4f"
+  webp: "/assets/img/ref-pet-labrador-640.webp 640w, /assets/img/ref-pet-labrador-1000.webp 1000w"
+  jpg: "/assets/img/ref-pet-labrador-800.jpg"
+ref-pet-leap:
+  alt: "Reference frame: a border collie leaping on the sand"
+  ratio: "3/2"
+  w: 1018
+  h: 679
+  src: "licensed"
+  key: "pets-5073498f-a15"
+  webp: "/assets/img/ref-pet-leap-640.webp 640w, /assets/img/ref-pet-leap-1000.webp 1000w, /assets/img/ref-pet-leap-1018.webp 1018w"
+  jpg: "/assets/img/ref-pet-leap-1018.jpg"
+ref-pet-pergola:
+  alt: "Reference frame: walking the dog under a pergola walk"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "pets-babb5ecd-fe9"
+  webp: "/assets/img/ref-pet-pergola-640.webp 640w, /assets/img/ref-pet-pergola-960.webp 960w"
+  jpg: "/assets/img/ref-pet-pergola-800.jpg"
+ref-pet-retriever:
+  alt: "Reference frame: a golden retriever running towards the camera"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "pets-ba620708-fa0"
+  webp: "/assets/img/ref-pet-retriever-640.webp 640w, /assets/img/ref-pet-retriever-1000.webp 1000w"
+  jpg: "/assets/img/ref-pet-retriever-800.jpg"
+ref-pet-shepherd:
+  alt: "Reference frame: a german shepherd at full stretch on the beach"
+  ratio: "4/5"
+  w: 819
+  h: 1024
+  src: "licensed"
+  key: "pets-6c60a81e-1e7"
+  webp: "/assets/img/ref-pet-shepherd-640.webp 640w, /assets/img/ref-pet-shepherd-819.webp 819w"
+  jpg: "/assets/img/ref-pet-shepherd-819.jpg"
+ref-pet-shore:
+  alt: "Reference frame: a small dog running along a turquoise shoreline"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "pets-6145605f-c32"
+  webp: "/assets/img/ref-pet-shore-640.webp 640w, /assets/img/ref-pet-shore-1000.webp 1000w"
+  jpg: "/assets/img/ref-pet-shore-800.jpg"
+ref-pet-two:
+  alt: "Reference frame: two dogs together on the beach"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "pets-8d6304ac-6bb"
+  webp: "/assets/img/ref-pet-two-640.webp 640w, /assets/img/ref-pet-two-1000.webp 1000w"
+  jpg: "/assets/img/ref-pet-two-800.jpg"
+ref-pet-walk:
+  alt: "Reference frame: an owner walking a dog down a tree-lined path"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "pets-7ac7ee02-fd5"
+  webp: "/assets/img/ref-pet-walk-640.webp 640w, /assets/img/ref-pet-walk-960.webp 960w"
+  jpg: "/assets/img/ref-pet-walk-800.jpg"
+ref-port-atrium:
+  alt: "Reference frame: a senior professional photographed in an office atrium"
+  ratio: "3/2"
+  w: 960
+  h: 640
+  src: "licensed"
+  key: "portrait-3399da31-a35"
+  webp: "/assets/img/ref-port-atrium-640.webp 640w, /assets/img/ref-port-atrium-960.webp 960w"
+  jpg: "/assets/img/ref-port-atrium-960.jpg"
+ref-port-coffee:
+  alt: "Reference frame: a professional portrait with the office behind and coffee in hand"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "portrait-23980511-186"
+  webp: "/assets/img/ref-port-coffee-640.webp 640w, /assets/img/ref-port-coffee-960.webp 960w"
+  jpg: "/assets/img/ref-port-coffee-800.jpg"
+ref-port-desk:
+  alt: "Reference frame: a seated portrait at a desk against a clean backdrop"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "portrait-fe9c0e44-93d"
+  webp: "/assets/img/ref-port-desk-640.webp 640w, /assets/img/ref-port-desk-960.webp 960w"
+  jpg: "/assets/img/ref-port-desk-800.jpg"
+ref-port-folded:
+  alt: "Reference frame: a professional portrait, arms folded, colleagues behind"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "portrait-2cd309b9-3aa"
+  webp: "/assets/img/ref-port-folded-640.webp 640w, /assets/img/ref-port-folded-960.webp 960w"
+  jpg: "/assets/img/ref-port-folded-800.jpg"
+ref-port-meeting:
+  alt: "Reference frame: a professional portrait with a meeting going on behind"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "portrait-eb2c686a-d74"
+  webp: "/assets/img/ref-port-meeting-640.webp 640w, /assets/img/ref-port-meeting-960.webp 960w"
+  jpg: "/assets/img/ref-port-meeting-800.jpg"
+ref-port-open:
+  alt: "Reference frame: a professional portrait, arms folded, an open office behind"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "portrait-e45075af-0e7"
+  webp: "/assets/img/ref-port-open-640.webp 640w, /assets/img/ref-port-open-960.webp 960w"
+  jpg: "/assets/img/ref-port-open-800.jpg"
+ref-port-phone:
+  alt: "Reference frame: a professional on the phone with the team behind"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "portrait-47630adb-c42"
+  webp: "/assets/img/ref-port-phone-640.webp 640w, /assets/img/ref-port-phone-960.webp 960w"
+  jpg: "/assets/img/ref-port-phone-800.jpg"
+ref-port-smile:
+  alt: "Reference frame: a professional portrait with a natural smile, workplace setting"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "portrait-813aa247-80b"
+  webp: "/assets/img/ref-port-smile-640.webp 640w, /assets/img/ref-port-smile-960.webp 960w"
+  jpg: "/assets/img/ref-port-smile-800.jpg"
+ref-prod-basil:
+  alt: "Reference frame: fresh basil on a white background"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "product-ec9c3c28-89d"
+  webp: "/assets/img/ref-prod-basil-640.webp 640w, /assets/img/ref-prod-basil-1000.webp 1000w"
+  jpg: "/assets/img/ref-prod-basil-800.jpg"
+ref-prod-burger:
+  alt: "Reference frame: a burger and fries styled with drinks"
+  ratio: "4/5"
+  w: 768
+  h: 960
+  src: "licensed"
+  key: "product-07dd3331-bf9"
+  webp: "/assets/img/ref-prod-burger-640.webp 640w, /assets/img/ref-prod-burger-768.webp 768w"
+  jpg: "/assets/img/ref-prod-burger-768.jpg"
 ref-prod-camera:
   alt: "Reference frame: medium format camera on a tripod head, side-lit"
   ratio: "4/5"
@@ -1044,6 +1845,24 @@ ref-prod-cans-bw:
   key: "61803610"
   webp: "/assets/img/ref-prod-cans-bw-640.webp 640w, /assets/img/ref-prod-cans-bw-1000.webp 1000w"
   jpg: "/assets/img/ref-prod-cans-bw-800.jpg"
+ref-prod-flatlay:
+  alt: "Reference frame: a flat lay of coffee, flowers and stationery"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "product-81e41852-8d5"
+  webp: "/assets/img/ref-prod-flatlay-640.webp 640w, /assets/img/ref-prod-flatlay-960.webp 960w"
+  jpg: "/assets/img/ref-prod-flatlay-800.jpg"
+ref-prod-honey:
+  alt: "Reference frame: a honey jar still life on dark wood"
+  ratio: "4/5"
+  w: 800
+  h: 1000
+  src: "licensed"
+  key: "product-60a2315e-ed2"
+  webp: "/assets/img/ref-prod-honey-640.webp 640w, /assets/img/ref-prod-honey-960.webp 960w"
+  jpg: "/assets/img/ref-prod-honey-800.jpg"
 ref-prod-kit:
   alt: "Reference frame: pour-over coffee equipment on a clean white ground"
   ratio: "1/1"
@@ -1053,6 +1872,159 @@ ref-prod-kit:
   key: "61713629"
   webp: "/assets/img/ref-prod-kit-640.webp 640w, /assets/img/ref-prod-kit-1000.webp 1000w"
   jpg: "/assets/img/ref-prod-kit-800.jpg"
+ref-prod-lamp-white:
+  alt: "Reference frame: a stage light unit photographed as a packshot on white"
+  ratio: "1/1"
+  w: 800
+  h: 800
+  src: "licensed"
+  key: "product-bf8a8bc8-575"
+  webp: "/assets/img/ref-prod-lamp-white-640.webp 640w, /assets/img/ref-prod-lamp-white-946.webp 946w"
+  jpg: "/assets/img/ref-prod-lamp-white-800.jpg"
+ref-prod-latte:
+  alt: "Reference frame: a latte with poured art, photographed overhead"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "product-89c87780-125"
+  webp: "/assets/img/ref-prod-latte-640.webp 640w, /assets/img/ref-prod-latte-1000.webp 1000w"
+  jpg: "/assets/img/ref-prod-latte-800.jpg"
+ref-prod-mug-white:
+  alt: "Reference frame: a glass mug photographed as a clean packshot on white"
+  ratio: "1/1"
+  w: 800
+  h: 800
+  src: "licensed"
+  key: "product-3722e9c2-f01"
+  webp: "/assets/img/ref-prod-mug-white-640.webp 640w, /assets/img/ref-prod-mug-white-942.webp 942w"
+  jpg: "/assets/img/ref-prod-mug-white-800.jpg"
+ref-re-air-crescent:
+  alt: "Reference frame: an aerial of a suburban crescent"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-aerial-a846bc75-1ab"
+  webp: "/assets/img/ref-re-air-crescent-640.webp 640w, /assets/img/ref-re-air-crescent-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-air-crescent-800.jpg"
+ref-re-air-park:
+  alt: "Reference frame: an overhead view of a residential neighbourhood and its park"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "re-aerial-71fea6c8-bf5"
+  webp: "/assets/img/ref-re-air-park-640.webp 640w, /assets/img/ref-re-air-park-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-air-park-800.jpg"
+ref-re-air-snow:
+  alt: "Reference frame: a drone view of a house in snow"
+  ratio: "16/9"
+  w: 800
+  h: 450
+  src: "licensed"
+  key: "re-aerial-abe94307-7fa"
+  webp: "/assets/img/ref-re-air-snow-640.webp 640w, /assets/img/ref-re-air-snow-960.webp 960w"
+  jpg: "/assets/img/ref-re-air-snow-800.jpg"
+ref-re-air-street:
+  alt: "Reference frame: an aerial of a street and the green space beside it"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-aerial-af9c5198-fa7"
+  webp: "/assets/img/ref-re-air-street-640.webp 640w, /assets/img/ref-re-air-street-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-air-street-800.jpg"
+ref-re-air-townhouses:
+  alt: "Reference frame: an aerial over townhouses and the streets between them"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-aerial-47eea1c1-832"
+  webp: "/assets/img/ref-re-air-townhouses-640.webp 640w, /assets/img/ref-re-air-townhouses-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-air-townhouses-800.jpg"
+ref-re-air-treelined:
+  alt: "Reference frame: an aerial of tree-lined suburban streets"
+  ratio: "3/2"
+  w: 1024
+  h: 683
+  src: "licensed"
+  key: "re-aerial-b83979c0-88a"
+  webp: "/assets/img/ref-re-air-treelined-640.webp 640w, /assets/img/ref-re-air-treelined-1000.webp 1000w, /assets/img/ref-re-air-treelined-1024.webp 1024w"
+  jpg: "/assets/img/ref-re-air-treelined-1024.jpg"
+ref-re-bath-door:
+  alt: "Reference frame: a bathroom seen through a bedroom doorway"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-bath-89cea2aa-8c5"
+  webp: "/assets/img/ref-re-bath-door-640.webp 640w, /assets/img/ref-re-bath-door-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-bath-door-800.jpg"
+ref-re-bath-tub:
+  alt: "Reference frame: a freestanding tub standing on stone tile"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "re-bath-2a6f7783-f77"
+  webp: "/assets/img/ref-re-bath-tub-640.webp 640w, /assets/img/ref-re-bath-tub-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-bath-tub-800.jpg"
+ref-re-bath-vanity:
+  alt: "Reference frame: a white bathroom with vanity seating"
+  ratio: "4/5"
+  w: 794
+  h: 992
+  src: "licensed"
+  key: "re-bath-2a8189c6-f0f"
+  webp: "/assets/img/ref-re-bath-vanity-640.webp 640w, /assets/img/ref-re-bath-vanity-794.webp 794w"
+  jpg: "/assets/img/ref-re-bath-vanity-794.jpg"
+ref-re-bath-view:
+  alt: "Reference frame: a bathroom with a city view"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-bath-82f59a13-810"
+  webp: "/assets/img/ref-re-bath-view-640.webp 640w, /assets/img/ref-re-bath-view-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-bath-view-800.jpg"
+ref-re-bed-corner:
+  alt: "Reference frame: a bedroom with corner windows and a fireplace"
+  ratio: "21/9"
+  w: 784
+  h: 336
+  src: "licensed"
+  key: "re-bedroom-1b7a9f3d-da8"
+  webp: "/assets/img/ref-re-bed-corner-640.webp 640w, /assets/img/ref-re-bed-corner-784.webp 784w"
+  jpg: "/assets/img/ref-re-bed-corner-784.jpg"
+ref-re-bed-study:
+  alt: "Reference frame: a bedroom with a study corner under a warm lamp"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-bedroom-61817c40-ddb"
+  webp: "/assets/img/ref-re-bed-study-640.webp 640w, /assets/img/ref-re-bed-study-960.webp 960w"
+  jpg: "/assets/img/ref-re-bed-study-800.jpg"
+ref-re-bed-teal:
+  alt: "Reference frame: a made bed with teal cushions in morning light"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-bedroom-93b1e6b4-21e"
+  webp: "/assets/img/ref-re-bed-teal-640.webp 640w, /assets/img/ref-re-bed-teal-960.webp 960w"
+  jpg: "/assets/img/ref-re-bed-teal-800.jpg"
+ref-re-bed-timber:
+  alt: "Reference frame: a bedroom with a timber feature wall"
+  ratio: "16/9"
+  w: 800
+  h: 450
+  src: "licensed"
+  key: "re-bedroom-82cb7fca-4fd"
+  webp: "/assets/img/ref-re-bed-timber-640.webp 640w, /assets/img/ref-re-bed-timber-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-bed-timber-800.jpg"
 ref-re-bedroom:
   alt: "Reference frame: bright bedroom with desk, plant and low bed"
   ratio: "3/2"
@@ -1080,6 +2052,24 @@ ref-re-drawer:
   key: "62119968"
   webp: "/assets/img/ref-re-drawer-420.webp 420w, /assets/img/ref-re-drawer-640.webp 640w"
   jpg: "/assets/img/ref-re-drawer-520.jpg"
+ref-re-ext-dusk:
+  alt: "Reference frame: a house at dusk with its windows lit and a pool in the foreground"
+  ratio: "3/2"
+  w: 1024
+  h: 683
+  src: "licensed"
+  key: "re-exterior-776abccf-f74"
+  webp: "/assets/img/ref-re-ext-dusk-640.webp 640w, /assets/img/ref-re-ext-dusk-1000.webp 1000w, /assets/img/ref-re-ext-dusk-1024.webp 1024w"
+  jpg: "/assets/img/ref-re-ext-dusk-1024.jpg"
+ref-re-ext-walk:
+  alt: "Reference frame: a white clapboard house behind a planted front walk"
+  ratio: "4/5"
+  w: 960
+  h: 1200
+  src: "licensed"
+  key: "re-exterior-00f6a15b-26c"
+  webp: "/assets/img/ref-re-ext-walk-640.webp 640w, /assets/img/ref-re-ext-walk-960.webp 960w"
+  jpg: "/assets/img/ref-re-ext-walk-960.jpg"
 ref-re-glass:
   alt: "Reference frame: black and white abstract of a folding glass facade"
   ratio: "4/5"
@@ -1089,6 +2079,96 @@ ref-re-glass:
   key: "62208011"
   webp: "/assets/img/ref-re-glass-640.webp 640w, /assets/img/ref-re-glass-1000.webp 1000w"
   jpg: "/assets/img/ref-re-glass-800.jpg"
+ref-re-int-bright:
+  alt: "Reference frame: a bright living room with a patterned armchair"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-interior-7424bd95-7f4"
+  webp: "/assets/img/ref-re-int-bright-640.webp 640w, /assets/img/ref-re-int-bright-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-int-bright-800.jpg"
+ref-re-int-dining:
+  alt: "Reference frame: a bright dining room with a long table and panelled walls"
+  ratio: "4/5"
+  w: 800
+  h: 1000
+  src: "licensed"
+  key: "re-interior-c6b1bca4-744"
+  webp: "/assets/img/ref-re-int-dining-640.webp 640w, /assets/img/ref-re-int-dining-960.webp 960w"
+  jpg: "/assets/img/ref-re-int-dining-800.jpg"
+ref-re-int-glazing:
+  alt: "Reference frame: a living room behind floor-to-ceiling glazing"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "re-interior-1f6ae721-045"
+  webp: "/assets/img/ref-re-int-glazing-640.webp 640w, /assets/img/ref-re-int-glazing-969.webp 969w"
+  jpg: "/assets/img/ref-re-int-glazing-800.jpg"
+ref-re-int-minimal:
+  alt: "Reference frame: a minimal living room in a neutral palette"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-interior-5c1b8889-c9d"
+  webp: "/assets/img/ref-re-int-minimal-640.webp 640w, /assets/img/ref-re-int-minimal-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-int-minimal-800.jpg"
+ref-re-int-navy:
+  alt: "Reference frame: a living room with a deep navy gallery wall"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-interior-4d47e4f8-3f0"
+  webp: "/assets/img/ref-re-int-navy-640.webp 640w, /assets/img/ref-re-int-navy-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-int-navy-800.jpg"
+ref-re-int-outlook:
+  alt: "Reference frame: an open lounge with a city outlook"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-interior-06204d58-e78"
+  webp: "/assets/img/ref-re-int-outlook-640.webp 640w, /assets/img/ref-re-int-outlook-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-int-outlook-800.jpg"
+ref-re-kit-compact:
+  alt: "Reference frame: a compact kitchen with integrated appliances"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-kitchen-2196bf51-fa0"
+  webp: "/assets/img/ref-re-kit-compact-640.webp 640w, /assets/img/ref-re-kit-compact-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-kit-compact-800.jpg"
+ref-re-kit-galley:
+  alt: "Reference frame: a galley kitchen with a patterned splashback"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-kitchen-81e90529-fb6"
+  webp: "/assets/img/ref-re-kit-galley-640.webp 640w, /assets/img/ref-re-kit-galley-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-kit-galley-800.jpg"
+ref-re-kit-island:
+  alt: "Reference frame: a kitchen island with bar stools and pale cabinetry"
+  ratio: "1/1"
+  w: 800
+  h: 800
+  src: "licensed"
+  key: "re-kitchen-0b015b64-536"
+  webp: "/assets/img/ref-re-kit-island-640.webp 640w, /assets/img/ref-re-kit-island-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-kit-island-800.jpg"
+ref-re-kit-sink:
+  alt: "Reference frame: a farmhouse sink set under a bay window"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-kitchen-3c0a0e94-5b9"
+  webp: "/assets/img/ref-re-kit-sink-640.webp 640w, /assets/img/ref-re-kit-sink-960.webp 960w"
+  jpg: "/assets/img/ref-re-kit-sink-800.jpg"
 ref-re-lounge:
   alt: "Reference frame: interior lounge with brick wall and window planting"
   ratio: "3/2"
@@ -1125,6 +2205,78 @@ ref-re-stairwell:
   key: "61874763"
   webp: "/assets/img/ref-re-stairwell-640.webp 640w, /assets/img/ref-re-stairwell-1000.webp 1000w"
   jpg: "/assets/img/ref-re-stairwell-800.jpg"
+ref-re-yard-bench:
+  alt: "Reference frame: a bench under a tree on an autumn lawn"
+  ratio: "4/5"
+  w: 800
+  h: 1000
+  src: "licensed"
+  key: "re-yard-9e9171d3-957"
+  webp: "/assets/img/ref-re-yard-bench-640.webp 640w, /assets/img/ref-re-yard-bench-960.webp 960w"
+  jpg: "/assets/img/ref-re-yard-bench-800.jpg"
+ref-re-yard-border:
+  alt: "Reference frame: a fenced border in full summer flower"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-yard-69c7e457-8ec"
+  webp: "/assets/img/ref-re-yard-border-640.webp 640w, /assets/img/ref-re-yard-border-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-yard-border-800.jpg"
+ref-re-yard-curve:
+  alt: "Reference frame: a curved pool set into a planted back garden"
+  ratio: "4/3"
+  w: 800
+  h: 600
+  src: "licensed"
+  key: "re-yard-b48c0db7-0a8"
+  webp: "/assets/img/ref-re-yard-curve-640.webp 640w, /assets/img/ref-re-yard-curve-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-yard-curve-800.jpg"
+ref-re-yard-deck:
+  alt: "Reference frame: a pool with a timber deck surround"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-yard-1c8a6cdd-baf"
+  webp: "/assets/img/ref-re-yard-deck-640.webp 640w, /assets/img/ref-re-yard-deck-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-yard-deck-800.jpg"
+ref-re-yard-loungers:
+  alt: "Reference frame: a pool terrace set with loungers"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-yard-20a0f861-638"
+  webp: "/assets/img/ref-re-yard-loungers-640.webp 640w, /assets/img/ref-re-yard-loungers-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-yard-loungers-800.jpg"
+ref-re-yard-path:
+  alt: "Reference frame: a stone path running through a formal garden"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-yard-8715a77e-417"
+  webp: "/assets/img/ref-re-yard-path-640.webp 640w, /assets/img/ref-re-yard-path-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-yard-path-800.jpg"
+ref-re-yard-patio:
+  alt: "Reference frame: a covered patio with an outdoor fireplace and grill"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "re-yard-13ed51cc-13c"
+  webp: "/assets/img/ref-re-yard-patio-640.webp 640w, /assets/img/ref-re-yard-patio-1000.webp 1000w"
+  jpg: "/assets/img/ref-re-yard-patio-800.jpg"
+ref-re-yard-terrace:
+  alt: "Reference frame: a planted garden running up to a seating terrace"
+  ratio: "21/9"
+  w: 800
+  h: 343
+  src: "licensed"
+  key: "re-yard-0d5a95a5-8ef"
+  webp: "/assets/img/ref-re-yard-terrace-640.webp 640w, /assets/img/ref-re-yard-terrace-968.webp 968w"
+  jpg: "/assets/img/ref-re-yard-terrace-800.jpg"
 ref-vid-barrel:
   alt: "Reference frame: low-key study of a lens barrel and aperture ring"
   ratio: "4/5"
@@ -1134,6 +2286,15 @@ ref-vid-barrel:
   key: "61754620"
   webp: "/assets/img/ref-vid-barrel-640.webp 640w, /assets/img/ref-vid-barrel-1000.webp 1000w"
   jpg: "/assets/img/ref-vid-barrel-800.jpg"
+ref-vid-floor:
+  alt: "Reference frame: a production set with lighting and monitors"
+  ratio: "3/2"
+  w: 960
+  h: 640
+  src: "licensed"
+  key: "video-344bf044-48c"
+  webp: "/assets/img/ref-vid-floor-640.webp 640w, /assets/img/ref-vid-floor-960.webp 960w"
+  jpg: "/assets/img/ref-vid-floor-960.jpg"
 ref-vid-lens:
   alt: "Reference frame: long telephoto lens on a body at the edge of a field"
   ratio: "3/2"
@@ -1161,6 +2322,24 @@ ref-vid-photog:
   key: "61835793"
   webp: "/assets/img/ref-vid-photog-420.webp 420w, /assets/img/ref-vid-photog-640.webp 640w"
   jpg: "/assets/img/ref-vid-photog-520.jpg"
+ref-vid-rig:
+  alt: "Reference frame: a cinema camera rig under coloured light"
+  ratio: "4/5"
+  w: 800
+  h: 1000
+  src: "licensed"
+  key: "video-ede9b715-f2b"
+  webp: "/assets/img/ref-vid-rig-640.webp 640w, /assets/img/ref-vid-rig-960.webp 960w"
+  jpg: "/assets/img/ref-vid-rig-800.jpg"
+ref-vid-set:
+  alt: "Reference frame: an empty studio with lights and stands set for a shoot"
+  ratio: "16/9"
+  w: 1024
+  h: 576
+  src: "licensed"
+  key: "video-138b3efe-806"
+  webp: "/assets/img/ref-vid-set-640.webp 640w, /assets/img/ref-vid-set-1000.webp 1000w, /assets/img/ref-vid-set-1024.webp 1024w"
+  jpg: "/assets/img/ref-vid-set-1024.jpg"
 ref-vid-slr:
   alt: "Reference frame: 35mm SLR on a table, shallow focus on the barrel"
   ratio: "3/2"
@@ -1170,6 +2349,15 @@ ref-vid-slr:
   key: "62121072"
   webp: "/assets/img/ref-vid-slr-640.webp 640w, /assets/img/ref-vid-slr-1000.webp 1000w"
   jpg: "/assets/img/ref-vid-slr-800.jpg"
+ref-vid-stage:
+  alt: "Reference frame: filming a performer on a lit stage"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "licensed"
+  key: "video-ab4ea1cf-f06"
+  webp: "/assets/img/ref-vid-stage-640.webp 640w, /assets/img/ref-vid-stage-960.webp 960w"
+  jpg: "/assets/img/ref-vid-stage-800.jpg"
 ref-wed-aisle:
   alt: "Reference frame: aisle set for a ceremony with tall floral arrangements"
   ratio: "4/5"
