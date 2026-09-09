@@ -30,7 +30,8 @@ table.rate td.a{text-align:right;white-space:nowrap;width:1%}
 .pick:hover{background:var(--acbg);border-color:var(--ac)}
 .pick[aria-pressed="true"]{background:var(--ac);border-color:var(--ac);color:var(--btn-fg)}
 
-/* The pay panel. Not a <form>: it posts JSON to the orders Worker and then
+/* The pay panel. Deliberately not an HTML form element: it posts JSON to the
+   orders Worker and then
    hands the visitor to Stripe, so there is no browser form submission to
    hijack and no card field anywhere on this domain. */
 .paybox{border:1px solid var(--ln);border-radius:8px;background:var(--card);

@@ -470,13 +470,15 @@ description: >-
 
   function applyDeepLink() {
     var want = params.get("item") || params.get("sku") || "";
+    var invoiceRoute = params.get("route") === "invoice";
     if (want && BY[want]) {
       /* The fragment in the incoming link has already put the browser in the
          right place, so only scroll when the link did not name one. */
-      choose(want, location.hash ? "silent" : "");
+      choose(want, location.hash || invoiceRoute ? "silent" : "");
+      if (!location.hash && invoiceRoute) go("#invoice");
       return;
     }
-    if (params.get("route") === "invoice") go("#invoice");
+    if (invoiceRoute) go("#invoice");
   }
 
   /* ---- Turnstile ------------------------------------------------------ */
