@@ -168,6 +168,20 @@ def tidy(s):
 LIC_LABEL = {'cc0': 'CC0', 'by': 'CC BY', 'pdm': 'Public domain'}
 
 
+def licence_url(u):
+    """Repair the one malformed licence URL the manifest carries.
+
+    One CC0 record has licence_url ending "/deed.en/" -- a trailing slash
+    after the deed segment -- and creativecommons.org answers that with a
+    404. On a credits page the licence link IS the licence: a broken one
+    leaves a reader unable to check what they are permitted to do. The deed
+    segment is dropped so the link lands on the canonical deed, which is the
+    same document the correct URL would have reached.
+    """
+    u = tidy(u)
+    return re.sub(r'/deed\.[a-z-]+/?$', '/', u) if u else u
+
+
 def merge_photos():
     """Append to _data/photos.yml, keeping it sorted and the header intact."""
     raw = open(DATA + '/photos.yml').read()
@@ -203,7 +217,7 @@ def write_licensed():
                     f"  desc: {q(tidy(v.get('description')))}\n"
                     f"  lic: {q(LIC_LABEL.get(tidy(v.get('licence')).lower(), tidy(v.get('licence')).upper()))}\n"
                     f"  licver: {q(tidy(v.get('licence_version')))}\n"
-                    f"  licurl: {q(tidy(v.get('licence_url')))}\n"
+                    f"  licurl: {q(licence_url(v.get('licence_url')))}\n"
                     f"  site: {q(tidy(v.get('source')))}\n"
                     f"  page: {q(tidy(v.get('source_url')))}\n")
     return len(set(used_lic))
