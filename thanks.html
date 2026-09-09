@@ -1,0 +1,27 @@
+---
+layout: base
+permalink: /thanks/
+title: Message received
+noindex: true
+og_photo: wat-fisherman
+description: Your enquiry has been received.
+---
+<section class="mast"><div class="wide">
+  <div class="split">
+    <div>
+      <span class="eyebrow">Sent</span>
+      <h1>Message received.</h1>
+      <p class="lead">Your enquiry has come through and I will reply to the address you gave, usually within a working day. You are seeing this page because the form actually posted &mdash; not because a script decided to say so.</p>
+      <div class="contacts" style="border-top:1px solid var(--ln);padding-top:22px;max-width:420px">
+        <a href="tel:{{ site.phone_link }}"><b>Phone</b><span class="v">{{ site.phone_display }}</span></a>
+        <a href="mailto:{{ site.email }}"><b>Email</b><span class="v">{{ site.email }}</span></a>
+      </div>
+      <p class="small muted" style="margin-top:22px">If it is time-sensitive, call rather than wait.</p>
+      <div class="acts" style="margin-top:28px">
+        <a href="{{ '/' | relative_url }}" class="btn btn-g">Back to the studio</a>
+        <a href="{{ '/work/' | relative_url }}" class="btn btn-g">Look at the work</a>
+      </div>
+    </div>
+    <div class="dev">{% include photo.html slug="wat-fisherman" ratio="r32" loading="eager" sizes="(max-width:900px) 100vw, 46vw" %}</div>
+  </div>
+</div></section>

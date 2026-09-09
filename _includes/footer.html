@@ -1,0 +1,44 @@
+{%- assign home = '/' | relative_url -%}
+<footer><div class="wide">
+  <div class="fg">
+    <div>
+      <a href="{{ home }}" class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <span class="bn">Wirewalk<s>Studio</s></span>
+      </a>
+      <p class="small muted" style="max-width:36ch">Photography, video and audio production. Briefed, shot, cut and mixed by the same hands, and delivered in the formats your channels actually take.</p>
+      <p class="small" style="margin-top:18px"><a href="tel:{{ site.phone_link }}" style="font-family:var(--mono)">{{ site.phone_display }}</a></p>
+      <p class="small"><a href="mailto:{{ site.email }}" style="font-family:var(--mono)">{{ site.email }}</a></p>
+    </div>
+    <div><h5>Photography</h5>
+      <a href="{{ '/business/'    | relative_url }}">Business and corporate</a>
+      <a href="{{ '/photography/' | relative_url }}#people">People and portraits</a>
+      <a href="{{ '/photography/' | relative_url }}#event">Events</a>
+      <a href="{{ '/photography/' | relative_url }}#product">Product</a>
+      <a href="{{ '/photography/' | relative_url }}#property">Real estate and interiors</a>
+      <a href="{{ '/photography/' | relative_url }}#pets">Pets</a>
+      <a href="{{ '/photography/' | relative_url }}#aerial">Aerial and landscape</a>
+      <a href="{{ '/photography/' | relative_url }}#city">Cityscape</a>
+    </div>
+    <div><h5>Motion and sound</h5>
+      <a href="{{ '/video/' | relative_url }}">Video production</a>
+      <a href="{{ '/video/' | relative_url }}#editing">Editing and colour</a>
+      <a href="{{ '/audio/' | relative_url }}">Audio production</a>
+      <a href="{{ '/audio/' | relative_url }}#post">Post for picture</a>
+      <a href="{{ '/work/'  | relative_url }}">Selected work</a>
+    </div>
+    <div><h5>Working together</h5>
+      <a href="{{ '/process/'  | relative_url }}">How a project runs</a>
+      <a href="{{ '/process/'  | relative_url }}#delivery">Deliverables and formats</a>
+      <a href="{{ '/process/'  | relative_url }}#rights">Rights and usage</a>
+      <a href="{{ home }}#contact">Start a project</a>
+      <h5 style="margin-top:24px">Also from Wirewalk</h5>
+      <a href="https://www.wirewalk.com/">Wirewalk Advisory</a>
+      <a href="https://ai.wirewalk.com/">Wirewalk AI</a>
+    </div>
+  </div>
+  <div class="fb">
+    <span>&copy; {{ 'now' | date: "%Y" }} Wirewalk Studio. New York.</span>
+    <span><a href="{{ '/credits/' | relative_url }}">Image credits and licences</a> &middot; usage rights are set in writing before a shoot or session is booked.</span>
+  </div>
+</div></footer>

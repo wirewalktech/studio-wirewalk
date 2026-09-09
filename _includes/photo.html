@@ -1,0 +1,27 @@
+{%- comment -%}
+  Renders one developed frame from _data/photos.yml.
+
+    {% include photo.html slug="hero-city" sizes="(max-width:900px) 100vw, 40vw" %}
+
+  Parameters: slug (required) · sizes · alt (overrides the data file) ·
+  loading ("eager" for anything above the fold) · fetchpriority · ratio
+  (a .fr modifier class, e.g. "r32") · class (extra classes on the figure/div)
+  · wrap ("none" to emit only the <picture>).
+
+  Paths in the data file are root-absolute (/assets/img/...), which is correct
+  because baseurl is empty and the site is served at the root of the custom
+  domain. If baseurl ever becomes non-empty these break — as does everything
+  else. See the comment in _config.yml.
+{%- endcomment -%}
+{%- assign p = site.data.photos[include.slug] -%}
+{%- if p -%}
+{%- assign a = include.alt | default: p.alt -%}
+{%- assign ld = include.loading | default: 'lazy' -%}
+{%- if include.wrap == 'none' -%}
+<picture><source type="image/webp" srcset="{{ p.webp }}"{% if include.sizes %} sizes="{{ include.sizes }}"{% endif %}><img src="{{ p.jpg }}" width="{{ p.w }}" height="{{ p.h }}" alt="{{ a | escape }}" loading="{{ ld }}" decoding="async"{% if include.fetchpriority %} fetchpriority="{{ include.fetchpriority }}"{% endif %}></picture>
+{%- else -%}
+<div class="fr {{ include.ratio }} {{ include.class }}"{% unless include.ratio %} style="aspect-ratio:{{ p.ratio }}"{% endunless %}><picture><source type="image/webp" srcset="{{ p.webp }}"{% if include.sizes %} sizes="{{ include.sizes }}"{% endif %}><img src="{{ p.jpg }}" width="{{ p.w }}" height="{{ p.h }}" alt="{{ a | escape }}" loading="{{ ld }}" decoding="async"{% if include.fetchpriority %} fetchpriority="{{ include.fetchpriority }}"{% endif %}></picture></div>
+{%- endif -%}
+{%- else -%}
+<!-- photo.html: no entry named "{{ include.slug }}" in _data/photos.yml -->
+{%- endif -%}

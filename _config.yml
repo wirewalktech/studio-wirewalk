@@ -1,0 +1,33 @@
+title: Wirewalk Studio
+tagline: Photo, video and audio
+description: >-
+  Photography, video production and audio work. Product, architectural and
+  event photography; brand films, documentary and multi-camera video with
+  editing and colour; recording, voice, mixing, mastering and post for
+  picture.
+author: Wirewalk Studio
+email: sales@wirewalk.com
+phone_display: 917-217-7975
+phone_link: "+19172177975"
+
+# Change both of these together if the repository is renamed.
+url: https://studio.wirewalk.com
+# Served at the ROOT of studio.wirewalk.com (see CNAME). A non-empty baseurl
+# would make every Liquid-generated link render as /studio-wirewalk/... and
+# 404 on the live domain. Leave this empty.
+baseurl: ""
+
+timezone: America/New_York
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache
+  - tools

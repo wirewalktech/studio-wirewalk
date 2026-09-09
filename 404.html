@@ -1,0 +1,32 @@
+---
+layout: base
+permalink: /404.html
+title: Page not found
+noindex: true
+og_photo: mood-lilies
+description: That page does not exist.
+---
+<section class="mast"><div class="wide">
+  <div class="split">
+    <div>
+      <span class="eyebrow">404</span>
+      <h1>Nothing at this address.</h1>
+      <p class="lead">The page you asked for is not here. It may have been renamed, or the link may have been mistyped. Everything the studio publishes is reachable from the pages below.</p>
+      <div class="acts" style="margin-top:28px">
+        <a href="{{ '/' | relative_url }}" class="btn btn-p">Back to the studio</a>
+        <a href="{{ '/work/' | relative_url }}" class="btn btn-g">Work</a>
+      </div>
+      <div class="rows" style="margin-top:36px">
+        <div class="row"><div><span class="kicker">Photography</span><h4><a href="{{ '/photography/' | relative_url }}">Every discipline</a></h4></div>
+          <p>People, events, weddings, product, real estate, architecture, pets, aerial and landscape, cityscape, food, nature.</p></div>
+        <div class="row"><div><span class="kicker">Business</span><h4><a href="{{ '/business/' | relative_url }}">Corporate photography</a></h4></div>
+          <p>Headshots, people at work, workplace and facility, culture, events and image libraries.</p></div>
+        <div class="row"><div><span class="kicker">Motion and sound</span><h4><a href="{{ '/video/' | relative_url }}">Video</a> and <a href="{{ '/audio/' | relative_url }}">audio</a></h4></div>
+          <p>Films, documentary, multi-camera, edit and grade; recording, voice, mix, master and post.</p></div>
+        <div class="row"><div><span class="kicker">Working together</span><h4><a href="{{ '/process/' | relative_url }}">Process, delivery and rights</a></h4></div>
+          <p>How a project runs, what lands and in what format, and how usage is licensed.</p></div>
+      </div>
+    </div>
+    <div class="dev">{% include photo.html slug="mood-lilies" ratio="r32" loading="eager" sizes="(max-width:900px) 100vw, 46vw" %}</div>
+  </div>
+</div></section>
