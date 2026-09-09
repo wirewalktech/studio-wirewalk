@@ -49,6 +49,14 @@ table.rate td.a{text-align:right;white-space:nowrap;width:1%}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .msg.bad{color:#F09080}}
 .turn{margin:20px 0 4px;min-height:0}
 .paynote{margin-top:20px;font-size:13px;line-height:1.65;color:var(--tx3)}
+/* The pay panel is not a <form> element (it posts JSON to the orders Worker),
+   so it matched neither .frm nor .frm2 and its fields rendered at the browser
+   default size while everything around them was 15.5px. Scoping input styling
+   to a form class silently excludes any control that is not inside one. */
+.paybox label{display:block;font:600 13.5px/1.4 var(--sans);color:var(--tx2);
+              margin:0 0 6px;letter-spacing:.01em}
+.paybox .fld{margin:0 0 16px}
+.paybox select{appearance:auto}
 .paynote a{color:var(--ac);text-decoration:underline;text-underline-offset:2px}
 
 /* Two plain HTML forms — the invoice/PO route and the quote request. Both
@@ -58,6 +66,7 @@ table.rate td.a{text-align:right;white-space:nowrap;width:1%}
 @media (max-width:720px){.frm2{grid-template-columns:1fr}}
 .frm2 .wide-f{grid-column:1/-1}
 .frm2 label{font-size:12.5px;color:var(--tx3);margin-top:12px;display:block;letter-spacing:.02em}
+.paybox input,.paybox select,
 .frm2 input,.frm2 select,.frm2 textarea{width:100%;font:400 15.5px/1.5 var(--sans);
   color:var(--tx);background:var(--bg);border:1px solid var(--ln2);border-radius:6px;
   padding:11px 13px;margin-top:5px}
