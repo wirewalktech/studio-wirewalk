@@ -26,7 +26,11 @@ description: >-
     {%- assign ref_count = ref_count | plus: 1 -%}{%- assign lic_count = lic_count | plus: 1 -%}
   {%- else -%}{%- assign own_count = own_count | plus: 1 -%}{%- endif -%}
 {%- endfor -%}
-{%- assign by_frames = site.data.licensed | where_exp: "c", "c.lic == 'CC BY'" -%}
+{%- assign by_count = 0 -%}
+{%- for c in site.data.licensed -%}
+  {%- unless c.lic == 'CC0' or c.lic == 'Public domain' -%}{%- assign by_count = by_count | plus: 1 -%}{%- endunless -%}
+{%- endfor -%}
+{%- assign lic_sources = site.data.licensed | size -%}
 
 <section class="sec" id="summary"><div class="wide">
   <div class="hero-meta" style="margin-top:0;border-top:0;padding-top:0">
@@ -88,9 +92,9 @@ description: >-
   <div class="sh">
     <span class="eyebrow">03 &mdash; Licensed reference frames</span>
     <h2>Illustrating the services the archive does not cover.</h2>
-    <p>A second set of {{ lic_count }} reference frames, added to illustrate family, newborn and pet sessions, headshots in a workplace, product, video and audio, and to build out the real-estate section &mdash; all categories where the studio&rsquo;s published archive is thin or where commissioned work is confidential. They were sourced through <a href="https://openverse.org/" rel="noopener">Openverse</a>, which returns licence, creator and source as structured data rather than as a claim on a web page &mdash; so the table below is <em>generated</em> from that data when the site builds, not typed out by hand. A credit somebody retypes is a credit that eventually goes wrong.</p>
+    <p>A second set of {{ lic_count }} published frames, derived from the {{ lic_sources }} licensed source photographs listed below &mdash; one is used at two aspect ratios, which is why the counts differ by one. Added to illustrate family, newborn and pet sessions, headshots in a workplace, product, video and audio, and to build out the real-estate section &mdash; all categories where the studio&rsquo;s published archive is thin or where commissioned work is confidential. They were sourced through <a href="https://openverse.org/" rel="noopener">Openverse</a>, which returns licence, creator and source as structured data rather than as a claim on a web page &mdash; so the table below is <em>generated</em> from that data when the site builds, not typed out by hand. A credit somebody retypes is a credit that eventually goes wrong.</p>
     <p><b>One category is deliberately not filled.</b> There is no wedding and no conference photography in this set: searching for it under an acceptable licence returned political ceremonies, military decorations and museum objects, and none of that would honestly stand in for wedding or event coverage. The five party frames here are used as what they are &mdash; a cake, a sparkler, confetti &mdash; and the events and weddings sections are carried by their words instead. That category needs the photographer&rsquo;s own work and is waiting for it.</p>
-    <p>Licences are CC0, public-domain mark or CC-BY only. Share-alike work was excluded deliberately, so there is never a question about what a page containing one of these becomes. {% if by_frames.size > 0 %}<b>{{ by_frames.size }} of the {{ lic_count }} require attribution</b> under CC-BY; the creator, licence version and source page for each are in the table, which is the attribution.{% endif %}</p>
+    <p>Licences are CC0, public-domain mark or CC-BY only. Share-alike work was excluded deliberately, so there is never a question about what a page containing one of these becomes. {% if by_count > 0 %}<b>{{ by_count }} of the {{ lic_sources }} require attribution</b> under CC-BY; the creator, licence version and source page for each are in the table, which is the attribution.{% endif %}</p>
     <p><b>None of this is the studio&rsquo;s work.</b> Each is labelled &ldquo;Reference frame&rdquo; in its alt text, flagged on the section it appears in, and never placed beside copy claiming the studio shot it.</p>
   </div>
   <div class="tbl-wrap">
