@@ -61,7 +61,7 @@ city-dusk:
   h: 800
   src: "flickr"
   key: "cityscape-53783702414"
-  webp: "/assets/img/city-dusk-640.webp 640w, /assets/img/city-dusk-1000.webp 1000w, /assets/img/city-dusk-1600.webp 1600w"
+  webp: "/assets/img/city-dusk-640.webp 640w, /assets/img/city-dusk-1000.webp 1000w, /assets/img/city-dusk-1400.webp 1400w"
   jpg: "/assets/img/city-dusk-1200.jpg"
 city-escalator:
   alt: "Black and white escalators at night, converging metal diagonals"
@@ -225,6 +225,69 @@ det-reeds:
   key: "detail-239"
   webp: "/assets/img/det-reeds-420.webp 420w, /assets/img/det-reeds-640.webp 640w"
   jpg: "/assets/img/det-reeds-520.jpg"
+fam-dress:
+  alt: "Small child in a purple dress seen from behind, dappled light through trees"
+  ratio: "4/5"
+  w: 1200
+  h: 1500
+  src: "selects"
+  key: "family-198"
+  webp: "/assets/img/fam-dress-640.webp 640w, /assets/img/fam-dress-1000.webp 1000w, /assets/img/fam-dress-1400.webp 1400w"
+  jpg: "/assets/img/fam-dress-1200.jpg"
+fam-dress-w:
+  alt: "Small child in a purple dress in dappled light"
+  ratio: "3/2"
+  w: 800
+  h: 533
+  src: "selects"
+  key: "family-198"
+  webp: "/assets/img/fam-dress-w-640.webp 640w, /assets/img/fam-dress-w-1000.webp 1000w"
+  jpg: "/assets/img/fam-dress-w-800.jpg"
+fam-grass:
+  alt: "Young girl sitting in long grass, backlit, the background thrown well out of focus"
+  ratio: "3/2"
+  w: 1200
+  h: 800
+  src: "selects"
+  key: "family-075"
+  webp: "/assets/img/fam-grass-640.webp 640w, /assets/img/fam-grass-1000.webp 1000w, /assets/img/fam-grass-1400.webp 1400w"
+  jpg: "/assets/img/fam-grass-1200.jpg"
+fam-grass-t:
+  alt: "Young girl sitting in long grass, backlit in late afternoon"
+  ratio: "4/5"
+  w: 1200
+  h: 1500
+  src: "selects"
+  key: "family-075"
+  webp: "/assets/img/fam-grass-t-640.webp 640w, /assets/img/fam-grass-t-1000.webp 1000w"
+  jpg: "/assets/img/fam-grass-t-1200.jpg"
+fam-run:
+  alt: "Child caught mid-run across a lawn, arms out"
+  ratio: "3/2"
+  w: 1200
+  h: 800
+  src: "selects"
+  key: "family-206"
+  webp: "/assets/img/fam-run-640.webp 640w, /assets/img/fam-run-1000.webp 1000w, /assets/img/fam-run-1400.webp 1400w"
+  jpg: "/assets/img/fam-run-1200.jpg"
+fam-run-t:
+  alt: "Child caught mid-run across a lawn, arms out"
+  ratio: "4/5"
+  w: 800
+  h: 1000
+  src: "selects"
+  key: "family-206"
+  webp: "/assets/img/fam-run-t-640.webp 640w, /assets/img/fam-run-t-1000.webp 1000w"
+  jpg: "/assets/img/fam-run-t-800.jpg"
+fam-surf:
+  alt: "Child running through shallow surf, backlit and in monochrome"
+  ratio: "3/2"
+  w: 1200
+  h: 800
+  src: "selects"
+  key: "family-169"
+  webp: "/assets/img/fam-surf-640.webp 640w, /assets/img/fam-surf-1000.webp 1000w, /assets/img/fam-surf-1400.webp 1400w"
+  jpg: "/assets/img/fam-surf-1200.jpg"
 gfx-arch:
   alt: "Black and white natural rock arch"
   ratio: "4/5"
@@ -304,7 +367,7 @@ gfx-railing:
   h: 800
   src: "selects"
   key: "graphic-266"
-  webp: "/assets/img/gfx-railing-640.webp 640w, /assets/img/gfx-railing-1000.webp 1000w, /assets/img/gfx-railing-1600.webp 1600w"
+  webp: "/assets/img/gfx-railing-640.webp 640w, /assets/img/gfx-railing-1000.webp 1000w, /assets/img/gfx-railing-1400.webp 1400w"
   jpg: "/assets/img/gfx-railing-1200.jpg"
 gfx-road:
   alt: "Monochrome road curving into snowbound mountains"
@@ -349,35 +412,8 @@ hero-city:
   h: 800
   src: "flickr"
   key: "cityscape-53783702414"
-  webp: "/assets/img/hero-city-640.webp 640w, /assets/img/hero-city-1000.webp 1000w, /assets/img/hero-city-1600.webp 1600w"
+  webp: "/assets/img/hero-city-640.webp 640w, /assets/img/hero-city-1000.webp 1000w, /assets/img/hero-city-1400.webp 1400w"
   jpg: "/assets/img/hero-city-1200.jpg"
-hero-dog:
-  alt: "Dog standing on a snow-covered track in winter woods"
-  ratio: "4/5"
-  w: 1200
-  h: 1500
-  src: "selects"
-  key: "pets-060"
-  webp: "/assets/img/hero-dog-640.webp 640w, /assets/img/hero-dog-1000.webp 1000w, /assets/img/hero-dog-1600.webp 1600w"
-  jpg: "/assets/img/hero-dog-1200.jpg"
-hero-dunes:
-  alt: "A single bare tree standing in still misted water"
-  ratio: "4/5"
-  w: 1200
-  h: 1500
-  src: "selects"
-  key: "water-193"
-  webp: "/assets/img/hero-dunes-640.webp 640w, /assets/img/hero-dunes-1000.webp 1000w, /assets/img/hero-dunes-1600.webp 1600w"
-  jpg: "/assets/img/hero-dunes-1200.jpg"
-hero-lamp:
-  alt: "Snow falling through the light of a park lamp at dusk"
-  ratio: "4/5"
-  w: 1200
-  h: 1500
-  src: "selects"
-  key: "mood-058"
-  webp: "/assets/img/hero-lamp-640.webp 640w, /assets/img/hero-lamp-1000.webp 1000w"
-  jpg: "/assets/img/hero-lamp-1200.jpg"
 hosp-counter:
   alt: "Counter service at a small restaurant, black and white"
   ratio: "3/2"
@@ -385,7 +421,7 @@ hosp-counter:
   h: 800
   src: "flickr"
   key: "cityscape-53746171760"
-  webp: "/assets/img/hosp-counter-640.webp 640w, /assets/img/hosp-counter-1000.webp 1000w, /assets/img/hosp-counter-1600.webp 1600w"
+  webp: "/assets/img/hosp-counter-640.webp 640w, /assets/img/hosp-counter-1000.webp 1000w, /assets/img/hosp-counter-1400.webp 1400w"
   jpg: "/assets/img/hosp-counter-1200.jpg"
 land-badlands:
   alt: "Eroded badlands formation in late light"
@@ -403,7 +439,7 @@ land-canyon:
   h: 800
   src: "selects"
   key: "landscape-026"
-  webp: "/assets/img/land-canyon-640.webp 640w, /assets/img/land-canyon-1000.webp 1000w, /assets/img/land-canyon-1600.webp 1600w"
+  webp: "/assets/img/land-canyon-640.webp 640w, /assets/img/land-canyon-1000.webp 1000w, /assets/img/land-canyon-1400.webp 1400w"
   jpg: "/assets/img/land-canyon-1200.jpg"
 land-cumulus:
   alt: "Mountain range beneath towering cumulus"
@@ -520,7 +556,7 @@ mood-lilies:
   h: 800
   src: "selects"
   key: "mood-041"
-  webp: "/assets/img/mood-lilies-640.webp 640w, /assets/img/mood-lilies-1000.webp 1000w, /assets/img/mood-lilies-1600.webp 1600w"
+  webp: "/assets/img/mood-lilies-640.webp 640w, /assets/img/mood-lilies-1000.webp 1000w, /assets/img/mood-lilies-1400.webp 1400w"
   jpg: "/assets/img/mood-lilies-1200.jpg"
 mood-road:
   alt: "Black and white snow-covered forest road"
@@ -601,7 +637,7 @@ pet-surf:
   h: 800
   src: "selects"
   key: "pets-047"
-  webp: "/assets/img/pet-surf-640.webp 640w, /assets/img/pet-surf-1000.webp 1000w, /assets/img/pet-surf-1600.webp 1600w"
+  webp: "/assets/img/pet-surf-640.webp 640w, /assets/img/pet-surf-1000.webp 1000w, /assets/img/pet-surf-1400.webp 1400w"
   jpg: "/assets/img/pet-surf-1200.jpg"
 pet-track:
   alt: "Dog standing on a snow-covered track in winter woods"
@@ -657,6 +693,15 @@ ppl-blossom:
   key: "people-53694883761"
   webp: "/assets/img/ppl-blossom-640.webp 640w, /assets/img/ppl-blossom-1000.webp 1000w"
   jpg: "/assets/img/ppl-blossom-800.jpg"
+ppl-blossom-t:
+  alt: "Woman framed by pink blossom, looking past the camera"
+  ratio: "4/5"
+  w: 854
+  h: 1068
+  src: "flickr"
+  key: "people-53694883761"
+  webp: "/assets/img/ppl-blossom-t-640.webp 640w"
+  jpg: "/assets/img/ppl-blossom-t-854.jpg"
 ppl-bodyboard:
   alt: "Bodyboarder walking out of the water as another rider takes a wave"
   ratio: "3/2"
@@ -790,7 +835,7 @@ ref-atwork-desk:
   h: 800
   src: "stock"
   key: "61682185"
-  webp: "/assets/img/ref-atwork-desk-640.webp 640w, /assets/img/ref-atwork-desk-1000.webp 1000w, /assets/img/ref-atwork-desk-1600.webp 1600w"
+  webp: "/assets/img/ref-atwork-desk-640.webp 640w, /assets/img/ref-atwork-desk-1000.webp 1000w, /assets/img/ref-atwork-desk-1400.webp 1400w"
   jpg: "/assets/img/ref-atwork-desk-1200.jpg"
 ref-atwork-drill:
   alt: "Reference frame: hands operating a pillar drill in a dark workshop"
@@ -835,7 +880,7 @@ ref-aud-console:
   h: 800
   src: "stock"
   key: "61692790"
-  webp: "/assets/img/ref-aud-console-640.webp 640w, /assets/img/ref-aud-console-1000.webp 1000w, /assets/img/ref-aud-console-1600.webp 1600w"
+  webp: "/assets/img/ref-aud-console-640.webp 640w, /assets/img/ref-aud-console-1000.webp 1000w, /assets/img/ref-aud-console-1400.webp 1400w"
   jpg: "/assets/img/ref-aud-console-1200.jpg"
 ref-aud-mic:
   alt: "Reference frame: condenser microphone on a shock mount, lit low key"
@@ -954,15 +999,6 @@ ref-headshot-03:
   key: "61733565"
   webp: "/assets/img/ref-headshot-03-640.webp 640w, /assets/img/ref-headshot-03-1000.webp 1000w"
   jpg: "/assets/img/ref-headshot-03-800.jpg"
-ref-loft:
-  alt: "Reference frame: meeting table in a brick-walled loft office"
-  ratio: "3/2"
-  w: 800
-  h: 533
-  src: "stock"
-  key: "61803840"
-  webp: "/assets/img/ref-loft-640.webp 640w, /assets/img/ref-loft-1000.webp 1000w"
-  jpg: "/assets/img/ref-loft-800.jpg"
 ref-lounge:
   alt: "Reference frame: informal office lounge with sofa and low table"
   ratio: "3/2"
@@ -1105,7 +1141,7 @@ ref-vid-lens:
   h: 800
   src: "stock"
   key: "62379052"
-  webp: "/assets/img/ref-vid-lens-640.webp 640w, /assets/img/ref-vid-lens-1000.webp 1000w, /assets/img/ref-vid-lens-1600.webp 1600w"
+  webp: "/assets/img/ref-vid-lens-640.webp 640w, /assets/img/ref-vid-lens-1000.webp 1000w, /assets/img/ref-vid-lens-1400.webp 1400w"
   jpg: "/assets/img/ref-vid-lens-1200.jpg"
 ref-vid-operator:
   alt: "Reference frame: operator shouldering a cinema camera in a kitchen"
@@ -1231,7 +1267,7 @@ wat-bigsur:
   h: 800
   src: "selects"
   key: "water-019"
-  webp: "/assets/img/wat-bigsur-640.webp 640w, /assets/img/wat-bigsur-1000.webp 1000w, /assets/img/wat-bigsur-1600.webp 1600w"
+  webp: "/assets/img/wat-bigsur-640.webp 640w, /assets/img/wat-bigsur-1000.webp 1000w, /assets/img/wat-bigsur-1400.webp 1400w"
   jpg: "/assets/img/wat-bigsur-1200.jpg"
 wat-burst:
   alt: "Monochrome cloud burst over a wide empty beach"
@@ -1276,7 +1312,7 @@ wat-fisherman:
   h: 800
   src: "selects"
   key: "water-044"
-  webp: "/assets/img/wat-fisherman-640.webp 640w, /assets/img/wat-fisherman-1000.webp 1000w, /assets/img/wat-fisherman-1600.webp 1600w"
+  webp: "/assets/img/wat-fisherman-640.webp 640w, /assets/img/wat-fisherman-1000.webp 1000w, /assets/img/wat-fisherman-1400.webp 1400w"
   jpg: "/assets/img/wat-fisherman-1200.jpg"
 wat-fog:
   alt: "Black and white lake in heavy fog, sun burning through the trees"

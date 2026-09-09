@@ -9,13 +9,24 @@ M = [
 ("hero-city",       "Lcityscape-53783702414",(3,2),"feature",.5,"City waterfront at dusk under a bank of cloud, a bird crossing the frame"),
 ("hero-smoker",     "Lpeople-53693994437",(4,5),"feature",.3,"Close portrait of an older man outdoors, a cigarette held in his lips"),
 ("hero-dunes",      "Gwater-193",   (4,5),"feature",.5,"A single bare tree standing in still misted water"),
-("hero-dog",        "Gpets-060",   (4,5),"feature", .5, "Dog standing on a snow-covered track in winter woods"),
-("hero-lamp",       "Gmood-058",   (4,5),"feature", .5, "Snow falling through the light of a park lamp at dusk"),
+("hero-dog",        "Gpets-060",   (4,5),"grid",    .5, "Dog standing on a snow-covered track in winter woods"),
+("hero-lamp",       "Gmood-058",   (4,5),"grid",    .5, "Snow falling through the light of a park lamp at dusk"),
 ("hero-pilings",    "Ggraphic-125",(3,2),"feature", .5, "Black and white timber pilings standing in shallow water"),
+
+# ══ FAMILY AND CHILDREN — the owner's own ════════════════════════════════
+("fam-grass",       "Gfamily-075",(3,2),"feature",.5,"Young girl sitting in long grass, backlit, the background thrown well out of focus"),
+("fam-grass-t",     "Gfamily-075",(4,5),"feature",.45,"Young girl sitting in long grass, backlit in late afternoon"),
+("fam-surf",        "Gfamily-169",(3,2),"feature",.5,"Child running through shallow surf, backlit and in monochrome"),
+("fam-surf-t",      "Gfamily-169",(4,5),"grid",.45,"Child running through shallow surf, backlit and in monochrome"),
+("fam-dress",       "Gfamily-198",(4,5),"feature",.42,"Small child in a purple dress seen from behind, dappled light through trees"),
+("fam-dress-w",     "Gfamily-198",(3,2),"grid",.3,"Small child in a purple dress in dappled light"),
+("fam-run",         "Gfamily-206",(3,2),"feature",.5,"Child caught mid-run across a lawn, arms out"),
+("fam-run-t",       "Gfamily-206",(4,5),"grid",.4,"Child caught mid-run across a lawn, arms out"),
 
 # ══ PEOPLE — the owner's own street portraiture ══════════════════════════
 ("ppl-smoker",      "Lpeople-53693994437",(3,2),"feature",.4,"Older man outdoors, cigarette in his lips, weathered face filling the frame"),
 ("ppl-blossom",     "Lpeople-53694883761",(3,2),"grid",.4,"Woman framed by pink blossom, looking past the camera"),
+("ppl-blossom-t",   "Lpeople-53694883761",(4,5),"feature",.35,"Woman framed by pink blossom, looking past the camera"),
 ("ppl-chess",       "Lpeople-53695232234",(3,2),"grid",.5,"Three men bent over a stone chess table in a park"),
 ("ppl-studio",      "Lpeople-53695324650",(4,5),"grid",.3,"Studio-lit portrait of a woman against a plain warm ground"),
 ("ppl-reading",     "Lpeople-53695324725",(4,5),"grid",.4,"A man and a child reading together against a bright yellow wall"),

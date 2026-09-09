@@ -24,7 +24,7 @@ flk  = {p['file'][7:-4]: p for p in json.load(open(LIB + '/flickr_manifest.json'
 sf   = {os.path.basename(f).split('_', 1)[1][:-4]: f for f in glob.glob('stock/*.jpg')}
 smeta = json.load(open('stock_keep.json'))
 
-WIDTHS = {'hero': [2000, 1400, 900], 'feature': [1600, 1000, 640],
+WIDTHS = {'hero': [2000, 1400, 900], 'feature': [1400, 1000, 640],
           'grid': [1000, 640], 'tile': [640, 420]}
 JPGW   = {'hero': 1400, 'feature': 1200, 'grid': 800, 'tile': 520}
 
@@ -51,27 +51,38 @@ for slug, src, (rw, rh), role, anchor, alt in M:
     key = src[1:]
     if src[0] == 'G':
         if key not in gsel: missing.append((slug, src)); continue
-        path, origin = LIB + '/' + gsel[key]['file'], 'selects'; used_g.add(key)
+        path, origin = LIB + '/' + (gsel[key].get('use') or gsel[key]['file']), 'selects'; used_g.add(key)
     elif src[0] == 'L':
         if key not in flk: missing.append((slug, src)); continue
-        path, origin = LIB + '/' + flk[key]['file'], 'flickr'; used_l.add(key)
+        path, origin = LIB + '/' + (flk[key].get('use') or flk[key]['file']), 'flickr'; used_l.add(key)
     else:
         if key not in sf: missing.append((slug, src)); continue
         path, origin = sf[key], 'stock'; used_stock.add(key)
 
-    im = crop_to(develop(Image.open(path)), rw, rh, anchor)
+    # A frame with a 'use' path has already been graded by hand. Running the
+    # develop pass over it again would stack two sets of contrast moves, which
+    # is exactly the fault that made the first retouch pass come out dark.
+    src_im = Image.open(path)
+    graded = '/retouched/' in path
+    im = crop_to(src_im.convert('RGB') if graded else develop(src_im), rw, rh, anchor)
     src_w = im.width
     widths = sorted({w for w in WIDTHS[role] if w <= src_w} or {src_w}, reverse=True)
     webps = []
     for w in widths:
         r = im.resize((w, int(round(w * rh / rw))), Image.LANCZOS) \
               .filter(ImageFilter.UnsharpMask(1.0, 52, 3))
-        fn = f'{slug}-{w}.webp'; r.save(os.path.join(OUT, fn), 'WEBP', quality=74, method=6)
+        # Bigger renditions carry more pixels, so they can afford a lower
+        # quality for the same perceived result -- and it is the big ones that
+        # hurt. Detail-dense frames (snow, foliage) are the worst case, so the
+        # ladder is deliberately steep.
+        q = 78 if w <= 640 else 72 if w <= 1000 else 64 if w <= 1600 else 58
+        fn = f'{slug}-{w}.webp'; r.save(os.path.join(OUT, fn), 'WEBP', quality=q, method=6)
         webps.append((fn, w))
     jw = min(JPGW[role], src_w); jh = int(round(jw * rh / rw))
     r = im.resize((jw, jh), Image.LANCZOS).filter(ImageFilter.UnsharpMask(1.0, 52, 3))
     jfn = f'{slug}-{jw}.jpg'
-    r.save(os.path.join(OUT, jfn), 'JPEG', quality=79, optimize=True, progressive=True)
+    jq = 80 if jw <= 640 else 76
+    r.save(os.path.join(OUT, jfn), 'JPEG', quality=jq, optimize=True, progressive=True)
 
     photos[slug] = {'alt': alt, 'ratio': f'{rw}/{rh}', 'src': origin, 'key': key,
                     'w': jw, 'h': jh, 'jpg': f'/assets/img/{jfn}',

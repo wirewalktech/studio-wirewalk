@@ -1,4 +1,5 @@
 {%- assign home = '/' | relative_url -%}
+{%- assign ph = '/photography/' | relative_url -%}
 <header id="hd"><div class="nav">
   <a href="{% if page.is_home %}#top{% else %}{{ home }}{% endif %}" class="brand">
     <span class="mark" aria-hidden="true"></span>
@@ -6,18 +7,21 @@
   </a>
   <div class="nav-c" id="menu">
     <nav class="lk">
-      <a href="{{ '/business/'    | relative_url }}"{% if page.nav == 'business' %} aria-current="page"{% endif %}>Business</a>
-      <a href="{{ '/photography/' | relative_url }}"{% if page.nav == 'photography' %} aria-current="page"{% endif %}>Photography</a>
-      <a href="{{ '/video/'       | relative_url }}"{% if page.nav == 'video' %} aria-current="page"{% endif %}>Video</a>
-      <a href="{{ '/audio/'       | relative_url }}"{% if page.nav == 'audio' %} aria-current="page"{% endif %}>Audio</a>
-      <a href="{{ '/work/'        | relative_url }}"{% if page.nav == 'work' %} aria-current="page"{% endif %}>Work</a>
-      <a href="{{ '/process/'     | relative_url }}"{% if page.nav == 'process' %} aria-current="page"{% endif %}>Process</a>
-      <a href="{{ home }}#contact">Contact</a>
+      <a href="{{ '/family/' | relative_url }}"{% if page.nav == 'family' %} aria-current="page"{% endif %}>Family</a>
+      <a href="{{ ph }}#people">Portraits</a>
+      <a href="{{ ph }}#pets">Pets</a>
+      <a href="{{ ph }}#event">Events</a>
+      <a href="{{ '/business/' | relative_url }}"{% if page.nav == 'business' %} aria-current="page"{% endif %}>Business</a>
+      <a href="{{ ph }}#product">Product</a>
+      <a href="{{ ph }}#property">Property</a>
+      <a href="{{ '/video/' | relative_url }}"{% if page.nav == 'video' %} aria-current="page"{% endif %}>Video</a>
+      <a href="{{ '/audio/' | relative_url }}"{% if page.nav == 'audio' %} aria-current="page"{% endif %}>Audio</a>
+      <a href="{{ '/work/' | relative_url }}"{% if page.nav == 'work' %} aria-current="page"{% endif %}>Gallery</a>
     </nav>
   </div>
   <div class="nav-r">
     <a class="nav-tel" href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a>
-    <a class="btn btn-p btn-sm" href="{{ home }}#contact">Start a project</a>
+    <a class="btn btn-p btn-sm" href="{{ home }}#contact">Book a session</a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
   </div>
 </div></header>
