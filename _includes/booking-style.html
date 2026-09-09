@@ -49,13 +49,16 @@ table.rate td.a{text-align:right;white-space:nowrap;width:1%}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .msg.bad{color:#F09080}}
 .turn{margin:20px 0 4px;min-height:0}
 .paynote{margin-top:20px;font-size:13px;line-height:1.65;color:var(--tx3)}
-/* The pay panel is not an HTML form element (it posts JSON to the orders
-   Worker) -- spelled out in words rather than as a tag, because a literal
-   one here reads to any regex over the rendered page as a third form with
-   no action and no method, which is precisely what such a scan is for --
-   so it matched neither .frm nor .frm2 and its fields rendered at the browser
-   default size while everything around them was 15.5px. Scoping input styling
-   to a form class silently excludes any control that is not inside one. */
+/* The pay panel is not an HTML form element -- it posts JSON to the orders
+   Worker -- so it matched neither .frm nor .frm2, and its fields rendered at
+   the browser default size while everything around them was 15.5px. Scoping
+   input styling to a form class silently excludes any control that is not
+   inside one.
+
+   Written as "HTML form element" rather than as the tag itself: a literal
+   opening tag in this comment reads, to any regex auditing the rendered page
+   for forms that carry an action, a method and a name on every field, as a
+   third form carrying none of them. */
 .paybox label{display:block;font:600 13.5px/1.4 var(--sans);color:var(--tx2);
               margin:0 0 6px;letter-spacing:.01em}
 .paybox .fld{margin:0 0 16px}
