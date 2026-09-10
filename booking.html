@@ -9,6 +9,7 @@ description: >-
   holds the date, or pay in full and take 5% off. Card and bank payment are
   handled by Stripe; companies that need an invoice or purchase order can
   request one.
+nav: booking
 ---
 <section class="mast"><div class="wide">
   <div class="crumb"><a href="{{ '/' | relative_url }}">Studio</a> <span>/</span> <span>Booking</span></div>
@@ -308,6 +309,25 @@ description: >-
         "The booking system is not answering, so nothing can be paid here at the moment. " +
         "Please call {{ site.phone_display }} — do not assume a booking has been made.";
       $("#pay-item").innerHTML = '<option value="">Unavailable</option>';
+      /* The quote and invoice forms do not need the catalogue at all -- they
+         are the route people take WHEN payment is down. Leaving their selects
+         reading "Loading…" forever meant the fallback presented as broken at
+         exactly the moment it was needed, and #q-what would silently submit the
+         placeholder value. Free text instead: we can read a sentence. */
+      var q = $("#q-what");
+      if (q) {
+        q.innerHTML = "";
+        var qo = document.createElement("option");
+        qo.value = "Quoted work — see notes"; qo.textContent = "Tell us below what you need";
+        q.appendChild(qo);
+      }
+      var iv = $("#i-item");
+      if (iv) {
+        iv.innerHTML = "";
+        var io_ = document.createElement("option");
+        io_.value = "Unknown — see notes"; io_.textContent = "Tell us below what you need";
+        iv.appendChild(io_);
+      }
     });
 
   /* ---- the rate tables ------------------------------------------------ */
@@ -363,9 +383,14 @@ description: >-
   function fillSelects() {
     var payable = ITEMS.filter(function (i) { return !i.priceOnApplication && i.prepay && i.deposit; });
     fill($("#pay-item"), payable, "", function (i) { return i.name + " — " + i.listFormatted; });
+    /* Value is the readable name, not the SKU: this select feeds an EMAIL to a
+       person. The invoice request used to arrive saying "studio-headshots"
+       while the quote request beside it said "Wedding". The SKU rides along in
+       a hidden field for matching. */
     fill($("#i-item"),
          payable.filter(function (i) { return i.poEligible; }),
-         "", function (i) { return i.name + " — " + i.listFormatted; });
+         "", function (i) { return i.name + " — " + i.listFormatted; },
+         function (i) { return i.name; });
 
     var quoted = ITEMS.filter(function (i) { return i.priceOnApplication; });
     var qsel = $("#q-what");
@@ -386,7 +411,7 @@ description: >-
     summarise();
   }
 
-  function fill(sel, list, blank, label) {
+  function fill(sel, list, blank, label, value) {
     sel.innerHTML = "";
     var o0 = document.createElement("option");
     o0.value = ""; o0.textContent = blank || "Choose one";
@@ -402,7 +427,12 @@ description: >-
         seen[g] = grp;
       }
       var o = document.createElement("option");
-      o.value = i.sku; o.textContent = label(i);
+      /* `value` lets a caller override what gets submitted. #pay-item must send
+         the SKU (the Worker resolves the price from it); #i-item feeds an email
+         a person reads, so it sends the name. */
+      o.value = value ? value(i) : i.sku;
+      o.dataset.sku = i.sku;
+      o.textContent = label(i);
       grp.appendChild(o);
     });
   }
@@ -442,11 +472,15 @@ description: >-
         esc(word) + " against " + esc(i.name) + " at " + esc(i.listFormatted) + ". " +
         (HOLDS_A_DATE[i.group] ? "The date is held once it clears" : "The booking is confirmed once it clears") +
         ", and the balance of <b>" + esc(i.deposit.balanceFormatted) + "</b> is due on delivery. " +
-        "The 5% applies to the whole booking, so it is not available on a " + esc(word.toLowerCase()) + "."
+        PREPAY_PCT + "% applies to the whole booking, so it is not available on a " + esc(word.toLowerCase()) + "."
       : '<span class="big">' + esc(i.prepay.formatted) + " due now</span>" +
         esc(i.name) + " paid in full &mdash; <b>" + esc(i.listFormatted) + " less " +
         esc(i.prepay.savingFormatted) + "</b>. Nothing further to pay" +
-        (i.special ? ". " + esc(i.special.label) : ", and the date is held once it clears.");
+        /* An active special used to REPLACE "the date is held once it clears"
+           rather than add to it, so a customer paying in full during a promotion
+           silently lost the one sentence telling them their date is safe. */
+        ", and the date is held once it clears." +
+        (i.special ? " " + esc(i.special.label) + "." : "");
     btn.disabled = false;
   }
 
@@ -497,8 +531,19 @@ description: >-
         callback: resolve,
         "error-callback": function () { reject(new Error("verification failed")); }
       };
-      if (widget === null) { widget = window.turnstile.render("#turnstile", opts); }
-      else { window.turnstile.reset(widget); window.turnstile.execute(widget, opts); }
+      /* A FRESH WIDGET EVERY ATTEMPT. Caching it and calling execute() with
+         new opts does not work: the widget was not rendered with
+         execution:"execute", so it keeps the FIRST call's callback and
+         error-callback -- which are the already-settled resolve/reject of the
+         first promise. The second attempt therefore never settles, the button
+         stays disabled, and the message freezes on "Checking you are not a
+         robot". That is the retry path, so anyone whose first attempt hit a
+         network blip could not pay at all. */
+      if (widget !== null) {
+        try { window.turnstile.remove(widget); } catch (e) { /* already gone */ }
+        widget = null;
+      }
+      widget = window.turnstile.render("#turnstile", opts);
     });
   }
 
