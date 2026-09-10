@@ -6,7 +6,7 @@ extra_style: booking-style.html
 og_photo: fam-grass
 description: >-
   Book a photography, video or audio session and pay for it here. A retainer
-  holds the date, or pay in full and take 10% off. Card and bank payment are
+  holds the date, or pay in full and take 5% off. Card and bank payment are
   handled by Stripe; companies that need an invoice or purchase order can
   request one.
 ---
@@ -14,7 +14,7 @@ description: >-
   <div class="crumb"><a href="{{ '/' | relative_url }}">Studio</a> <span>/</span> <span>Booking</span></div>
   <span class="eyebrow">Booking and payment</span>
   <h1>Hold the date, and pay for it here.</h1>
-  <p class="lead">Pick the session or the shoot, pay a retainer to hold the date, and it is booked &mdash; or pay in full and take <strong>10% off</strong>. Card and bank payment are handled by Stripe, so no card details are typed into this site or stored by it.</p>
+  <p class="lead">Pick the session or the shoot, pay a retainer to hold the date, and it is booked &mdash; or pay in full and take <strong>5% off</strong>. Card and bank payment are handled by Stripe, so no card details are typed into this site or stored by it.</p>
   <div class="acts">
     <a href="#pay" class="btn btn-p">Book and pay<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="#quote" class="btn btn-g">Weddings and other quoted work</a>
@@ -37,7 +37,7 @@ description: >-
   </div>
 
   <div class="note" style="margin-top:30px">
-    <p><b>Retainer or in full.</b> A retainer holds the date and comes off the total; the balance is due on delivery. Paying in full up front takes 10% off and holds the date on the same terms. The 10% applies to the whole booking, so it is not available on a retainer.</p>
+    <p><b>Retainer or in full.</b> A retainer holds the date and comes off the total; the balance is due on delivery. Paying in full up front takes 5% off and holds the date on the same terms. The 5% applies to the whole booking, so it is not available on a retainer.</p>
   </div>
 </div></section>
 
@@ -59,7 +59,7 @@ description: >-
         <label for="pay-mode">How much to pay now</label>
         <select id="pay-mode" name="mode">
           <option value="deposit">Retainer &mdash; hold the date</option>
-          <option value="full">In full &mdash; 10% off</option>
+          <option value="full">In full &mdash; 5% off</option>
         </select>
       </div>
     </div>
@@ -158,7 +158,7 @@ description: >-
         <div class="row"><div><span class="kicker">Rights</span><h4>Stated before, not after</h4></div>
           <p>The usage licence is written into the quotation, so what your marketing team may do with the pictures is settled before the shoot rather than argued afterwards.</p></div>
         <div class="row"><div><span class="kicker">Faster</span><h4>Or just pay by card</h4></div>
-          <p>Commercial bookings can also go through the <a href="#pay">card route above</a>, which holds the date immediately and takes 10% off if paid in full.</p></div>
+          <p>Commercial bookings can also go through the <a href="#pay">card route above</a>, which holds the date immediately and takes 5% off if paid in full.</p></div>
       </div>
     </div>
 
@@ -258,6 +258,12 @@ description: >-
 
   var $ = function (s) { return document.querySelector(s); };
   var ITEMS = [], GROUPS = [], BY = {}, widget = null;
+  /* Read from the catalogue rather than typed here. The prepay rate was
+     hardcoded as 10% in this label while the server had already been cut to 5%,
+     so the page printed the CORRECT price next to the WRONG percentage in the
+     same sentence. A number that exists in two places is a number that will
+     eventually disagree with itself. */
+  var PREPAY_PCT = 5;
 
   /* Groups booked by holding a date use "retainer", which is the word a
      client expects and which says the date is held. Commercial and post
@@ -283,6 +289,7 @@ description: >-
     .then(function (d) {
       ITEMS = (d.items || []).filter(function (i) { return i && i.sku; });
       GROUPS = d.groups || [];
+      if (d.prepayDiscountPct) PREPAY_PCT = d.prepayDiscountPct;
       if (!ITEMS.length) throw new Error("catalogue is empty");
       ITEMS.forEach(function (i) { BY[i.sku] = i; });
       renderRates();
@@ -426,7 +433,7 @@ description: >-
     var word = partWord(i.group);
     modeSel.options[0].textContent =
       word + " — " + i.deposit.formatted + (HOLDS_A_DATE[i.group] ? ", holds the date" : "");
-    modeSel.options[1].textContent = "In full — " + i.prepay.formatted + ", 10% off";
+    modeSel.options[1].textContent = "In full — " + i.prepay.formatted + ", " + PREPAY_PCT + "% off";
 
     var part = modeSel.value === "deposit";
     box.hidden = false;
@@ -435,7 +442,7 @@ description: >-
         esc(word) + " against " + esc(i.name) + " at " + esc(i.listFormatted) + ". " +
         (HOLDS_A_DATE[i.group] ? "The date is held once it clears" : "The booking is confirmed once it clears") +
         ", and the balance of <b>" + esc(i.deposit.balanceFormatted) + "</b> is due on delivery. " +
-        "The 10% applies to the whole booking, so it is not available on a " + esc(word.toLowerCase()) + "."
+        "The 5% applies to the whole booking, so it is not available on a " + esc(word.toLowerCase()) + "."
       : '<span class="big">' + esc(i.prepay.formatted) + " due now</span>" +
         esc(i.name) + " paid in full &mdash; <b>" + esc(i.listFormatted) + " less " +
         esc(i.prepay.savingFormatted) + "</b>. Nothing further to pay" +
