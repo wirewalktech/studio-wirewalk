@@ -152,7 +152,7 @@ nav.lk a[aria-current]{color:var(--ac)}
 
 /* ── the develop reveal ─────────────────────────────────────────────────
    Frames arrive the way a print comes up in the tray: flat and colourless
-   first, then density, then colour. Driven by one IntersectionObserver in
+   first, then density, then color. Driven by one IntersectionObserver in
    base.html. Anything without JS, or with reduced motion asked for, simply
    renders finished — the .dev class only ever removes, never adds.
    ─────────────────────────────────────────────────────────────────────── */
@@ -451,4 +451,5 @@ footer{border-top:1px solid var(--ln);background:var(--alt);padding:clamp(44px,5
 .fact dd{color:var(--tx2);line-height:1.55}
 @media (max-width:560px){.fact{grid-template-columns:1fr;gap:2px 0}
   .fact dd{margin-bottom:12px}}
+@media(max-width:560px){.btn{white-space:normal;max-width:100%;text-align:center}.btn svg{flex-shrink:0}}
 </style>

@@ -12,14 +12,14 @@ description: Confirmation of a booking payment.
   <span class="eyebrow">Booking</span>
   <div class="outcome" id="outcome">
     <h1 class="stat">Checking with the payment system&hellip;</h1>
-    <p class="lead">One moment. This page asks Stripe what actually happened rather than assuming it worked, so it takes a second longer than a page that simply says &ldquo;thank you&rdquo;.</p>
+    <p class="lead">Please wait while we check your payment status.</p>
   </div>
 
   <div id="next-steps" hidden>
     <h2 style="margin-top:44px">What happens now</h2>
     <ol class="steps2">
-      <li><b>A receipt from Stripe</b>, to the address you gave, within a minute or two. If it has not arrived, check the junk folder before assuming anything went wrong.</li>
-      <li><b>Confirmation of the date from me</b>, in writing, within one working day &mdash; with what is included, where we are meeting and what to expect on the day.</li>
+      <li><b>A receipt from Stripe</b>, to the address you gave, after payment clears. If it has not arrived, check the junk folder before assuming anything went wrong.</li>
+      <li><b>Confirmation of the date from me</b>, in writing, within one business day &mdash; with what is included, where we are meeting and what to expect on the day.</li>
       <li><b>The balance</b>, where you paid a retainer or deposit, is due on delivery. Nothing is taken automatically; you will be invoiced.</li>
     </ol>
     <p class="small muted" style="margin-top:24px">Newborn sessions are held as a provisional week and confirmed once the baby arrives &mdash; the retainer holds the week, not a particular day.</p>
@@ -75,22 +75,19 @@ description: Confirmation of a booking payment.
       return r.json();
     })
     .then(function (d) {
+      if (d.livemode !== true) {
+        out.innerHTML = '<h1 class="stat no">Test payment only.</h1><p class="lead">No real payment or reservation is confirmed by this reference. Please contact us to book.</p>';
+        return;
+      }
       if (!d.paid) {
-        out.innerHTML =
-          '<h1 class="stat no">That payment did not complete.</h1>' +
-          '<p class="lead">Stripe has no completed payment against this reference, so <strong>nothing has been ' +
-          "booked and no date is held</strong>. A card may have been declined, or the page may have been " +
-          "closed before it finished. You can " +
-          '<a href="{{ '/booking/' | relative_url }}" style="color:var(--ac);text-decoration:underline;text-underline-offset:2px">try again</a>' +
-          " &mdash; but if you believe you were charged, email <strong>{{ site.email }}</strong> or call " +
-          "<strong>{{ site.phone_display }}</strong> first so you are not charged twice.</p>";
+        out.innerHTML = '<h1 class="stat no">Payment is not confirmed yet.</h1><p class="lead">A bank payment may still be processing. Please do not pay again while we check its status. Contact <strong>{{ site.email }}</strong> with your payment reference. Your session date is confirmed separately in writing.</p>';
         return;
       }
       var bal = d.balanceDue > 0
         ? " The balance of <strong>" + esc(d.balanceDueFormatted) + "</strong> is due on delivery and will be invoiced."
-        : " There is nothing further to pay.";
+        : " The selected service fee is paid in full. Applicable sales tax and any agreed travel costs are invoiced separately.";
       out.innerHTML =
-        '<h1 class="stat">' + esc(d.amountFormatted) + " received. The date is held.</h1>" +
+        '<h1 class="stat">' + esc(d.amountFormatted) + " received. Thank you.</h1>" +
         '<p class="lead">Thank you &mdash; the payment went through and a receipt is on its way to <strong>' +
         esc(d.email || "the address you gave") + "</strong>." + bal + "</p>";
       steps.hidden = false;

@@ -154,7 +154,7 @@ det-board:
   webp: "/assets/img/det-board-420.webp 420w, /assets/img/det-board-640.webp 640w"
   jpg: "/assets/img/det-board-520.jpg"
 det-daisy:
-  alt: "Grasshopper and a bee sharing the centre of an oxeye daisy"
+  alt: "Grasshopper and a bee sharing the center of an oxeye daisy"
   ratio: "3/2"
   w: 800
   h: 533
@@ -2575,7 +2575,7 @@ ref-vid-photog:
   webp: "/assets/img/ref-vid-photog-420.webp 420w, /assets/img/ref-vid-photog-640.webp 640w"
   jpg: "/assets/img/ref-vid-photog-520.jpg"
 ref-vid-rig:
-  alt: "A cinema camera rig under coloured light"
+  alt: "A cinema camera rig under colored light"
   ratio: "4/5"
   w: 800
   h: 1000

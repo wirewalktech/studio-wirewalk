@@ -14,14 +14,14 @@ nav: booking
 <section class="mast"><div class="wide">
   <div class="crumb"><a href="{{ '/' | relative_url }}">Studio</a> <span>/</span> <span>Booking</span></div>
   <span class="eyebrow">Booking and payment</span>
-  <h1>Hold the date, and pay for it here.</h1>
-  <p class="lead">Pick the session or the shoot, pay a retainer to hold the date, and it is booked &mdash; or pay in full and take <strong>5% off</strong>. Card and bank payment are handled by Stripe, so no card details are typed into this site or stored by it.</p>
+  <h1>Your session, ready to book.</h1>
+  <p class="lead">Confirm your date and scope with us first, then pay a retainer toward your session &mdash; or pay in full and take <strong>5% off</strong>. Your date is confirmed separately in writing. Card and bank payment are handled by Stripe, so no card details are typed into this site or stored by it.</p>
   <div class="acts">
     <a href="#pay" class="btn btn-p">Book and pay<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="#quote" class="btn btn-g">Weddings and other quoted work</a>
     <a href="#invoice" class="btn btn-g">My company needs an invoice</a>
   </div>
-  <div id="cancelled" hidden><p class="note" style="margin-top:26px"><strong>That payment was cancelled and you have not been charged.</strong> Nothing has been booked. Start again below, or call <a href="tel:{{ site.phone_link }}" style="color:var(--ac);text-decoration:underline;text-underline-offset:2px">{{ site.phone_display }}</a> if something went wrong.</p></div>
+  <div id="cancelled" hidden><p class="note" style="margin-top:26px"><strong>You returned from checkout.</strong> If you already submitted a payment, contact us to check its status before paying again. Otherwise, continue below, or call <a href="tel:{{ site.phone_link }}" style="color:var(--ac);text-decoration:underline;text-underline-offset:2px">{{ site.phone_display }}</a> if something went wrong.</p></div>
 </div></section>
 
 <!-- ══════════ RATES ══════════ -->
@@ -46,8 +46,8 @@ nav: booking
 <section class="sec" id="pay"><div class="wide">
   <div class="sh">
     <span class="eyebrow">02 &mdash; Book and pay</span>
-    <h2>Pay the retainer and the date is yours.</h2>
-    <p>Choose what you are booking and how much to pay now. You will be handed to Stripe&rsquo;s payment page to enter card or bank details &mdash; they are never entered here, and this site never sees them. A receipt is emailed immediately, and confirmation of the date follows from me within a working day.</p>
+    <h2>Confirm the details. Then make your payment.</h2>
+    <p>Choose what you are booking and how much to pay now. You will be handed to Stripe&rsquo;s payment page to enter card or bank details &mdash; they are never entered here, and this site never sees them. Please agree on your date and scope with us before paying. Payment alone does not reserve an unconfirmed date. Bank payments may take several business days to clear.</p>
   </div>
 
   <div class="paybox">
@@ -71,16 +71,20 @@ nav: booking
       </div>
       <div>
         <label for="pay-org">Your name, or your company</label>
-        <input id="pay-org" name="organisation" type="text" autocomplete="organization" placeholder="Optional, but it goes on the receipt">
+        <input id="pay-org" name="organization" type="text" autocomplete="organization" placeholder="Optional, but it goes on the receipt">
       </div>
     </div>
 
+    <div class="payrow">
+      <div><label for="pay-method">Payment method</label><select id="pay-method"><option value="card">Card</option><option value="ach">US bank account — 3% discount</option></select></div>
+      <div><label for="pay-date">Agreed date or project reference — optional</label><input id="pay-date" type="text" maxlength="120" placeholder="Confirm availability with us before paying"></div>
+    </div>
     <div class="due" id="due" hidden></div>
     <div class="turn" id="turnstile"></div>
     <button class="btn btn-p" id="paygo" type="button" disabled>Continue to payment<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <div class="msg" id="paymsg" role="status" aria-live="polite"></div>
 
-    <p class="paynote">Nothing on this page is a card field. Payment happens on Stripe&rsquo;s own page and this site is told only whether it succeeded. Sessions are held once the retainer clears; more than 14 days&rsquo; notice moves a booking once at no charge, subject to availability, and a child being unwell moves a family or newborn session at no charge however late the notice. Questions first? <a href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a> or <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+    <p class="paynote">Nothing on this page is a card field. Payment happens on Stripe&rsquo;s own page and this site is told only whether it succeeded. Session dates are confirmed in writing after payment; more than 14 days&rsquo; notice moves a booking once at no charge, subject to availability, and a child being unwell moves a family or newborn session at no charge however late the notice. Questions first? <a href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a> or <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
   </div>
 </div></section>
 
@@ -135,7 +139,7 @@ nav: booking
         </div>
         <button class="btn btn-p" type="submit">Ask for a quote<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       </form>
-      <p class="frm-note">This posts straight to email and lands you on a confirmation page once it has actually sent. A quote comes back in writing, with the usage rights stated in the same document, and nothing is booked until you accept it.</p>
+      <p class="frm-note">We will follow up within one business day. A quote comes back in writing, with the usage rights stated in the same document, and nothing is booked until you accept it.</p>
     </div>
   </div>
 </div></section>
@@ -145,8 +149,8 @@ nav: booking
   <div class="sh">
     <span class="eyebrow">04 &mdash; For companies</span>
     <h2>If your finance team needs an invoice or a purchase order.</h2>
-    <p>Commercial work &mdash; team headshots, a workplace day, product, property, video and audio &mdash; can be placed on a purchase order and invoiced instead of paid by card. Ask here and an invoice, W-9 or supplier form comes back the same working day; the dates are held while it goes through your system.</p>
-    <p class="small muted">Family, newborn, portrait, pet and wedding bookings are card only. Nobody raises a purchase order for a family session, and pretending otherwise would only put a procurement process between you and a Saturday morning.</p>
+    <p>Commercial work &mdash; team headshots, a workplace day, product, property, video and audio &mdash; can be placed on a purchase order and invoiced instead of paid by card. Ask here and an invoice, W-9 or supplier form comes back the same business day; we confirm availability and any date hold in writing.</p>
+    <p class="small muted">Family, newborn, portrait and pet sessions can be paid online by card or US bank account. Wedding payment terms are confirmed with your quote. For personal sessions, use secure online checkout after confirming your date.</p>
   </div>
 
   <div class="split wide-r">
@@ -155,11 +159,11 @@ nav: booking
         <div class="row"><div><span class="kicker">Terms</span><h4>Net 30</h4></div>
           <p>Invoiced against your PO number to the accounts payable address you give, on net 30 terms unless your process says otherwise.</p></div>
         <div class="row"><div><span class="kicker">Documents</span><h4>Whatever procurement needs</h4></div>
-          <p>Quotation, W-9, certificate of insurance, supplier registration &mdash; say which and they come back the same working day.</p></div>
+          <p>Quotation, W-9, certificate of insurance, supplier registration &mdash; say which and they come back the same business day.</p></div>
         <div class="row"><div><span class="kicker">Rights</span><h4>Stated before, not after</h4></div>
-          <p>The usage licence is written into the quotation, so what your marketing team may do with the pictures is settled before the shoot rather than argued afterwards.</p></div>
+          <p>The usage license is written into the quotation, so what your marketing team may do with the pictures is settled before the shoot rather than argued afterward.</p></div>
         <div class="row"><div><span class="kicker">Faster</span><h4>Or just pay by card</h4></div>
-          <p>Commercial bookings can also go through the <a href="#pay">card route above</a>, which holds the date immediately and takes 5% off if paid in full.</p></div>
+          <p>Commercial bookings can also go through the <a href="#pay">card route above</a>, which pays for your agreed booking and takes 5% off if paid in full.</p></div>
       </div>
     </div>
 
@@ -172,8 +176,8 @@ nav: booking
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 
         <div>
-          <label for="i-org">Organisation</label>
-          <input id="i-org" name="organisation" type="text" autocomplete="organization" required>
+          <label for="i-org">Organization</label>
+          <input id="i-org" name="organization" type="text" autocomplete="organization" required>
         </div>
         <div>
           <label for="i-dept">Department <span class="muted">&mdash; optional</span></label>
@@ -209,7 +213,7 @@ nav: booking
         </div>
         <button class="btn btn-p" type="submit">Request an invoice or PO<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       </form>
-      <p class="frm-note">This posts straight to email and lands you on a confirmation page once it has actually sent &mdash; there is no script here that says &ldquo;thanks&rdquo; without sending anything.</p>
+      <p class="frm-note">Send your billing requirements and we will follow up within one business day.</p>
     </div>
   </div>
 </div></section>
@@ -222,9 +226,9 @@ nav: booking
   </div>
   <div class="rows">
     <div class="row"><div><span class="kicker">Tax</span><h4>Prices exclude sales tax</h4></div>
-      <p>Every figure on this page is before any applicable sales or use tax. Tax is shown on the invoice or the Stripe receipt, not buried in the headline number.</p></div>
+      <p>Every figure on this page is before any applicable sales or use tax. Applicable sales tax is calculated and invoiced separately after we confirm the details of your project; this checkout collects the service fee only.</p></div>
     <div class="row"><div><span class="kicker">Travel</span><h4>Quoted separately</h4></div>
-      <p>Rates cover work in and around New York. Travel beyond the metro area is quoted before you book, never added afterwards.</p></div>
+      <p>Rates cover work in and around New York. Travel beyond the metro area is quoted before you book, never added afterward.</p></div>
     <div class="row"><div><span class="kicker">Retainer</span><h4>It holds the date and comes off the total</h4></div>
       <p>A retainer is part payment, not a fee on top. The balance is due on delivery. Where a booking is invoiced instead, the whole fee is invoiced on net 30 terms.</p></div>
     <div class="row"><div><span class="kicker">Moving a date</span><h4>Once, free, with notice</h4></div>
@@ -258,8 +262,8 @@ nav: booking
   var SITEKEY = "0x4AAAAAAEuBwz8OpbI3bmtE";
 
   var $ = function (s) { return document.querySelector(s); };
-  var ITEMS = [], GROUPS = [], BY = {}, widget = null;
-  /* Read from the catalogue rather than typed here. The prepay rate was
+  var ITEMS = [], GROUPS = [], BY = {}, widget = null, busy = false, paymentMode = "unknown";
+  /* Read from the catalog rather than typed here. The prepay rate was
      hardcoded as 10% in this label while the server had already been cut to 5%,
      so the page printed the CORRECT price next to the WRONG percentage in the
      same sentence. A number that exists in two places is a number that will
@@ -280,18 +284,19 @@ nav: booking
   };
 
   var params = new URLSearchParams(location.search);
-  if (params.get("cancelled")) { $("#cancelled").hidden = false; }
+  if (params.get("cancelled") || params.get("canceled")) { $("#cancelled").hidden = false; }
 
   fetch(ORDERS + "/catalog?practice=studio")
     .then(function (r) {
-      if (!r.ok) throw new Error("catalogue " + r.status);
+      if (!r.ok) throw new Error("catalog " + r.status);
       return r.json();
     })
     .then(function (d) {
+      paymentMode = d.paymentMode || "unknown";
       ITEMS = (d.items || []).filter(function (i) { return i && i.sku; });
       GROUPS = d.groups || [];
       if (d.prepayDiscountPct) PREPAY_PCT = d.prepayDiscountPct;
-      if (!ITEMS.length) throw new Error("catalogue is empty");
+      if (!ITEMS.length) throw new Error("catalog is empty");
       ITEMS.forEach(function (i) { BY[i.sku] = i; });
       renderRates();
       fillSelects();
@@ -309,7 +314,7 @@ nav: booking
         "The booking system is not answering, so nothing can be paid here at the moment. " +
         "Please call {{ site.phone_display }} — do not assume a booking has been made.";
       $("#pay-item").innerHTML = '<option value="">Unavailable</option>';
-      /* The quote and invoice forms do not need the catalogue at all -- they
+      /* The quote and invoice forms do not need the catalog at all -- they
          are the route people take WHEN payment is down. Leaving their selects
          reading "Loading…" forever meant the fallback presented as broken at
          exactly the moment it was needed, and #q-what would silently submit the
@@ -408,6 +413,7 @@ nav: booking
 
     $("#pay-item").addEventListener("change", summarise);
     $("#pay-mode").addEventListener("change", summarise);
+    $("#pay-method").addEventListener("change", summarise);
     summarise();
   }
 
@@ -437,7 +443,7 @@ nav: booking
     });
   }
 
-  /* ---- quoted work, listed from the catalogue ------------------------- */
+  /* ---- quoted work, listed from the catalog ------------------------- */
   function renderQuoted() {
     var quoted = ITEMS.filter(function (i) { return i.priceOnApplication; });
     if (!quoted.length) { $("#quote-list").innerHTML = ""; return; }
@@ -460,28 +466,19 @@ nav: booking
       modeSel.options[0].textContent = "Retainer — hold the date";
       return;
     }
-    var word = partWord(i.group);
-    modeSel.options[0].textContent =
-      word + " — " + i.deposit.formatted + (HOLDS_A_DATE[i.group] ? ", holds the date" : "");
-    modeSel.options[1].textContent = "In full — " + i.prepay.formatted + ", " + PREPAY_PCT + "% off";
-
-    var part = modeSel.value === "deposit";
+    var word = partWord(i.group), ach = $("#pay-method").value === "ach";
+    var deposit = ach ? i.ach.depositFormatted : i.deposit.formatted;
+    var full = ach ? i.ach.fullFormatted : i.prepay.formatted;
+    var balance = ach ? i.ach.balanceFormatted : i.deposit.balanceFormatted;
+    modeSel.options[0].textContent = word + " — " + deposit;
+    modeSel.options[1].textContent = "In full — " + full;
     box.hidden = false;
-    box.innerHTML = part
-      ? '<span class="big">' + esc(i.deposit.formatted) + " due now</span>" +
-        esc(word) + " against " + esc(i.name) + " at " + esc(i.listFormatted) + ". " +
-        (HOLDS_A_DATE[i.group] ? "The date is held once it clears" : "The booking is confirmed once it clears") +
-        ", and the balance of <b>" + esc(i.deposit.balanceFormatted) + "</b> is due on delivery. " +
-        PREPAY_PCT + "% applies to the whole booking, so it is not available on a " + esc(word.toLowerCase()) + "."
-      : '<span class="big">' + esc(i.prepay.formatted) + " due now</span>" +
-        esc(i.name) + " paid in full &mdash; <b>" + esc(i.listFormatted) + " less " +
-        esc(i.prepay.savingFormatted) + "</b>. Nothing further to pay" +
-        /* An active special used to REPLACE "the date is held once it clears"
-           rather than add to it, so a customer paying in full during a promotion
-           silently lost the one sentence telling them their date is safe. */
-        ", and the date is held once it clears." +
-        (i.special ? " " + esc(i.special.label) + "." : "");
-    btn.disabled = false;
+    box.innerHTML = '<span class="big">' + esc(modeSel.value === "deposit" ? deposit : full) + ' due now</span>' +
+      esc(i.name) + '. ' + (modeSel.value === "deposit" ? 'Balance of <b>' + esc(balance) + '</b> due on delivery. ' : 'Paid in full for the selected service. ') +
+      (ach ? 'Includes the bank payment discount; bank payments may take several business days to clear. ' : '') +
+      'Your session date and scope must be confirmed separately in writing. Applicable sales tax and any agreed travel costs are invoiced separately.';
+    if (paymentMode !== "live") box.innerHTML += '<p>Online payments are unavailable. Please contact us to book.</p>';
+    btn.disabled = busy || paymentMode !== "live";
   }
 
   /* ---- deep links from the service pages ------------------------------ */
@@ -497,7 +494,7 @@ nav: booking
       return;
     }
     $("#pay-item").value = sku;
-    if (i.poEligible) { $("#i-item").value = sku; }
+    if (i.poEligible) { $("#i-item").value = i.name; }
     summarise();
     if (where !== "silent") go("#pay");
   }
@@ -526,10 +523,12 @@ nav: booking
   function token() {
     return new Promise(function (resolve, reject) {
       if (!window.turnstile) { reject(new Error("verification did not load")); return; }
+      var timer = setTimeout(function () { reject(new Error("Verification timed out. Please try again")); }, 120000);
       var opts = {
         sitekey: SITEKEY,
-        callback: resolve,
-        "error-callback": function () { reject(new Error("verification failed")); }
+        callback: function(t) { clearTimeout(timer); resolve(t); },
+        "error-callback": function () { clearTimeout(timer); reject(new Error("verification failed")); },
+        "expired-callback": function () { clearTimeout(timer); reject(new Error("verification expired; please retry")); }
       };
       /* A FRESH WIDGET EVERY ATTEMPT. Caching it and calling execute() with
          new opts does not work: the widget was not rendered with
@@ -549,6 +548,7 @@ nav: booking
 
   /* ---- start the checkout --------------------------------------------- */
   $("#paygo").addEventListener("click", function () {
+    if (busy || paymentMode !== "live") return;
     var btn = $("#paygo"), msg = $("#paymsg"), emailEl = $("#pay-email");
     var email = emailEl.value.trim();
     if (!email || !emailEl.checkValidity()) {
@@ -562,6 +562,10 @@ nav: booking
       msg.textContent = "Choose what you are booking first.";
       return;
     }
+    var payload = {sku: $("#pay-item").value, mode: $("#pay-mode").value, method: $("#pay-method").value,
+      email: email, organization: $("#pay-org").value.trim(), reference: $("#pay-date").value.trim(), practice: "studio"};
+    busy = true;
+    document.querySelectorAll(".paybox input, .paybox select").forEach(function(el) { el.disabled = true; });
     btn.disabled = true;
     msg.className = "msg";
     msg.textContent = "Checking you are not a robot…";
@@ -571,13 +575,7 @@ nav: booking
         return fetch(ORDERS + "/checkout", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            sku: $("#pay-item").value,
-            mode: $("#pay-mode").value,
-            email: email,
-            organisation: $("#pay-org").value.trim(),
-            token: t
-          })
+          body: JSON.stringify(Object.assign({}, payload, {token: t}))
         });
       })
       .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
@@ -586,7 +584,9 @@ nav: booking
         location.assign(res.d.url);
       })
       .catch(function (err) {
-        btn.disabled = false;
+        busy = false;
+        document.querySelectorAll(".paybox input, .paybox select").forEach(function(el) { el.disabled = false; });
+        summarise();
         msg.className = "msg bad";
         msg.textContent = (err && err.message ? err.message : "Something went wrong") +
           " — nothing has been charged. Please call {{ site.phone_display }} or email {{ site.email }}.";
