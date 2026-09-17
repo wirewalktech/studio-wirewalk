@@ -38,7 +38,7 @@ nav: booking
   </div>
 
   <div class="note" style="margin-top:30px">
-    <p><b>Retainer or in full.</b> A retainer holds the date and comes off the total; the balance is due on delivery. Paying in full up front takes 5% off and holds the date on the same terms. The 5% applies to the whole booking, so it is not available on a retainer.</p>
+    <p><b>Retainer or in full.</b> A retainer holds your agreed date and comes off the total; the balance is due on delivery. Paying in full up front takes 5% off and holds the date on the same terms. The 5% applies to the whole booking, so it is not available on a retainer.</p>
   </div>
 </div></section>
 
@@ -80,7 +80,7 @@ nav: booking
       <div><label for="pay-date">Agreed date or project reference — optional</label><input id="pay-date" type="text" maxlength="120" placeholder="Confirm availability with us before paying"></div>
     </div>
     <div class="due" id="due" hidden></div>
-    <div class="turn" id="turnstile"></div>
+    <div class="turn" id="payment-verification"></div>
     <button class="btn btn-p" id="paygo" type="button" disabled>Continue to payment<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <div class="msg" id="paymsg" role="status" aria-live="polite"></div>
 
@@ -234,7 +234,7 @@ nav: booking
     <div class="row"><div><span class="kicker">Moving a date</span><h4>Once, free, with notice</h4></div>
       <p>More than 14 days&rsquo; notice moves a booking once at no charge, subject to availability. Inside that window the retainer covers time reserved that cannot be filled at short notice. A child who is unwell is not a late cancellation &mdash; a family or newborn session moves at no charge, whenever you tell me.</p></div>
     <div class="row"><div><span class="kicker">Newborn</span><h4>Booked to a due date, not a day</h4></div>
-      <p>Newborn sessions hold a provisional week and confirm once the baby arrives. Pay the retainer against the due date and the week is yours.</p></div>
+      <p>Newborn sessions hold a provisional week and confirm once the baby arrives. Confirm the provisional week with us before paying the retainer.</p></div>
     <div class="row"><div><span class="kicker">Rights</span><h4>Written down before the shoot</h4></div>
       <p>Personal sessions come with print rights for your own use. Commercial licensing is set out in the quotation. Either way it is in writing before the camera comes out &mdash; see <a href="{{ '/process/' | relative_url }}#rights">rights and usage</a>.</p></div>
   </div>
@@ -522,7 +522,7 @@ nav: booking
   /* ---- Turnstile ------------------------------------------------------ */
   function token() {
     return new Promise(function (resolve, reject) {
-      if (!window.turnstile) { reject(new Error("verification did not load")); return; }
+      if (!window.turnstile || typeof window.turnstile.render !== "function") { reject(new Error("Verification is still loading. Please wait a moment and try again")); return; }
       var timer = setTimeout(function () { reject(new Error("Verification timed out. Please try again")); }, 120000);
       var opts = {
         sitekey: SITEKEY,
@@ -542,7 +542,7 @@ nav: booking
         try { window.turnstile.remove(widget); } catch (e) { /* already gone */ }
         widget = null;
       }
-      widget = window.turnstile.render("#turnstile", opts);
+      widget = window.turnstile.render("#payment-verification", opts);
     });
   }
 
