@@ -21,12 +21,16 @@ const scenarios = [
   { name: 'Test payment', data: { ...paid, livemode: false }, heading: 'Test payment only.' },
   { name: 'Missing live mode', data: { ...paid, livemode: undefined }, heading: 'Test payment only.' },
   { name: 'Unpaid session', data: { ...paid, paid: false }, heading: 'Payment is not confirmed yet.' },
+  { name: 'String true is not paid', data: { ...paid, paid: 'true' }, heading: 'Payment is not confirmed yet.' },
+  { name: 'Open unpaid checkout', data: { ...paid, paid: false, paymentStatus: 'unpaid', sessionStatus: 'open' }, heading: 'Payment is not confirmed yet.', text: 'This checkout has not completed.' },
+  { name: 'Expired unpaid checkout', data: { ...paid, paid: false, paymentStatus: 'unpaid', sessionStatus: 'expired' }, heading: 'Payment is not confirmed yet.', text: 'This checkout has expired.' },
+  { name: 'Completed checkout awaiting payment', data: { ...paid, paid: false, paymentStatus: 'unpaid', sessionStatus: 'complete' }, heading: 'Payment is not confirmed yet.', text: 'Payment processing may still be in progress.' },
   { name: 'String paid flag', data: { ...paid, paid: 'false' }, heading: 'Payment is not confirmed yet.' },
   { name: 'Numeric paid flag', data: { ...paid, paid: 1 }, heading: 'Payment is not confirmed yet.' },
   { name: 'Missing paid flag', data: { ...paid, paid: undefined }, heading: 'Payment is not confirmed yet.' },
   { name: 'Lookup HTTP failure', data: {}, status: 404 },
   { name: 'Lookup network failure', networkFailure: true },
-  { name: 'Invalid JSON', raw: 'not json' },
+  { name: 'Invalid JSON', raw: 'not json', text: 'The payment status could not be checked' },
   { name: 'Missing URL reference', noReference: true, fetches: 0 },
   { name: 'Provider text remains escaped', data: { ...paid, email: '<img src=x onerror="window.fixtureExecuted=true">', amountFormatted: '<b>$494</b>' }, heading: '<b>$494</b> received. Thank you.', success: true }
 ];
@@ -57,7 +61,9 @@ const scenarios = [
         assert.ok(heading.includes(scenario.heading || 'This page cannot confirm a payment.'), heading);
         assert.equal(await page.locator('#next-steps').isVisible(), !!scenario.success);
         assert.equal(calls, scenario.fetches ?? 1);
-        if (scenario.text) assert.ok((await page.locator('#outcome').innerText()).includes(scenario.text));
+        if (scenario.text) assert.ok((await page.locator('#outcome').innerText()).includes(scenario.text), scenario.text);
+        if (scenario.data && ['open', 'expired'].includes(scenario.data.sessionStatus))
+          assert.ok(!(await page.locator('#outcome').innerText()).includes('processing'), 'unfinished checkout must not suggest processing');
         assert.equal(await page.locator('#outcome img, #outcome b').count(), 0);
         assert.equal(await page.evaluate(() => !!window.fixtureExecuted), false);
         assert.deepEqual(errors, []);
