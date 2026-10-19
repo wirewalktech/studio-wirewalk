@@ -116,3 +116,12 @@ reaches Stripe and no checkout or payment is created. It covers supported,
 foreign, missing, unknown and quote-only services; unpaid/test/malformed responses;
 lookup failures; escaped provider text; and responsive overflow. These author
 checks are not independent review, live payment or delivery verification.
+
+Check confirmation identifiers against the current public catalog with
+`node tools/check-studio-skus.cjs`, or pass a saved catalog JSON file for offline
+review. This uses only a public catalog GET, never a checkout or Stripe request.
+It catches a newly payable service missing from the confirmation allowlist and
+rejects current quote-only/foreign entries in that list. Historical identifiers
+may remain for older receipts. Payment success still requires literal live/paid
+flags; an open or expired checkout is described separately from a completed
+checkout whose payment is still unconfirmed.
