@@ -34,11 +34,11 @@ nav: booking
 
   <div id="rates-out">
     <p class="lead muted">Loading current rates&hellip;</p>
-    <noscript><p class="lead">Rates load from the booking system, which needs JavaScript. Call <strong>{{ site.phone_display }}</strong> or email <strong>{{ site.email }}</strong> and the current rate card comes back the same day.</p></noscript>
+    <noscript><p class="lead">Rates load from the booking system, which needs JavaScript. Call <strong>{{ site.phone_display }}</strong> or email <strong>{{ site.email }}</strong> and the current rate card comes back within one business day.</p></noscript>
   </div>
 
   <div class="note" style="margin-top:30px">
-    <p><b>Retainer or in full.</b> A retainer holds your agreed date and comes off the total; the balance is due on delivery. Paying in full up front takes 5% off and holds the date on the same terms. The 5% applies to the whole booking, so it is not available on a retainer.</p>
+    <p><b>Retainer or in full.</b> A 25% retainer, rounded to the nearest whole dollar, holds your agreed date and comes off the total; the balance is due on delivery. Paying in full up front takes 5% off and holds the date on the same terms. The 5% applies to the whole booking, so it is not available on a retainer. Read the <a href="{{ '/process/' | relative_url }}#terms">booking, cancellation and delivery terms</a> before paying.</p>
   </div>
 </div></section>
 
@@ -84,7 +84,7 @@ nav: booking
     <button class="btn btn-p" id="paygo" type="button" disabled>Continue to payment<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <div class="msg" id="paymsg" role="status" aria-live="polite"></div>
 
-    <p class="paynote">Nothing on this page is a card field. Payment happens on Stripe&rsquo;s own page and this site is told only whether it succeeded. Session dates are confirmed in writing after payment; more than 14 days&rsquo; notice moves a booking once at no charge, subject to availability, and a child being unwell moves a family or newborn session at no charge however late the notice. Questions first? <a href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a> or <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+    <p class="paynote">Nothing on this page is a card field. Payment happens on Stripe&rsquo;s own page and this site is told only whether it succeeded. Session dates are confirmed separately in writing. Read the <a href="{{ '/process/' | relative_url }}#terms">retainer, cancellation and rescheduling terms</a>, including the family/newborn illness and rain exception, before paying. Questions first? <a href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a> or <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
   </div>
 </div></section>
 
@@ -149,7 +149,7 @@ nav: booking
   <div class="sh">
     <span class="eyebrow">04 &mdash; For companies</span>
     <h2>If your finance team needs an invoice or a purchase order.</h2>
-    <p>Commercial work &mdash; team headshots, a workplace day, product, property, video and audio &mdash; can be placed on a purchase order and invoiced instead of paid by card. Ask here and an invoice, W-9 or supplier form comes back the same business day; we confirm availability and any date hold in writing.</p>
+    <p>Commercial work &mdash; team headshots, a workplace day, product, property, video and audio &mdash; can be placed on a purchase order and invoiced instead of paid by card. Ask here and we reply within one business day; we confirm availability and any date hold in writing. Tell us if you need an invoice, W-9 or supplier form.</p>
     <p class="small muted">Family, newborn, portrait and pet sessions can be paid online by card or US bank account. Wedding payment terms are confirmed with your quote. For personal sessions, use secure online checkout after confirming your date.</p>
   </div>
 
@@ -159,7 +159,7 @@ nav: booking
         <div class="row"><div><span class="kicker">Terms</span><h4>Net 30</h4></div>
           <p>Invoiced against your PO number to the accounts payable address you give, on net 30 terms unless your process says otherwise.</p></div>
         <div class="row"><div><span class="kicker">Documents</span><h4>Whatever procurement needs</h4></div>
-          <p>Quotation, W-9, certificate of insurance, supplier registration &mdash; say which and they come back the same business day.</p></div>
+          <p>We reply to procurement requests within one business day. Certificate of insurance available on request. Tell us which quotation, W-9 or supplier registration you need.</p></div>
         <div class="row"><div><span class="kicker">Rights</span><h4>Stated before, not after</h4></div>
           <p>The usage license is written into the quotation, so what your marketing team may do with the pictures is settled before the shoot rather than argued afterward.</p></div>
         <div class="row"><div><span class="kicker">Faster</span><h4>Or just pay by card</h4></div>
@@ -223,6 +223,7 @@ nav: booking
   <div class="sh">
     <span class="eyebrow">05 &mdash; The small print, in plain words</span>
     <h2>What you are agreeing to.</h2>
+    <p>The <a href="{{ '/process/' | relative_url }}#terms">complete Studio booking terms</a> cover delivery dates, two included revision rounds, cancellation and rescheduling, payment and usage rights.</p>
   </div>
   <div class="rows">
     <div class="row"><div><span class="kicker">Tax</span><h4>Prices exclude sales tax</h4></div>
@@ -230,9 +231,9 @@ nav: booking
     <div class="row"><div><span class="kicker">Travel</span><h4>Quoted separately</h4></div>
       <p>Rates cover work in and around New York. Travel beyond the metro area is quoted before you book, never added afterward.</p></div>
     <div class="row"><div><span class="kicker">Retainer</span><h4>It holds the date and comes off the total</h4></div>
-      <p>A retainer is part payment, not a fee on top. The balance is due on delivery. Where a booking is invoiced instead, the whole fee is invoiced on net 30 terms.</p></div>
-    <div class="row"><div><span class="kicker">Moving a date</span><h4>Once, free, with notice</h4></div>
-      <p>More than 14 days&rsquo; notice moves a booking once at no charge, subject to availability. Inside that window the retainer covers time reserved that cannot be filled at short notice. A child who is unwell is not a late cancellation &mdash; a family or newborn session moves at no charge, whenever you tell me.</p></div>
+      <p>The retainer is 25% of the booking fee, rounded to the nearest whole dollar: part payment, not a fee on top. The balance is due on delivery. Where a booking is invoiced instead, the whole fee is invoiced on net 30 terms.</p></div>
+    <div class="row"><div><span class="kicker">Cancellation</span><h4>Refunds and rescheduling</h4></div>
+      <p>Cancel 14 or more days before the session for a full retainer refund. With less notice, the retainer is non-refundable but may be moved once to a new date within six months. Family and newborn illness or rain reschedules are free whenever you tell us and override those limits. If the studio cancels, choose a full refund of everything paid or a new date. See the complete <a href="{{ '/process/' | relative_url }}#terms">booking terms</a>.</p></div>
     <div class="row"><div><span class="kicker">Newborn</span><h4>Booked to a due date, not a day</h4></div>
       <p>Newborn sessions hold a provisional week and confirm once the baby arrives. Confirm the provisional week with us before paying the retainer.</p></div>
     <div class="row"><div><span class="kicker">Rights</span><h4>Written down before the shoot</h4></div>
@@ -308,7 +309,7 @@ nav: booking
         '<p class="lead">Rates could not be loaded just now, and this page will not guess at them. ' +
         'Call <strong>{{ site.phone_display }}</strong> or email ' +
         '<a href="mailto:{{ site.email }}" style="color:var(--ac);text-decoration:underline">{{ site.email }}</a>' +
-        ' and the current rate card comes straight back.</p>';
+        ' and the current rate card comes back within one business day.</p>';
       $("#paymsg").className = "msg bad";
       $("#paymsg").textContent =
         "The booking system is not answering, so nothing can be paid here at the moment. " +
