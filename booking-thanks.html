@@ -95,7 +95,12 @@ description: Confirmation of a booking payment.
         return;
       }
       if (d.paid !== true) {
-        out.innerHTML = '<h1 class="stat no">Payment is not confirmed yet.</h1><p class="lead">A bank payment may still be processing. Please do not pay again while we check its status. Contact <strong>{{ site.email }}</strong> with your payment reference. Your session date is confirmed separately in writing.</p>';
+        var detail = "The payment status needs to be checked.";
+        if (d.sessionStatus === "open") detail = "This checkout has not completed.";
+        else if (d.sessionStatus === "expired") detail = "This checkout has expired.";
+        else if (d.sessionStatus === "complete" && d.paymentStatus === "unpaid")
+          detail = "Checkout was completed, but payment is not confirmed. Payment processing may still be in progress.";
+        out.innerHTML = '<h1 class="stat no">Payment is not confirmed yet.</h1><p class="lead">' + detail + ' Please contact <strong>{{ site.email }}</strong> with your payment reference before paying again. Your session date is confirmed separately in writing.</p>';
         return;
       }
       var bal = d.balanceDue > 0
@@ -108,7 +113,7 @@ description: Confirmation of a booking payment.
       steps.hidden = false;
     })
     .catch(function () {
-      unknown("The payment system could not be reached just now, so this page will not guess.");
+      unknown("The payment status could not be checked just now, so this page will not guess.");
     });
 })();
 </script>
