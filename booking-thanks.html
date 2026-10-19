@@ -52,6 +52,17 @@ description: Confirmation of a booking payment.
   var out = document.getElementById("outcome");
   var steps = document.getElementById("next-steps");
   var id = new URLSearchParams(location.search).get("session");
+  // Recognize supported Studio payments, not every paid session in the shared
+  // Stripe account. Extend this identifier list when adding a payable service;
+  // keep historical identifiers so an older receipt remains recognizable.
+  // Quote-only wedding/brand-film entries cannot be bought through this flow.
+  var STUDIO_SKUS = [
+    "studio-family", "studio-newborn", "studio-portrait", "studio-pets",
+    "studio-event-half", "studio-event-full", "studio-commercial-day",
+    "studio-headshots", "studio-product-day", "studio-property",
+    "studio-video-day", "studio-video-edit", "studio-podcast",
+    "studio-vo", "studio-mixmaster"
+  ];
 
   var esc = function (t) {
     return String(t == null ? "" : t).replace(/[&<>"]/g, function (c) {
@@ -75,11 +86,15 @@ description: Confirmation of a booking payment.
       return r.json();
     })
     .then(function (d) {
+      if (!d || STUDIO_SKUS.indexOf(d.service) === -1) {
+        unknown("This reference does not identify a supported Studio service.");
+        return;
+      }
       if (d.livemode !== true) {
         out.innerHTML = '<h1 class="stat no">Test payment only.</h1><p class="lead">No real payment or reservation is confirmed by this reference. Please contact us to book.</p>';
         return;
       }
-      if (!d.paid) {
+      if (d.paid !== true) {
         out.innerHTML = '<h1 class="stat no">Payment is not confirmed yet.</h1><p class="lead">A bank payment may still be processing. Please do not pay again while we check its status. Contact <strong>{{ site.email }}</strong> with your payment reference. Your session date is confirmed separately in writing.</p>';
         return;
       }
