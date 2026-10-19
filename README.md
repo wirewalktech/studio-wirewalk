@@ -92,3 +92,27 @@ honeypot and a `_next` redirect to `/thanks/`. There is deliberately **no**
 JavaScript success handler: a handler that prints "thanks" without a confirmed
 send silently discarded every enquiry on the main site for months. The visitor
 reaches `/thanks/` only because the POST actually happened.
+
+## Payment confirmation checks
+
+`booking-thanks.html` recognizes supported Studio SKU identifiers before showing
+any payment success. A paid session for another Wirewalk practice is not a Studio
+booking. The page also requires the provider's live and paid flags to be literal
+booleans. Quote-only entries cannot be confirmed as online purchases here.
+
+When adding a payable SKU through the coordinator's orders catalog review, extend
+`STUDIO_SKUS` in this page. Keep historical supported identifiers for older
+receipts. This duplicates identifiers only; prices still come from the server.
+
+After building with `bundle exec jekyll build`, run the isolated browser checks:
+
+```bash
+PLAYWRIGHT_MODULE=/absolute/path/to/playwright node tools/test-confirmation.cjs
+```
+
+The script accepts a generated HTML file as its first argument if the build uses
+a custom destination. It intercepts the page and all session lookups; no request
+reaches Stripe and no checkout or payment is created. It covers supported,
+foreign, missing, unknown and quote-only services; unpaid/test/malformed responses;
+lookup failures; escaped provider text; and responsive overflow. These author
+checks are not independent review, live payment or delivery verification.
